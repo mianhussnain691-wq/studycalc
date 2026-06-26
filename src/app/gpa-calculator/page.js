@@ -12,6 +12,7 @@ export default function GPACalculator() {
     },
   ]);
   const [gpa, setGPA] = useState(0);
+  const [totalCredits, setTotalCredits] = useState(0);
 
   function addSubject() {
     setSubjects([
@@ -61,6 +62,7 @@ export default function GPACalculator() {
   }
 
   setGPA((totalPoints / totalCredits).toFixed(2));
+  setTotalCredits(totalCredits);
 }
 
   return (
@@ -142,14 +144,32 @@ export default function GPACalculator() {
 >
   Calculate GPA
 </button>
-<div className="mt-8 rounded-xl bg-slate-800 p-6 text-center">
-  <h2 className="text-xl font-semibold text-slate-300">
-    Your GPA
+<div className="mt-8 rounded-xl bg-slate-800 p-6">
+
+  <h2 className="text-center text-xl font-semibold">
+    GPA Result
   </h2>
 
-  <p className="mt-3 text-5xl font-black text-cyan-400">
-    {gpa}
-  </p>
+  <div className="mt-6 grid grid-cols-2 gap-6">
+
+    <div className="rounded-xl bg-slate-900 p-5 text-center">
+      <p className="text-slate-400">GPA</p>
+
+      <h1 className="mt-2 text-4xl font-black text-cyan-400">
+        {gpa}
+      </h1>
+    </div>
+
+    <div className="rounded-xl bg-slate-900 p-5 text-center">
+      <p className="text-slate-400">Credits</p>
+
+      <h1 className="mt-2 text-4xl font-black text-green-400">
+        {totalCredits}
+      </h1>
+    </div>
+
+  </div>
+
 </div>
         </div>
 
