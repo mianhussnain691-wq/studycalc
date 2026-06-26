@@ -1,9 +1,5 @@
 "use client";
-
 import { useState } from "react";
-
-import GPATable from "@/components/GPA/GPATable";
-
 export default function GPACalculator() {
   const [subjects, setSubjects] = useState([
   {
