@@ -13,7 +13,7 @@ export default function GPACalculator() {
   ]);
   const [gpa, setGPA] = useState(0);
   const [totalCredits, setTotalCredits] = useState(0);
-
+const [error, setError] = useState("");
   function addSubject() {
     setSubjects([
       ...subjects,
@@ -43,7 +43,19 @@ export default function GPACalculator() {
     );
   }
   function calculateGPA() {
-  let totalCredits = 0;
+  setError("");
+
+for (const subject of subjects) {
+  if (
+    subject.name.trim() === "" ||
+    subject.credit === "" ||
+    Number(subject.credit) <= 0
+  ) {
+    setError("Please complete all subjects and enter valid credit hours.");
+    return;
+  }
+}
+    let totalCredits = 0;
   let totalPoints = 0;
 
   subjects.forEach((subject) => {
@@ -63,8 +75,21 @@ export default function GPACalculator() {
 
   setGPA((totalPoints / totalCredits).toFixed(2));
   setTotalCredits(totalCredits);
+  
 }
+function resetCalculator() {
+  setSubjects([
+    {
+      id: 1,
+      name: "",
+      credit: "",
+      grade: "4",
+    },
+  ]);
 
+  setGPA(0);
+  setTotalCredits(0);
+}
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-5xl mx-auto px-6 py-16">
@@ -138,11 +163,22 @@ export default function GPACalculator() {
             + Add Subject
 
           </button>
+{error && (
+  <div className="mb-4 rounded-lg bg-red-600 p-3 text-center font-semibold">
+    {error}
+  </div>
+)}
 <button
   onClick={calculateGPA}
   className="w-full mt-4 rounded-xl bg-green-600 py-4 text-lg font-bold hover:bg-green-700 transition"
 >
   Calculate GPA
+</button>
+<button
+  onClick={resetCalculator}
+  className="mt-3 w-full rounded-xl bg-red-600 py-4 text-lg font-bold hover:bg-red-700 transition"
+>
+  Reset Calculator
 </button>
 <div className="mt-8 rounded-xl bg-slate-800 p-6">
 
