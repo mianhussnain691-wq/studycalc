@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Home() {
   const tools = [
     {
@@ -81,24 +82,25 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {tools.map((tool) => (
+         <Link href="/gpa-calculator">
 
-            <div
-              key={tool.title}
-              className="rounded-2xl border border-slate-800 bg-slate-900 p-6 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 cursor-pointer"
-            >
+<div className="rounded-2xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-400 hover:-translate-y-2 hover:shadow-cyan-500/20 shadow-lg duration-300 transition cursor-pointer">
+    <span className="inline-block mb-4 rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-400">
+Popular
+</span>
+    <h2 className="text-2xl font-bold">
+      GPA Calculator
+    </h2>
 
-              <h4 className="text-xl font-bold mb-3">
-                {tool.title}
-              </h4>
+    <p className="text-slate-400 mt-3">
+      Calculate semester GPA quickly and accurately.
+    </p>
+<div className="mt-6 text-cyan-400 font-semibold">
+  Open →
+</div>
+  </div>
 
-              <p className="text-slate-400">
-                {tool.desc}
-              </p>
-
-            </div>
-
-          ))}
+</Link>
 
         </div>
 

@@ -1,7 +1,6 @@
 "use client";
-
 import { useState } from "react";
-
+import Navbar from "./Compnents/Navbar";
 export default function GPACalculator() {
   const [subjects, setSubjects] = useState([
     {
@@ -13,7 +12,9 @@ export default function GPACalculator() {
   ]);
   const [gpa, setGPA] = useState(0);
   const [totalCredits, setTotalCredits] = useState(0);
-const [error, setError] = useState("");
+const [gradePoints, setGradePoints] = useState(0);
+  const [error, setError] = useState("");
+  const [performance, setPerformance] = useState("");
   function addSubject() {
     setSubjects([
       ...subjects,
@@ -75,7 +76,20 @@ for (const subject of subjects) {
 
   setGPA((totalPoints / totalCredits).toFixed(2));
   setTotalCredits(totalCredits);
-  
+  setGradePoints(totalPoints.toFixed(2));
+  const finalGPA = totalPoints / totalCredits;
+
+if (finalGPA >= 3.7) {
+  setPerformance("🎉 Excellent");
+} else if (finalGPA >= 3.3) {
+  setPerformance("🔥 Very Good");
+} else if (finalGPA >= 3.0) {
+  setPerformance("👍 Good");
+} else if (finalGPA >= 2.0) {
+  setPerformance("🙂 Average");
+} else {
+  setPerformance("⚠️ Needs Improvement");
+}
 }
 function resetCalculator() {
   setSubjects([
@@ -89,9 +103,13 @@ function resetCalculator() {
 
   setGPA(0);
   setTotalCredits(0);
+  setGradePoints(0);
+setPerformance("");
+setError("");
 }
   return (
     <main className="min-h-screen bg-slate-950 text-white">
+<Navbar />
       <div className="max-w-5xl mx-auto px-6 py-16">
 
         <h1 className="text-5xl font-black text-center">
@@ -205,7 +223,17 @@ function resetCalculator() {
     </div>
 
   </div>
+<div className="mt-6 rounded-xl bg-slate-900 p-5">
+  <div className="flex justify-between py-2 border-b border-slate-700">
+    <span>Total Grade Points</span>
+    <span className="font-bold text-cyan-400">{gradePoints}</span>
+  </div>
 
+  <div className="flex justify-between py-2">
+    <span>Performance</span>
+    <span className="font-bold">{performance}</span>
+  </div>
+</div>
 </div>
         </div>
 
