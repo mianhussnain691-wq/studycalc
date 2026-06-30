@@ -23,12 +23,9 @@ export default function ToolCard({
           {description}
         </p>
 
-      <Link
-  href={href}
-  className="mt-6 inline-block text-cyan-400 font-bold hover:text-cyan-300"
->
+    <div className="mt-6 text-cyan-400 font-bold">
   Open →
-</Link>
+</div>
 
       </div>
     </Link>

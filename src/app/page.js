@@ -52,12 +52,26 @@ export default function Home() {
           placeholder="Search a calculator..."
           className="mt-10 w-full md:w-[650px] p-5 rounded-xl bg-slate-900 border border-slate-700 outline-none"
         />
+<div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+  <a
+    href="#popular-tools"
+    className="rounded-xl bg-cyan-500 px-8 py-4 font-bold text-slate-950 hover:bg-cyan-400 transition text-center"
+  >
+    Explore Tools
+  </a>
 
+  <a
+    href="/gpa-calculator"
+    className="rounded-xl border border-slate-700 px-8 py-4 font-bold hover:border-cyan-400 hover:text-cyan-400 transition text-center"
+  >
+    Try GPA Calculator
+  </a>
+</div>
       </section>
 
       {/* Popular Tools */}
 
-      <section className="max-w-7xl mx-auto px-6 pb-24">
+      <section id="popular-tools" className="max-w-6xl mx-auto px-6 py-20">
 
         <h3 className="text-3xl font-bold mb-10">
           Popular Tools
