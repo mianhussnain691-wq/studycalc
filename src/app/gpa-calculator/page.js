@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Navbar from "./Compnents/Navbar";
+import Navbar from "@/components/Navbar";
 export default function GPACalculator() {
   const [subjects, setSubjects] = useState([
     {

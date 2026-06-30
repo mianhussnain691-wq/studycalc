@@ -1,24 +1,7 @@
-import Link from "next/link";
-export default function Home() {
-  const tools = [
-    {
-      title: "GPA Calculator",
-      desc: "Calculate your semester GPA accurately."
-    },
-    {
-      title: "CGPA Calculator",
-      desc: "Track your overall academic performance."
-    },
-    {
-      title: "Attendance Calculator",
-      desc: "Know how many classes you can miss."
-    },
-    {
-      title: "Percentage Calculator",
-      desc: "Convert marks into percentages instantly."
-    }
-  ];
 
+import ToolCard from "@/components/ToolCard";
+export default function Home() {
+ 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
 
@@ -81,31 +64,200 @@ export default function Home() {
         </h3>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+ <ToolCard
+    title="GPA Calculator"
+    description="Calculate your semester GPA quickly and accurately."
+    href="/gpa-calculator"
+    badge="Popular"
+    badgeColor="bg-cyan-500/20 text-cyan-400"
+  />
 
-         <Link href="/gpa-calculator">
+  <ToolCard
+    title="CGPA Calculator"
+    description="Calculate your overall CGPA."
+      href="/cgpa-calculator"
 
-<div className="rounded-2xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-400 hover:-translate-y-2 hover:shadow-cyan-500/20 shadow-lg duration-300 transition cursor-pointer">
-    <span className="inline-block mb-4 rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-400">
-Popular
-</span>
-    <h2 className="text-2xl font-bold">
-      GPA Calculator
-    </h2>
+    badge="New"
+    badgeColor="bg-green-500/20 text-green-400"
+    
+  />
+<ToolCard
+  title="Attendance Calculator"
+  description="Check your attendance percentage."
+  href="/attendance-calculator"
+  badge="Useful"
+  badgeColor="bg-orange-500/20 text-orange-400"
+/>
 
-    <p className="text-slate-400 mt-3">
-      Calculate semester GPA quickly and accurately.
-    </p>
-<div className="mt-6 text-cyan-400 font-semibold">
-  Open →
+<ToolCard
+  title="Percentage Calculator"
+  description="Convert marks into percentage."
+  href="/percentage-calculator"
+  badge="Coming Soon"
+  badgeColor="bg-purple-500/20 text-purple-400"
+/>
 </div>
-  </div>
-
-</Link>
-
-        </div>
+        
 
       </section>
+      <section className="max-w-6xl mx-auto px-6 py-20">
 
+  <h2 className="text-4xl font-bold text-white mb-10">
+    Browse by Category
+  </h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer">
+      <h3 className="text-xl font-bold text-cyan-400">
+        University
+      </h3>
+      <p className="text-slate-400 mt-2">
+        GPA, CGPA and Semester calculators.
+      </p>
+    </div>
+
+    <div className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer">
+      <h3 className="text-xl font-bold text-cyan-400">
+        School
+      </h3>
+      <p className="text-slate-400 mt-2">
+        Percentage and Grade calculators.
+      </p>
+    </div>
+
+    <div className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer">
+      <h3 className="text-xl font-bold text-cyan-400">
+        Attendance
+      </h3>
+      <p className="text-slate-400 mt-2">
+        Track attendance and required classes.
+      </p>
+    </div>
+
+    <div className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer">
+      <h3 className="text-xl font-bold text-cyan-400">
+        Finance
+      </h3>
+      <p className="text-slate-400 mt-2">
+        Loan, EMI and savings calculators.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section className="max-w-6xl mx-auto px-6 py-24">
+
+  <h2 className="text-4xl font-bold text-center mb-16">
+    Trusted By Students
+  </h2>
+
+  <div className="grid md:grid-cols-4 gap-8 text-center">
+
+    <div className="rounded-2xl bg-slate-900 border border-slate-800 p-8">
+      <h3 className="text-5xl font-black text-cyan-400">
+        10K+
+      </h3>
+
+      <p className="text-slate-400 mt-4">
+        Calculations
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-900 border border-slate-800 p-8">
+      <h3 className="text-5xl font-black text-cyan-400">
+        99.9%
+      </h3>
+
+      <p className="text-slate-400 mt-4">
+        Accuracy
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-900 border border-slate-800 p-8">
+      <h3 className="text-5xl font-black text-cyan-400">
+        100%
+      </h3>
+
+      <p className="text-slate-400 mt-4">
+        Free
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-900 border border-slate-800 p-8">
+      <h3 className="text-5xl font-black text-cyan-400">
+        24/7
+      </h3>
+
+      <p className="text-slate-400 mt-4">
+        Available
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer className="mt-28 border-t border-slate-800">
+  <div className="max-w-7xl mx-auto px-6 py-14">
+
+    <div className="grid md:grid-cols-4 gap-10">
+
+      <div>
+        <h2 className="text-3xl font-black text-cyan-400">
+          StudyCalc
+        </h2>
+
+        <p className="text-slate-400 mt-4">
+          Professional student calculators made for universities and schools.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold mb-4">
+          Calculators
+        </h3>
+
+        <ul className="space-y-2 text-slate-400">
+          <li>GPA Calculator</li>
+          <li>CGPA Calculator</li>
+          <li>Attendance Calculator</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="font-bold mb-4">
+          Company
+        </h3>
+
+        <ul className="space-y-2 text-slate-400">
+          <li>About</li>
+          <li>Blog</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="font-bold mb-4">
+          Legal
+        </h3>
+
+        <ul className="space-y-2 text-slate-400">
+          <li>Privacy Policy</li>
+          <li>Terms</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div className="border-t border-slate-800 mt-12 pt-6 text-center text-slate-500">
+      © 2026 StudyCalc. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
     </main>
   );
 }
