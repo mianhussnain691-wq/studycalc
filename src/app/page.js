@@ -110,6 +110,15 @@ export default function Home() {
   badge="Coming Soon"
   badgeColor="bg-purple-500/20 text-purple-400"
 />
+
+<ToolCard
+  title="Grade Calculator"
+  description="Calculate your grade, grade point and performance instantly."
+  href="/grade-calculator"
+  badge="New"
+  badgeColor="bg-green-500/20 text-green-400"
+/>
+
 </div>
         
 
