@@ -1,5 +1,8 @@
 "use client";
-
+import PageHeader from "@/components/PageHeader";
+import ResultCard from "@/components/ResultCard";
+import ProgressBar from "@/components/ProgressBar";
+import Button from "@/components/Button";
 import { useState } from "react";
 
 export default function GradeCalculator() {
@@ -83,13 +86,10 @@ function resetCalculator() {
 
       <div className="max-w-4xl mx-auto px-6 py-16">
 
-        <h1 className="text-5xl font-black text-center">
-          Grade Calculator
-        </h1>
-
-        <p className="mt-4 text-center text-slate-400">
-          Calculate your grade instantly.
-        </p>
+      <PageHeader
+  title="Grade Calculator"
+  description="Calculate your grade instantly."
+/>
 
         <div className="mt-12">
 
@@ -109,60 +109,32 @@ function resetCalculator() {
 
         </div>
 
-<div className="mt-10 rounded-2xl border border-slate-800 bg-slate-900 p-8 text-center">
-
-<button
-  onClick={resetCalculator}
-  className="mt-6 inline-block rounded-xl border border-slate-700 px-6 py-3 text-base font-bold hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-500 focus:outline-none focus:ring-0 transition duration-300"
+<ResultCard
+  title="Your Result"
+  value={`Grade: ${calculateGrade().grade}`}
+  status={calculateGrade().status}
 >
-  Reset
-</button>
-
-
-  <h2 className="text-2xl font-bold">
-    Your Result
-  </h2>
-
-  <p className="mt-6 text-5xl font-black text-cyan-400">
-    Grade: {calculateGrade().grade}
-  </p>
-
   <p className="mt-4 text-3xl font-bold">
     Grade Point: {calculateGrade().point}
   </p>
 
-  <p className="mt-4 text-xl text-slate-300 font-semibold">
-    {calculateGrade().status}
-  </p>
+  <Button
+  onClick={resetCalculator}
+  className="mt-6 border border-slate-700 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-500"
+>
+  Reset
+</Button>
 
-<div className="mt-8">
-
-  <div className="h-4 w-full rounded-full bg-slate-700 overflow-hidden">
-
-    <div
-      className={`h-full rounded-full transition-all duration-500 ${
-        parseFloat(marks) >= 90
-          ? "bg-green-500"
-          : parseFloat(marks) >= 80
-          ? "bg-cyan-400"
-          : parseFloat(marks) >= 70
-          ? "bg-yellow-400"
-          : parseFloat(marks) >= 50
-          ? "bg-orange-400"
-          : "bg-red-500"
-      }`}
-      style={{
-        width: `${Math.min(Math.max(parseFloat(marks) || 0, 0), 100)}%`,
-      }}
-    ></div>
-
+  <div className="mt-8">
+    <div className="h-4 w-full rounded-full bg-slate-700 overflow-hidden">
+    
+      <ProgressBar
+  value={Math.min(Math.max(parseFloat(marks) || 0, 0), 100)}
+/>
+    </div>
   </div>
-
+</ResultCard>
 </div>
-
-</div>
-
-      </div>
 
     </main>
 
