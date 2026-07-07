@@ -1,28 +1,38 @@
-
+"use client";
+import { useState } from "react";
 import ToolCard from "@/components/ToolCard";
+import tools from "@/data/tools";
+import categories from "@/data/categories";
+import stats from "@/data/stats";
+import Link from "next/link";
+import { Search } from "lucide-react";
+
 export default function Home() {
  
+  const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+const filteredTools = tools.filter((tool) => {
+ 
+  const matchesSearch = tool.title
+    .toLowerCase()
+    .includes(search.toLowerCase());
+
+  const matchesCategory =
+    selectedCategory === "All" ||
+    tool.category === selectedCategory;
+
+  return matchesSearch && matchesCategory;
+});
+
+const suggestedTools =
+  search.trim() === ""
+    ? []
+    : filteredTools.slice(0, 5);
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
 
-      {/* Navbar */}
-
-      <header className="border-b border-slate-800 sticky top-0 bg-slate-950/80 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-
-          <h1 className="text-3xl font-black text-cyan-400">
-            StudyCalc
-          </h1>
-
-          <nav className="hidden md:flex gap-8 text-slate-300">
-            <a href="#">Home</a>
-            <a href="#">Tools</a>
-            <a href="#">Blog</a>
-            <a href="#">About</a>
-          </nav>
-
-        </div>
-      </header>
 
       {/* Hero */}
 
@@ -47,11 +57,61 @@ export default function Home() {
 
         </p>
 
-        <input
-          type="text"
-          placeholder="Search a calculator..."
-          className="mt-10 w-full md:w-[650px] p-5 rounded-xl bg-slate-900 border border-slate-700 outline-none"
-        />
+<div className="relative mx-auto w-full md:w-[650px]">
+
+<Search
+  size={20}
+  className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500"
+/>
+
+       <input
+  type="text"
+  placeholder="Search a calculator..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+className="w-full rounded-xl border border-slate-700 bg-slate-900 py-5 pl-14 pr-5 outline-none"/>
+
+{suggestedTools.length > 0 && (
+<div className="absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-2xl shadow-cyan-500/10">
+    {suggestedTools.map((tool) => (
+      <Link
+        key={tool.title}
+        href={tool.href}
+className="block border-b border-slate-800 px-5 py-4 transition-all duration-200 hover:bg-cyan-500/10 last:border-b-0"      >
+        <p className="font-semibold text-white">
+          {tool.title}
+        </p>
+
+        <p className="mt-1 text-sm text-slate-400">
+          {tool.description}
+        </p>
+      </Link>
+    ))}
+
+  </div>
+)}
+</div>
+
+<div className="mt-8 flex flex-wrap justify-center gap-3">
+
+  {["All", "University", "School", "Attendance"].map((category) => (
+
+    <button
+      key={category}
+      onClick={() => setSelectedCategory(category)}
+    className={`rounded-full px-5 py-2 font-semibold transition-all duration-300 ${
+  selectedCategory === category
+    ? "bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/30"
+    : "bg-slate-800 hover:bg-slate-700"
+}`}
+    >
+      {category}
+    </button>
+
+  ))}
+
+</div>
+
 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
   <a
     href="#popular-tools"
@@ -69,6 +129,36 @@ export default function Home() {
 </div>
       </section>
 
+<section className="max-w-6xl mx-auto px-6 py-10">
+
+  <div className="rounded-3xl border border-cyan-500/20 bg-gradient-to-r from-cyan-500/10 to-slate-900 p-10">
+
+    <span className="inline-block rounded-full bg-cyan-500/20 px-4 py-2 text-cyan-400 font-semibold">
+      ⭐ Featured Calculator
+    </span>
+
+    <h2 className="mt-6 text-4xl font-black">
+      GPA Calculator
+    </h2>
+
+    <p className="mt-4 max-w-2xl text-slate-300">
+      Our most popular calculator. Calculate your semester GPA instantly with
+      grade points, credit hours and real-time results.
+    </p>
+
+    <a
+      href="/gpa-calculator"
+      className="mt-8 inline-block rounded-xl bg-cyan-500 px-8 py-4 font-bold text-slate-950 hover:bg-cyan-400 transition"
+    >
+      Open GPA Calculator →
+    </a>
+
+  </div>
+
+</section>
+
+
+
       {/* Popular Tools */}
 
       <section id="popular-tools" className="max-w-6xl mx-auto px-6 py-20">
@@ -77,47 +167,26 @@ export default function Home() {
           Popular Tools
         </h3>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
- <ToolCard
-    title="GPA Calculator"
-    description="Calculate your semester GPA quickly and accurately."
-    href="/gpa-calculator"
-    badge="Popular"
-    badgeColor="bg-cyan-500/20 text-cyan-400"
-  />
+       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-  <ToolCard
-    title="CGPA Calculator"
-    description="Calculate your overall CGPA."
-      href="/cgpa-calculator"
+  {filteredTools.length > 0 ? (
+    filteredTools.map((tool) => (
+      <ToolCard
+        key={tool.title}
+        {...tool}
+      />
+    ))
+  ) : (
+    <div className="col-span-full py-12 text-center">
+      <h3 className="text-2xl font-bold text-slate-300">
+        No calculator found 😔
+      </h3>
 
-    badge="New"
-    badgeColor="bg-green-500/20 text-green-400"
-    
-  />
-<ToolCard
-  title="Attendance Calculator"
-  description="Check your attendance percentage."
-  href="/attendance-calculator"
-  badge="Useful"
-  badgeColor="bg-orange-500/20 text-orange-400"
-/>
-
-<ToolCard
-  title="Percentage Calculator"
-  description="Convert marks into percentage."
-  href="/percentage-calculator"
-  badge="Coming Soon"
-  badgeColor="bg-purple-500/20 text-purple-400"
-/>
-
-<ToolCard
-  title="Grade Calculator"
-  description="Calculate your grade, grade point and performance instantly."
-  href="/grade-calculator"
-  badge="New"
-  badgeColor="bg-green-500/20 text-green-400"
-/>
+      <p className="mt-2 text-slate-500">
+        Try another search keyword.
+      </p>
+    </div>
+  )}
 
 </div>
         
@@ -130,44 +199,21 @@ export default function Home() {
   </h2>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-    <div className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer">
+  {categories.map((category) => (
+    <div
+      key={category.title}
+      className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer"
+    >
       <h3 className="text-xl font-bold text-cyan-400">
-        University
+        {category.title}
       </h3>
+
       <p className="text-slate-400 mt-2">
-        GPA, CGPA and Semester calculators.
+        {category.description}
       </p>
     </div>
-
-    <div className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer">
-      <h3 className="text-xl font-bold text-cyan-400">
-        School
-      </h3>
-      <p className="text-slate-400 mt-2">
-        Percentage and Grade calculators.
-      </p>
-    </div>
-
-    <div className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer">
-      <h3 className="text-xl font-bold text-cyan-400">
-        Attendance
-      </h3>
-      <p className="text-slate-400 mt-2">
-        Track attendance and required classes.
-      </p>
-    </div>
-
-    <div className="rounded-xl bg-slate-900 border border-slate-800 p-6 hover:border-cyan-500 transition cursor-pointer">
-      <h3 className="text-xl font-bold text-cyan-400">
-        Finance
-      </h3>
-      <p className="text-slate-400 mt-2">
-        Loan, EMI and savings calculators.
-      </p>
-    </div>
-
-  </div>
+  ))}
+</div>
 
 </section>
 
@@ -178,109 +224,25 @@ export default function Home() {
   </h2>
 
   <div className="grid md:grid-cols-4 gap-8 text-center">
-
-    <div className="rounded-2xl bg-slate-900 border border-slate-800 p-8">
+  {stats.map((stat) => (
+    <div
+      key={stat.label}
+      className="rounded-2xl bg-slate-900 border border-slate-800 p-8"
+    >
       <h3 className="text-5xl font-black text-cyan-400">
-        10K+
+        {stat.number}
       </h3>
 
       <p className="text-slate-400 mt-4">
-        Calculations
+        {stat.label}
       </p>
     </div>
-
-    <div className="rounded-2xl bg-slate-900 border border-slate-800 p-8">
-      <h3 className="text-5xl font-black text-cyan-400">
-        99.9%
-      </h3>
-
-      <p className="text-slate-400 mt-4">
-        Accuracy
-      </p>
-    </div>
-
-    <div className="rounded-2xl bg-slate-900 border border-slate-800 p-8">
-      <h3 className="text-5xl font-black text-cyan-400">
-        100%
-      </h3>
-
-      <p className="text-slate-400 mt-4">
-        Free
-      </p>
-    </div>
-
-    <div className="rounded-2xl bg-slate-900 border border-slate-800 p-8">
-      <h3 className="text-5xl font-black text-cyan-400">
-        24/7
-      </h3>
-
-      <p className="text-slate-400 mt-4">
-        Available
-      </p>
-    </div>
-
-  </div>
+  ))}
+</div>
 
 </section>
 
-<footer className="mt-28 border-t border-slate-800">
-  <div className="max-w-7xl mx-auto px-6 py-14">
 
-    <div className="grid md:grid-cols-4 gap-10">
-
-      <div>
-        <h2 className="text-3xl font-black text-cyan-400">
-          StudyCalc
-        </h2>
-
-        <p className="text-slate-400 mt-4">
-          Professional student calculators made for universities and schools.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="font-bold mb-4">
-          Calculators
-        </h3>
-
-        <ul className="space-y-2 text-slate-400">
-          <li>GPA Calculator</li>
-          <li>CGPA Calculator</li>
-          <li>Attendance Calculator</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 className="font-bold mb-4">
-          Company
-        </h3>
-
-        <ul className="space-y-2 text-slate-400">
-          <li>About</li>
-          <li>Blog</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 className="font-bold mb-4">
-          Legal
-        </h3>
-
-        <ul className="space-y-2 text-slate-400">
-          <li>Privacy Policy</li>
-          <li>Terms</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div className="border-t border-slate-800 mt-12 pt-6 text-center text-slate-500">
-      © 2026 StudyCalc. All Rights Reserved.
-    </div>
-
-  </div>
-</footer>
     </main>
   );
 }

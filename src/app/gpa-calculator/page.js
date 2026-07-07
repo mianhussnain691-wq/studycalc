@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
 export default function GPACalculator() {
   const [subjects, setSubjects] = useState([
     {
@@ -109,7 +108,6 @@ setError("");
 }
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-<Navbar />
       <div className="max-w-5xl mx-auto px-6 py-16">
 
         <h1 className="text-5xl font-black text-center">

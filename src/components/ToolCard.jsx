@@ -9,8 +9,7 @@ export default function ToolCard({
 }) {
   return (
     <Link href={href}>
-      <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6 transition duration-300 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 cursor-pointer">
-
+      <div className="group rounded-2xl border border-slate-800 bg-slate-900 p-6 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500 hover:shadow-2xl hover:shadow-cyan-500/20">
         <span
           className={`inline-block mb-4 rounded-full px-3 py-1 text-xs font-semibold ${badgeColor}`}
         >
