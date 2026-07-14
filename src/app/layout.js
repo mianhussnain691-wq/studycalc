@@ -14,9 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "StudyCalc - Free Student Calculators",
+  metadataBase: new URL("https://studycalc.vercel.app"),
+
+  title: {
+    default: "StudyCalc - Free Student Calculators",
+    template: "%s | StudyCalc",
+  },
+
   description:
     "Free GPA, CGPA, Attendance, Percentage and Grade Calculators for students.",
+
   keywords: [
     "GPA Calculator",
     "CGPA Calculator",
@@ -25,7 +32,29 @@ export const metadata = {
     "Grade Calculator",
     "StudyCalc",
   ],
+
   authors: [{ name: "StudyCalc" }],
+
+  openGraph: {
+    title: "StudyCalc",
+    description:
+      "Free academic calculators for students worldwide.",
+    url: "https://studycalc.vercel.app",
+    siteName: "StudyCalc",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "StudyCalc",
+    description:
+      "Free academic calculators for students worldwide.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
