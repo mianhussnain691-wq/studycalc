@@ -4,7 +4,7 @@ export default function PageHeader({
 }) {
   return (
     <>
-      <h1 className="text-5xl font-black text-center">
+      <h1 className="text-5xl font-black text-center text-white">
         {title}
       </h1>
 

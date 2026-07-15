@@ -17,7 +17,7 @@ export default function ToolCard({
           {badge}
         </span>
 
-        <h2 className="text-2xl font-bold">{title}</h2>
+        <h2 className="text-2xl font-bold text-white">{title}</h2>
 
         <p className="mt-3 text-slate-400">
           {description}
