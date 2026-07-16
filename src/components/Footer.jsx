@@ -50,8 +50,20 @@ export default function Footer() {
                   Terms
                 </Link>
               </li>
+             
+              <li>
+                <Link href="/disclaimer" className="hover:text-cyan-400 transition">
+                  Disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookie-policy" className="hover:text-cyan-400 transition">
+                  Cookie Policy
+                </Link>
+              </li>
             </ul>
           </div>
+
 
           <div>
             <h3 className="font-bold text-white">Version</h3>
