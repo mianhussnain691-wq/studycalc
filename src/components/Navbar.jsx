@@ -19,7 +19,7 @@ export default function Navbar() {
           </h1>
         </Link>
 
-        {/* Menu */}
+        {/* Menu (Desktop) */}
         <div className="hidden md:flex items-center gap-8 font-semibold">
           <Link
             href="/"
@@ -43,15 +43,16 @@ export default function Navbar() {
             Calculators
           </Link>
 
+          {/* Naveen Blog Link */}
           <Link
-            href="/contact"
+            href="/blog"
             className={`transition hover:text-cyan-400 ${
-              pathname === "/contact"
+              pathname.startsWith("/blog")
                 ? "text-cyan-400 border-b-[3px] border-cyan-400 pb-1"
                 : "text-white"
             }`}
           >
-            Contact
+            Blog
           </Link>
 
           <Link
@@ -64,8 +65,20 @@ export default function Navbar() {
           >
             About
           </Link>
+
+          <Link
+            href="/contact"
+            className={`transition hover:text-cyan-400 ${
+              pathname === "/contact"
+                ? "text-cyan-400 border-b-[3px] border-cyan-400 pb-1"
+                : "text-white"
+            }`}
+          >
+            Contact
+          </Link>
         </div>
 
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-3xl text-white transition"
@@ -73,34 +86,53 @@ export default function Navbar() {
           {menuOpen ? "✕" : "☰"}
         </button>
 
+        {/* Menu (Mobile) */}
         {menuOpen && (
           <div className="absolute left-0 top-full w-full border-t border-slate-800 bg-slate-900 md:hidden">
             <div className="flex flex-col p-6 gap-5 font-semibold">
               <Link
                 href="/"
                 onClick={() => setMenuOpen(false)}
-                className="hover:text-cyan-400 text-white"
+                className={`hover:text-cyan-400 ${
+                  pathname === "/" ? "text-cyan-400" : "text-white"
+                }`}
               >
                 Home
               </Link>
               <Link
                 href="/calculators"
                 onClick={() => setMenuOpen(false)}
-                className="hover:text-cyan-400 text-white"
+                className={`hover:text-cyan-400 ${
+                  pathname === "/calculators" ? "text-cyan-400" : "text-white"
+                }`}
               >
                 Calculators
+              </Link>
+              {/* Naveen Blog Link for Mobile */}
+              <Link
+                href="/blog"
+                onClick={() => setMenuOpen(false)}
+                className={`hover:text-cyan-400 ${
+                  pathname.startsWith("/blog") ? "text-cyan-400" : "text-white"
+                }`}
+              >
+                Blog
               </Link>
               <Link
                 href="/about"
                 onClick={() => setMenuOpen(false)}
-                className="hover:text-cyan-400 text-white"
+                className={`hover:text-cyan-400 ${
+                  pathname === "/about" ? "text-cyan-400" : "text-white"
+                }`}
               >
                 About
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="hover:text-cyan-400 text-white"
+                className={`hover:text-cyan-400 ${
+                  pathname === "/contact" ? "text-cyan-400" : "text-white"
+                }`}
               >
                 Contact
               </Link>
