@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 
 const geistSans = Geist({
@@ -70,6 +71,25 @@ export default function RootLayout({ children }) {
   <Navbar />
   {children}
   <Footer />
+
+<Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-TJYSYBE39F"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TJYSYBE39F');
+  `}
+</Script>
+
+
+
+
 </body>
 
 </body>
