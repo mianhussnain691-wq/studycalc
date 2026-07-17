@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
+import { getAllBlogs } from "@/lib/mdx"; 
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Asi automatic domain match karan layi baseUrl fix kar ditta hai
   const baseUrl = "https://studycalc-three.vercel.app"; 
 
-  return [
+  // Static Links System
+  const staticRoutes = [
     { url: `${baseUrl}/`, lastModified: new Date() },
     { url: `${baseUrl}/gpa-calculator`, lastModified: new Date() },
     { url: `${baseUrl}/cgpa-calculator`, lastModified: new Date() },
@@ -13,7 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/grade-calculator`, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/contact`, lastModified: new Date() },
-    { url: `${baseUrl}/blog/how-to-calculate-gpa`, lastModified: new Date() },
-    { url: `${baseUrl}/blog/difference-between-cgpa-and-gpa`, lastModified: new Date() },
   ];
+
+  // Dynamic System: Fetches all .mdx files automatically
+  const blogs = getAllBlogs();
+  const blogRoutes = blogs.map((blog) => ({
+    url: `${baseUrl}/blog/${blog.slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }

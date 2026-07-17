@@ -1,54 +1,65 @@
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
-import blogs from "@/data/blog"; // 'blogs' di jagah 'blog'
+import { getAllBlogs } from "@/lib/mdx"; // Nawa automatic helper import kita
+
+export const metadata = {
+  title: "StudyCalc Blogs - Learn GPA & Academic Calculations",
+  description: "Read expert articles on how to calculate GPA, CGPA, and manage your university grades easily.",
+};
 
 export default function BlogListPage() {
-  return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        
-        <PageHeader 
-          title="Student Resources & Guides" 
-          description="Useful articles, formulas, and guides to help you manage your academics better." 
-        />
+  const blogs = getAllBlogs(); // Automatic saare .mdx blogs di metadata chukega
 
-        <div className="mt-16 grid md:grid-cols-2 gap-8">
-          {blogs.map((post) => (
-            <article 
-              key={post.slug}
-              className="group rounded-2xl border border-slate-800 bg-slate-900 p-8 transition-all duration-300 hover:border-cyan-500 hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col justify-between"
+  return (
+    <div style={{ minHeight: '100vh', color: '#cbd5e1', fontFamily: 'sans-serif' }}>
+      <PageHeader title="Our Blogs" description="Latest academic guides and tips" />
+      
+      <main style={{ maxWidth: '1000px', margin: '0 auto', padding: '48px 16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '24px' }}>
+          {blogs.map((blog) => (
+            <div 
+              key={blog.slug} 
+              style={{ 
+                background: '#0f172a', 
+                border: '1px solid #334155', 
+                borderRadius: '8px', 
+                padding: '24px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
             >
               <div>
-                <div className="flex items-center gap-4 text-xs text-slate-400">
-                  <span>{post.date}</span>
-                  <span>•</span>
-                  <span>{post.readTime}</span>
-                </div>
-
-                <h2 className="text-2xl font-bold mt-4 group-hover:text-cyan-400 transition-colors">
-                  <Link href={`/blog/${post.slug}`}>
-                    {post.title}
-                  </Link>
+                <span style={{ fontSize: '0.75rem', color: '#22d3ee' }}>{blog.date}</span>
+                <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#ffffff', marginTop: '8px', marginBottom: '12px' }}>
+                  {blog.title}
                 </h2>
-
-                <p className="mt-3 text-slate-400 leading-relaxed">
-                  {post.description}
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.5', marginBottom: '16px' }}>
+                  {blog.description}
                 </p>
               </div>
 
-              <div className="mt-6">
-                <Link 
-                  href={`/blog/${post.slug}`}
-                  className="inline-block text-cyan-400 font-bold hover:underline"
-                >
-                  Read Article →
-                </Link>
-              </div>
-            </article>
+              <Link 
+                href={`/blog/${blog.slug}`} 
+                style={{ 
+                  color: '#22d3ee', 
+                  fontWeight: '600', 
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  marginTop: 'auto'
+                }}
+              >
+                Read Article →
+              </Link>
+            </div>
           ))}
         </div>
 
-      </div>
-    </main>
+        {blogs.length === 0 && (
+          <p style={{ textAlign: 'center', color: '#64748b' }}>No blogs found in content folder.</p>
+        )}
+      </main>
+    </div>
   );
 }
