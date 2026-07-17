@@ -1,38 +1,19 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Asi automatic domain match karan layi baseUrl fix kar ditta hai
+  const baseUrl = "https://studycalc-three.vercel.app"; 
+
   return [
-    {
-      url: "https://studycalc.vercel.app",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://studycalc.vercel.app/gpa-calculator",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://studycalc.vercel.app/cgpa-calculator",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://studycalc.vercel.app/attendance-calculator",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://studycalc.vercel.app/percentage-calculator",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://studycalc.vercel.app/grade-calculator",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://studycalc.vercel.app/about",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://studycalc.vercel.app/contact",
-      lastModified: new Date(),
-    },
+    { url: `${baseUrl}/`, lastModified: new Date() },
+    { url: `${baseUrl}/gpa-calculator`, lastModified: new Date() },
+    { url: `${baseUrl}/cgpa-calculator`, lastModified: new Date() },
+    { url: `${baseUrl}/attendance-calculator`, lastModified: new Date() },
+    { url: `${baseUrl}/percentage-calculator`, lastModified: new Date() },
+    { url: `${baseUrl}/grade-calculator`, lastModified: new Date() },
+    { url: `${baseUrl}/about`, lastModified: new Date() },
+    { url: `${baseUrl}/contact`, lastModified: new Date() },
+    { url: `${baseUrl}/blog/how-to-calculate-gpa`, lastModified: new Date() },
+    { url: `${baseUrl}/blog/difference-between-cgpa-and-gpa`, lastModified: new Date() },
   ];
 }
