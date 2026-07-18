@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://studycalc.vercel.app"),
+  metadataBase: new URL("https://studycalc.co"),
 
   title: {
     default: "StudyCalc - Free Student Calculators",
@@ -41,7 +41,7 @@ export const metadata = {
     title: "StudyCalc",
     description:
       "Free academic calculators for students worldwide.",
-    url: "https://studycalc.vercel.app",
+    url: "https://studycalc.co",
     siteName: "StudyCalc",
     type: "website",
   },

@@ -1,26 +1,38 @@
-import type { MetadataRoute } from "next";
-import { getAllBlogs } from "@/lib/mdx"; 
+import { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://studycalc-three.vercel.app"; 
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = 'https://www.studycalc.co';
 
-  // Static Links System
+  // 1. Saare Tools te Static Pages de Routes
   const staticRoutes = [
-    { url: `${baseUrl}/`, lastModified: new Date() },
-    { url: `${baseUrl}/gpa-calculator`, lastModified: new Date() },
-    { url: `${baseUrl}/cgpa-calculator`, lastModified: new Date() },
-    { url: `${baseUrl}/attendance-calculator`, lastModified: new Date() },
-    { url: `${baseUrl}/percentage-calculator`, lastModified: new Date() },
-    { url: `${baseUrl}/grade-calculator`, lastModified: new Date() },
-    { url: `${baseUrl}/about`, lastModified: new Date() },
-    { url: `${baseUrl}/contact`, lastModified: new Date() },
-  ];
-
-  // Dynamic System: Fetches all .mdx files automatically
-  const blogs = getAllBlogs();
-  const blogRoutes = blogs.map((blog) => ({
-    url: `${baseUrl}/blog/${blog.slug}`,
+    '',
+    '/gpa-calculator',
+    '/cgpa-calculator',
+    '/attendance-calculator',
+    '/percentage-calculator',
+    '/grade-calculator',
+    '/blog',
+    '/about',
+    '/contact',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: route === '' ? 1.0 : 0.8, // Home page nu 1.0 te tools nu 0.8 priority
+  }));
+
+  // 2. Tuhade Blogs de Dynamic Routes (SEO optimized slugs)
+  const blogRoutes = [
+    '/blog/gpa-calculator-formula-explained',
+    '/blog/cgpa-calculator-guide',
+    '/blog/how-to-calculate-attendance-percentage',
+    '/blog/percentage-calculation-made-easy',
+    '/blog/marks-to-grade-conversion-formula',
+  ].map((slug) => ({
+    url: `${baseUrl}${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
   }));
 
   return [...staticRoutes, ...blogRoutes];
