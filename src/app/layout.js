@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -65,45 +64,36 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-    <body className="bg-slate-950 text-white">
+      <body className="bg-slate-950 text-white">
+        <Navbar />
+        {children}
+        <Footer />
 
- <body className="bg-slate-950 text-white">
-  <Navbar />
-  {children}
-  <Footer />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TJYSYBE39F"
+          strategy="afterInteractive"
+        />
 
-<Script
-  src="https://www.googletagmanager.com/gtag/js?id=G-TJYSYBE39F"
-  strategy="afterInteractive"
-/>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-<Script id="google-analytics" strategy="afterInteractive">
-  {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+            gtag('config', 'G-TJYSYBE39F');
+          `}
+        </Script>
 
-    gtag('config', 'G-TJYSYBE39F');
-  `}
-</Script>
-
-<Script id="microsoft-clarity" strategy="afterInteractive">
-  {`
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xnb6cd7sa5");
-  `}
-</Script>
-
-
-</body>
-
-</body>
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "xnb6cd7sa5");
+          `}
+        </Script>
+      </body>
     </html>
-
-
-
   );
 }

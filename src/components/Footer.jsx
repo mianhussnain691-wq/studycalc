@@ -7,6 +7,7 @@ export default function Footer() {
 
         <div className="grid gap-10 md:grid-cols-4">
 
+          {/* Brand Section */}
           <div>
             <h2 className="text-2xl font-black text-cyan-400">
               StudyCalc
@@ -16,6 +17,7 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Calculators Column */}
           <div>
             <h3 className="font-bold text-white">Calculators</h3>
             <ul className="mt-4 space-y-2 text-slate-400">
@@ -27,6 +29,34 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* NEW: SEO Academic Guides Column */}
+          <div>
+            <h3 className="font-bold text-white">Academic Guides</h3>
+            <ul className="mt-4 space-y-2 text-slate-400">
+              <li>
+                <Link href="/percentage-formula-explained" className="hover:text-cyan-400 transition">
+                  Percentage Formula
+                </Link>
+              </li>
+              <li>
+                <Link href="/how-to-calculate-cgpa" className="hover:text-cyan-400 transition">
+                  How to Calculate CGPA
+                </Link>
+              </li>
+              <li>
+                <Link href="/gpa-scale-explained" className="hover:text-cyan-400 transition">
+                  GPA Scale Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/attendance-percentage-formula" className="hover:text-cyan-400 transition">
+                  Attendance Formula
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal / Company Column */}
           <div>
             <h3 className="font-bold text-white">Company</h3>
             <ul className="mt-4 space-y-2 text-slate-400">
@@ -50,7 +80,6 @@ export default function Footer() {
                   Terms
                 </Link>
               </li>
-             
               <li>
                 <Link href="/disclaimer" className="hover:text-cyan-400 transition">
                   Disclaimer
@@ -64,18 +93,11 @@ export default function Footer() {
             </ul>
           </div>
 
-
-          <div>
-            <h3 className="font-bold text-white">Version</h3>
-            <p className="mt-4 text-slate-400">
-              StudyCalc v1.0
-            </p>
-          </div>
-
         </div>
 
+        {/* Copyright Section */}
         <div className="mt-10 border-t border-slate-800 pt-6 text-center text-slate-500">
-          © 2026 StudyCalc. All rights reserved.
+          © {new Date().getFullYear()} StudyCalc. All rights reserved.
         </div>
 
       </div>

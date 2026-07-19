@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ToolGuide from "@/components/ToolGuide"; // <--- Import Global Component
+import GPAGuide from "@/components/calculator-guides/GPAGuide"; // <--- Perfect Import Path
 
 export default function GPACalculator() {
   const [subjects, setSubjects] = useState([
@@ -163,6 +163,8 @@ export default function GPACalculator() {
         {/* Result Board */}
         <div className="mt-8 rounded-xl bg-slate-800 p-6 text-white">
           <h2 className="text-center text-xl font-semibold">GPA Result</h2>
+          
+          {/* Two-Column Grid for main metrics */}
           <div className="mt-6 grid grid-cols-2 gap-6">
             <div className="rounded-xl bg-slate-900 p-5 text-center">
               <p className="text-slate-400 text-sm">GPA</p>
@@ -174,6 +176,12 @@ export default function GPACalculator() {
             </div>
           </div>
 
+          {/* 🔥 PERFECT SPOT: Rendered beautifully horizontally centered right under the two option cards */}
+          <div className="my-6">
+            <GPAGuide />
+          </div>
+
+          {/* Detailed breakdowns */}
           <div className="mt-6 rounded-xl bg-slate-900 p-5 space-y-3">
             <div className="flex justify-between py-2 border-b border-slate-700/50">
               <span className="text-slate-300">Total Grade Points</span>
