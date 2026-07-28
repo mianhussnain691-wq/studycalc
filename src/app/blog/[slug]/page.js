@@ -6,7 +6,11 @@ import "@/styles/mdx.css"; // Global styles injected directly here
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const blog = await getBlogBySlug(slug);
-  if (!blog) return { title: "Blog Not Found" };
+
+  if (!blog) {
+    return { title: "Blog Not Found" };
+  }
+
   return {
     title: `${blog.frontMatter.title} - StudyCalc`,
     description: blog.frontMatter.description,
