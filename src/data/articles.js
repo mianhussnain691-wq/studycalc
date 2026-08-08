@@ -27,7 +27,7 @@ export const articles = [
   {
     title: "Cumulative GPA vs Semester GPA: What's the Difference?",
     description: "Understand the key differences between tracking single semester results versus overall performance.",
-    slug: "cumulative-vs-semester-gpa-calculator",
+    slug: "gpa-calculator",
     category: "Academic Calculators",
     readTime: "13 min read",
     date: "2026-03-01"
@@ -139,7 +139,7 @@ export const articles = [
   {
     title: "Semester GPA vs Cumulative GPA Explained",
     description: "Detailed comparative analysis on how term weightings affect your graduation standing.",
-    slug: "semester-gpa-vs-cumulative-gpa",
+    slug: "gpa-calculator",
     category: "Academic Guides",
     readTime: "13 min read",
     date: "2026-03-01"

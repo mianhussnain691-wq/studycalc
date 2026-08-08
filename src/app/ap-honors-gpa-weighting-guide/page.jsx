@@ -540,7 +540,7 @@ export default function APHonorsGpaWeightingGuide() {
             Input your AP, Honors, and Regular course grades into our free academic calculators to compute your weighted, unweighted, and college cumulative GPA metrics.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
-            <Link href="/high-school-gpa-calculator" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl text-base transition shadow-lg">
+            <Link href="/gpa-calculator" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl text-base transition shadow-lg">
               High School Weighted GPA Tool 🎒
             </Link>
             <Link href="/gpa-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">

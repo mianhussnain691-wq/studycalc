@@ -115,7 +115,7 @@ export default function SemesterVsCumulativeGPA() {
             <Link href="/gpa-calculator" className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg text-sm transition">
               Calculate Semester GPA 🚀
             </Link>
-            <Link href="/college-gpa-calculator" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
+            <Link href="/gpa-calculator" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
               Calculate Cumulative GPA 📊
             </Link>
             <Link href="/high-school-vs-college-gpa" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">

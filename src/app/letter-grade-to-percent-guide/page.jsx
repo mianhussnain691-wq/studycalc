@@ -521,7 +521,7 @@ export default function LetterGradeToPercentGuide() {
             <Link href="/gpa-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
               College GPA Calculator 🎓
             </Link>
-            <Link href="/high-school-gpa-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
+            <Link href="/gpa-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
               High School GPA Tool 🎒
             </Link>
           </div>

@@ -601,19 +601,19 @@ export default function HowToCalculateGpaFromPercentage() {
               ➔ Online GPA Calculator
             </Link>
             <Link
-              href="/cgpa-to-percentage"
+              href="/cgpa-to-percentage-conversion"
               className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/50 hover:bg-slate-900 text-cyan-400 transition block"
             >
               ➔ CGPA to Percentage Converter
             </Link>
             <Link
-              href="/high-school-gpa-calculator"
+              href="/gpa-calculator"
               className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-yellow-500/50 hover:bg-slate-900 text-yellow-400 transition block"
             >
               ➔ High School Weighted GPA Calculator
             </Link>
             <Link
-              href="/cumulative-gpa-calculator"
+              href="/cgpa-calculator"
               className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-slate-900 text-purple-400 transition block"
             >
               ➔ Cumulative GPA Calculator
@@ -735,19 +735,19 @@ export default function HowToCalculateGpaFromPercentage() {
               ➔ Online GPA Calculator
             </Link>
             <Link
-              href="/cgpa-to-percentage"
+              href="/cgpa-to-percentage-conversion"
               className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/50 hover:bg-slate-900 text-cyan-400 transition block"
             >
               ➔ CGPA to Percentage Converter
             </Link>
             <Link
-              href="/high-school-gpa-calculator"
+              href="/gpa-calculator"
               className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-yellow-500/50 hover:bg-slate-900 text-yellow-400 transition block"
             >
               ➔ High School Weighted GPA Calculator
             </Link>
             <Link
-              href="/cumulative-gpa-calculator"
+              href="/cgpa-calculator"
               className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-slate-900 text-purple-400 transition block"
             >
               ➔ Cumulative GPA Calculator

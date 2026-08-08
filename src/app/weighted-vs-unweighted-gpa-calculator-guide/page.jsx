@@ -409,7 +409,7 @@ export default function WeightedVsUnweightedGPAGuide() {
             <Link href="/gpa-calculator" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
               High School GPA Tool 📊
             </Link>
-            <Link href="/college-gpa-calculator" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
+            <Link href="/gpa-calculator" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
               College GPA Calculator 🎓
             </Link>
           </div>
