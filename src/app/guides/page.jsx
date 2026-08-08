@@ -24,7 +24,7 @@ export default function GuidesPage() {
         {articles.map((article) => (
           <Link
             key={article.slug}
-            href={`/${article.slug}`}
+            href={`/guides/${article.slug}`}
             className="p-6 rounded-2xl bg-[#0b1329] border border-slate-800 hover:border-cyan-500 transition flex flex-col justify-between group shadow-xl"
           >
             <div>
