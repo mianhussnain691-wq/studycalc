@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Raise Your GPA Fast: Step-by-Step Grade Recovery Plan",
+title: "How to Raise Your GPA Fast: 10 Proven Strategies",
   description: "Comprehensive guide on how to raise your high school or college GPA quickly. Proven strategies for grade forgiveness, credit weighting, professor office hours, and academic recovery math.",
   keywords: [
     "how to raise gpa fast",

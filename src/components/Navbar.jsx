@@ -13,10 +13,10 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <h1 className="text-3xl font-extrabold tracking-tight">
+          <div className="text-3xl font-extrabold tracking-tight">
             <span className="text-cyan-400">Study</span>
             <span className="text-white">Calc</span>
-          </h1>
+          </div>
         </Link>
 
         {/* Menu (Desktop) */}

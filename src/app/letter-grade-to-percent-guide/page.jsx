@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Letter Grade to Percent Conversion Chart: Standard, Curved & University Scales",
+  title: "Letter Grade to Percentage Conversion Chart",
   description: "Comprehensive breakdown of converting letter grades (A+, A, B, C, D, F) to exact percentages and 4.0 GPA quality points. Features 10-point, 7-point, curved grading, and international standards.",
   keywords: [
     "letter grade to percent chart",

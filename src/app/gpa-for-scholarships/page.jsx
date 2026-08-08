@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "GPA for Scholarships: Requirements, Ranges & Maintenance Guide",
+  title: "GPA for Scholarships: Requirements & Tips",
   description: "Comprehensive guide on minimum GPA requirements for academic scholarships, merit-based financial aid, renewal thresholds, and strategies to protect your funding.",
   keywords: [
     "GPA for scholarships",

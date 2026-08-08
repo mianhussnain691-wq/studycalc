@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "GPA Scale Explained: 4.0, 5.0 & 10.0 Scales",
+  description:
+    "Understand GPA scales, weighted vs unweighted GPA, and how 4.0, 5.0, and 10.0 grading systems compare.",
+};
+
 export default function GPAScaleExplained() {
   const scaleComparison = [
     { letter: "A+ / A", point4: "4.00", point5: "5.00", point10: "10.00", percentage: "93% – 100%", descriptor: "Outstanding / Exceptional Mastery" },

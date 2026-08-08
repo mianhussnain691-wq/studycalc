@@ -15,8 +15,7 @@ export const metadata = {
 
 export default function SemesterVsCumulativeGPA() {
   return (
-    <article className="mx-auto max-w-4xl px-6 py-12 text-slate-300">
-      
+<article className="min-h-screen bg-[#070b19] text-slate-300 pt-32 px-6 max-w-5xl mx-auto pb-20">      
       {/* Header Section */}
       <header className="mb-10 text-center md:text-left">
         <div className="inline-block rounded-full bg-cyan-950/80 border border-cyan-800/50 px-4 py-1.5 text-xs font-semibold text-cyan-400 mb-4">

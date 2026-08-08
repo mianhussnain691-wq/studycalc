@@ -139,7 +139,7 @@ export const articles = [
   {
     title: "Semester GPA vs Cumulative GPA Explained",
     description: "Detailed comparative analysis on how term weightings affect your graduation standing.",
-    slug: "semester-gpa-vs-cumulative-gpa",
+   slug: "semester-gpa-vs-cumulative-gpa",
     category: "Academic Guides",
     readTime: "13 min read",
     date: "2026-03-01"
