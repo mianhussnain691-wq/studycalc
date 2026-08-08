@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Marks to Grade Conversion: Global US, UK, Pakistan & India Systems",
+title: "Marks to Grade Conversion: US, UK, Pakistan & India",
   description: "Exhaustive master guide on marks to grade conversion across US, UK, Pakistan, and India. Compare letter grades, percentage metrics, CGPA scales, and WES evaluation workflows.",
   keywords: [
     "marks to grade conversion",

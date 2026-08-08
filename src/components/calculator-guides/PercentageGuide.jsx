@@ -170,9 +170,9 @@ export default function PercentageCalculatorGuide() {
         <div className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400 border border-cyan-500/20 mb-4">
           📊 Percentage Calculator Guide
         </div>
-        <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+        <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
           Percentage Calculator: Calculate Marks Percentage Instantly
-        </h1>
+        </h2>
         <p className="mt-4 text-base sm:text-lg leading-8 text-slate-300">
           Enter your obtained marks and total marks into the calculator above to get your exact percentage. Below,
           you'll find the formula, a full worked example across multiple subjects, and how percentage compares to

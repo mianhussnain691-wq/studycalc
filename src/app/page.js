@@ -40,11 +40,11 @@ export default function Home() {
           Free Student Calculators
         </span>
 
-        <h2 className="text-5xl md:text-7xl font-black mt-8 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-black mt-8 leading-tight">
           Calculate Smarter.
           <br />
           Study Better.
-        </h2>
+        </h1>
 
         <p className="text-slate-400 mt-8 text-lg max-w-2xl mx-auto">
           Professional calculators for university and school students.

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Semester GPA vs CGPA: Differences, Conversion & Calculation Guide",
+title: "Semester GPA vs CGPA: Differences & Calculation",
   description:
     "Understand the core differences between Semester GPA (SGPA) and Cumulative GPA (CGPA). Learn how SGPA affects CGPA, conversion formulas, and mathematical examples.",
   keywords: [

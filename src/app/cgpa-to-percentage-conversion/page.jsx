@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Calculate GPA from Percentage: Complete Step-by-Step Guide (2026)",
+title: "How to Calculate GPA from Percentage: 2026 Guide",
   description: "Learn how to calculate GPA from percentage with our complete 2026 step-by-step guide. Master percentage to GPA conversions across 4.0, 5.0, and 10.0 scale systems for university admissions.",
   keywords: [
     "how to calculate GPA from percentage",

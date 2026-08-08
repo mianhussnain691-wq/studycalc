@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Weighted vs Unweighted GPA: High School Scales, AP/IB Boosts & Recalculation",
+title: "Weighted vs Unweighted GPA: AP, IB & Honors Guide",
   description: "Master the exact math behind Weighted (5.0) vs Unweighted (4.0) High School GPAs. Learn how AP, IB, and Honors classes impact class rank, scholarship cutoffs, and college admissions.",
   keywords: [
     "weighted vs unweighted gpa",

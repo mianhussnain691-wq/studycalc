@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Cumulative vs Semester GPA: Calculation Guide, Formulas & Differences",
+title: "Cumulative vs Semester GPA: Calculation & Differences",
   description: "Comprehensive guide on calculating Cumulative GPA vs Semester GPA. Learn credit-weighted formulas, step-by-step mathematical examples, impact of grade forgiveness, and college academic standing rules.",
   keywords: [
     "cumulative vs semester gpa",
@@ -422,7 +422,7 @@ export default function CumulativeVsSemesterGPAGuide() {
             <Link href="/gpa-calculator" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
               College Term GPA Engine 🎓
             </Link>
-            <Link href="/final-grade-calculator" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
+            <Link href="/final-grade-calculator-guide" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
               Final Exam Grade Target 🎯
             </Link>
           </div>

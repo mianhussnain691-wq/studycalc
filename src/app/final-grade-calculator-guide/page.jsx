@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Final Grade Calculator Guide: How to Calculate Target Exam Scores",
+title: "Final Grade Calculator: Target Exam Scores",
   description:
     "Master the final grade formula to determine the exact exam score required to pass or achieve your target course grade. Step-by-step math and strategic tips.",
   keywords: [

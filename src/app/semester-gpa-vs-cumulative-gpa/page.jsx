@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Semester GPA vs Cumulative GPA: Differences, Calculations & Impact",
+title: "Semester GPA vs Cumulative GPA: Differences & Impact",
   description: "Learn the core differences between Semester GPA and Cumulative GPA. Understand how term grades aggregate over time, credit weight formulas, and recovery strategies.",
   keywords: [
     "semester gpa vs cumulative gpa",

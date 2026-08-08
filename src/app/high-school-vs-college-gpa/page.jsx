@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "High School vs College GPA: Differences, Weighting & Conversion Rules",
+title: "High School vs College GPA: Key Differences",
   description: "Learn how High School GPA differs from College GPA. Discover unweighted vs weighted 5.0 systems, credit hour impacts, and transcript evaluation rules.",
   keywords: [
     "high school vs college gpa",

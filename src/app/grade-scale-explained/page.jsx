@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Grading Scales Explained: 4.0 Scale, Letter Grades & Percentage Conversions",
+title: "Grading Scales Explained: 4.0, Letter Grades & Percentages",
   description:
     "Comprehensive guide explaining academic grading scales globally. Learn how to convert letter grades to GPA, calculate weighted scales, and convert percentages to a 4.0 scale.",
   keywords: [

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "GPA Requirements Guide: College Admissions, Graduate Schools & Career Paths",
+title: "GPA Requirements: College Admissions & Graduate School",
   description: "Complete breakdown of GPA requirements for Ivy League, state universities, master's programs, medical schools, law schools, and corporate recruitment.",
   keywords: [
     "GPA requirements for college",

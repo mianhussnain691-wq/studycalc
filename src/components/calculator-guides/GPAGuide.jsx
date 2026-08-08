@@ -181,9 +181,9 @@ export default function GPACalculatorGuide() {
         <div className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400 border border-cyan-500/20 mb-4">
           🎓 GPA Calculator Guide
         </div>
-        <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+        <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
           GPA Calculator: Calculate Your GPA Instantly
-        </h1>
+        </h2>
         <p className="mt-4 text-base sm:text-lg leading-8 text-slate-300">
           Enter your courses, credit hours, and grades into the calculator above and get your GPA in seconds. Below,
           you'll find the exact formula behind the numbers, a full worked example, and answers to the questions
