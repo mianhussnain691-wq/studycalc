@@ -168,11 +168,11 @@ export default function GPACalculator() {
           <div className="mt-6 grid grid-cols-2 gap-6">
             <div className="rounded-xl bg-slate-900 p-5 text-center">
               <p className="text-slate-400 text-sm">GPA</p>
-              <h1 className="mt-2 text-4xl font-black text-cyan-400">{gpa}</h1>
+              <div className="mt-2 text-4xl font-black text-cyan-400">{gpa}</div>
             </div>
             <div className="rounded-xl bg-slate-900 p-5 text-center">
               <p className="text-slate-400 text-sm">Total Credits</p>
-              <h1 className="mt-2 text-4xl font-black text-green-400">{totalCredits}</h1>
+              <div className="mt-2 text-4xl font-black text-green-400">{totalCredits}</div>
             </div>
           </div>
 
