@@ -17,6 +17,8 @@ export const metadata = {
 export default function PercentageCalculatorGuide() {
   const toc = [
     { href: "#what-is-percentage-calculator", label: "What Is a Percentage Calculator?" },
+    { href: "#how-to-calculate-percentage-from-marks", label: "How to Calculate Percentage From Marks" },
+    { href: "#global-queries-breakdown", label: "Global Search Queries (Top 30)" },
     { href: "#why-use", label: "Why Use This Calculator" },
     { href: "#how-it-works", label: "How This Calculator Works" },
     { href: "#formula", label: "Percentage Formula" },
@@ -47,8 +49,42 @@ export default function PercentageCalculatorGuide() {
   const totalMarks = subjects.reduce((s, x) => s + x.total, 0);
   const aggregatePercent = ((totalObtained / totalMarks) * 100).toFixed(2);
 
-  const singleExample = { obtained: 425, total: 500 };
+  const singleExample = { obtained: 338, total: 500 };
   const singlePercent = ((singleExample.obtained / singleExample.total) * 100).toFixed(1);
+
+  // 30 Global Search Queries & Solutions Array
+  const globalQueries = [
+    { q: "338 out of 500 in percentage", ans: "67.6%" },
+    { q: "338 percentage out of 500", ans: "67.6%" },
+    { q: "Aggregate percentage calculator", ans: "Combines multi-subject scores accurately." },
+    { q: "How to calculate percentage from marks", ans: "(Obtained ÷ Total) × 100" },
+    { q: "338 out of 400 percentage", ans: "84.5%" },
+    { q: "400 out of 500 percentage", ans: "80.0%" },
+    { q: "450 out of 500 percentage", ans: "90.0%" },
+    { q: "250 out of 300 percentage", ans: "83.3%" },
+    { q: "75 out of 100 percentage", ans: "75.0%" },
+    { q: "600 out of 600 percentage", ans: "100.0%" },
+    { q: "45 out of 50 percentage", ans: "90.0%" },
+    { q: "18 out of 20 percentage", ans: "90.0%" },
+    { q: "Calculate percentage for 4 subjects", ans: "Sum all obtained and totals, then apply formula." },
+    { q: "Calculate percentage for 5 subjects", ans: "Sum all obtained and totals, then apply formula." },
+    { q: "Calculate percentage for 6 subjects", ans: "Sum all obtained and totals, then apply formula." },
+    { q: "Convert percentage to 4.0 GPA scale", ans: "Divide percentage by 25 or use standard institutional charts." },
+    { q: "Convert CGPA to percentage formula", ans: "Multiply CGPA by 9.5 (commonly used in India)." },
+    { q: "What is 70 percent of 500 marks", ans: "350 marks" },
+    { q: "What is 80 percent of 600 marks", ans: "480 marks" },
+    { q: "What is 60 percent of 400 marks", ans: "240 marks" },
+    { q: "Percentage increase calculator formula", ans: "((New - Old) ÷ Old) × 100" },
+    { q: "Percentage decrease calculator formula", ans: "((Old - New) ÷ Old) × 100" },
+    { q: "Difference between percentage and percentile", ans: "Percentage is score ratio; percentile is relative rank." },
+    { q: "How to find total marks from percentage", ans: "Obtained Marks ÷ (Percentage ÷ 100)" },
+    { q: "How to find obtained marks from percentage", ans: "Total Marks × (Percentage ÷ 100)" },
+    { q: "University aggregate marks calculator", ans: "Weighted sum of entry tests and board exams." },
+    { q: "Semester percentage calculator online", ans: "Free automated tool for term-wise results." },
+    { q: "High school marks percentage converter", ans: "Instant conversion for report cards." },
+    { q: "Passing percentage calculator", ans: "Check if marks meet the minimum criteria (e.g., 33% or 40%)." },
+    { q: "Online total percentage checker", ans: "Fast and accurate tool for overall academic standing." },
+  ];
 
   const mistakes = [
     {
@@ -90,12 +126,12 @@ export default function PercentageCalculatorGuide() {
 
   const faqs = [
     {
-      q: "How do I calculate percentage from marks?",
-      a: "Divide the marks you obtained by the total possible marks, then multiply by 100. For example, scoring 425 out of 500 gives 425 ÷ 500 × 100 = 85%.",
+      q: "How do I calculate percentage from marks (e.g. 338 out of 500)?",
+      a: "Divide the marks obtained by total marks and multiply by 100. For instance, 338 out of 500 in percentage is (338 ÷ 500) × 100 = 67.6%.",
     },
     {
       q: "How do I calculate aggregate percentage across multiple subjects?",
-      a: "Add up the marks you obtained across all subjects, add up the total possible marks across all subjects, then divide the two sums and multiply by 100. Don't average the individual subject percentages directly, since that ignores different total marks per subject.",
+      a: "An aggregate percentage calculator sums all obtained marks across your subjects and divides them by the sum of all total marks, multiplying the final result by 100. This ensures accurate weighting compared to averaging percentages directly.",
     },
     {
       q: "How do I convert percentage to GPA?",
@@ -204,6 +240,63 @@ export default function PercentageCalculatorGuide() {
           Unlike GPA, which needs a conversion scale, percentage is a direct, unscaled representation of how many
           marks you earned out of the total available.
         </p>
+      </div>
+
+      <div id="how-to-calculate-percentage-from-marks" className="mt-12 scroll-mt-20">
+        <h2 className="text-2xl font-bold text-white">How to Calculate Percentage From Marks</h2>
+        <p className="mt-4 leading-7 text-slate-300">
+          Students frequently look up specific conversion scores like <strong>338 percentage out of 500</strong> or want to know how marks translate into percentages across different totals (such as 338 out of 400, 400 out of 500, or 450 out of 500). Calculating your score manually is straightforward once you apply the correct mathematical proportion.
+        </p>
+        <div className="mt-6 rounded-xl border border-cyan-500/20 bg-slate-950 p-6 text-center shadow-inner">
+          <p className="text-lg sm:text-xl font-black text-cyan-400 tracking-wide">
+            Percentage = (Marks Obtained ÷ Total Marks) × 100
+          </p>
+        </div>
+        <p className="mt-6 leading-7 text-slate-300">
+          <strong>Detailed Worked Example (338 out of 500):</strong><br />
+          If you scored 338 marks out of a total 500, divide 338 by 500 to get 0.676, then multiply by 100 to get <span className="text-cyan-400 font-bold">67.6%</span>.
+        </p>
+        
+        <h3 className="mt-6 text-xl font-bold text-white">Common Student Exam Examples</h3>
+        <ul className="mt-3 space-y-2 text-slate-300 leading-7 list-disc list-inside">
+          <li><strong>338 out of 500:</strong> (338 ÷ 500) × 100 = 67.6%</li>
+          <li><strong>338 out of 400:</strong> (338 ÷ 400) × 100 = 84.5%</li>
+          <li><strong>400 out of 500:</strong> (400 ÷ 500) × 100 = 80.0%</li>
+          <li><strong>450 out of 500:</strong> (450 ÷ 500) × 100 = 90.0%</li>
+        </ul>
+
+        <h3 className="mt-6 text-xl font-bold text-white">Marks Percentage vs. Aggregate Percentage</h3>
+        <p className="mt-3 leading-7 text-slate-300">
+          A single-subject percentage evaluates one exam or course, whereas an <strong>aggregate percentage</strong> computes your overall academic standing across multiple subjects with potentially varying total marks. Using an aggregate percentage calculator prevents weighting errors that happen when individual percentages are incorrectly averaged together.
+        </p>
+      </div>
+
+      {/* New Top 30 Global Search Queries Section */}
+      <div id="global-queries-breakdown" className="mt-12 scroll-mt-20">
+        <h2 className="text-2xl font-bold text-white">Global Student Search Queries & Scenarios (Top 30)</h2>
+        <p className="mt-4 leading-7 text-slate-300">
+          To help cover popular study queries searched worldwide by students, here is a quick-reference guide addressing the top 30 common variations related to marks, percentages, and conversions:
+        </p>
+        <div className="mt-6 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/30">
+          <table className="w-full border-collapse text-sm">
+            <thead className="bg-slate-800/80 text-cyan-400 font-semibold">
+              <tr>
+                <th className="px-4 py-3 text-left">#</th>
+                <th className="px-4 py-3 text-left">Search Query / Scenario</th>
+                <th className="px-4 py-3 text-left">Standard Output / Formula</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800 text-slate-300">
+              {globalQueries.map((item, index) => (
+                <tr key={index} className="hover:bg-slate-900/50">
+                  <td className="px-4 py-3 font-mono text-slate-500">{index + 1}</td>
+                  <td className="px-4 py-3 font-medium text-white">{item.q}</td>
+                  <td className="px-4 py-3 font-mono text-cyan-400">{item.ans}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div id="why-use" className="mt-12 scroll-mt-20">
