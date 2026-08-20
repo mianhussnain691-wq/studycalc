@@ -25,14 +25,6 @@ export const articles = [
     date: "2026-03-01"
   },
   {
-    title: "Cumulative GPA vs Semester GPA: What's the Difference?",
-    description: "Understand the key differences between tracking single semester results versus overall performance.",
-    slug: "cumulative-vs-semester-gpa-calculator-guide",
-    category: "Academic Calculators",
-    readTime: "13 min read",
-    date: "2026-03-01"
-  },
-  {
     title: "Final Grade Calculator: What Score Do You Need to Pass?",
     description: "Learn how to compute what score you need on your final exam to pass or top your class.",
     slug: "final-grade-calculator-guide",
@@ -57,8 +49,8 @@ export const articles = [
     date: "2026-03-01"
   },
   {
-    title: "US GPA Scale Explained: 4.0 GPA Chart & Calculator",
-    description: "Comprehensive breakdown of the North American 4.0 GPA scale and calculations.",
+    title: "GPA Scale Explained: 4.0, 5.0 & 10.0 Point Scales Compared",
+    description: "A clear breakdown of the 4.0, 5.0, and 10.0 GPA scales, how weighted vs unweighted grading changes the numbers, and how to read a scale you've never seen before.",
     slug: "gpa-scale-explained",
     category: "US Grading",
     readTime: "14 min read",
@@ -129,24 +121,16 @@ export const articles = [
     date: "2026-03-01"
   },
   {
-    title: "Semester GPA vs CGPA: What's the Difference?",
-    description: "Demystifying the difference between your single term results and overall cumulative score.",
+    title: "Semester GPA vs CGPA: Complete Calculation & Recovery Guide",
+    description: "The exact credit-weighted formulas, a full 3-semester worked example, credit inertia, grade forgiveness, and academic probation thresholds.",
     slug: "semester-gpa-vs-cgpa",
     category: "Academic Guides",
     readTime: "13 min read",
     date: "2026-03-01"
   },
   {
-    title: "Semester GPA vs Cumulative GPA Explained",
-    description: "Detailed comparative analysis on how term weightings affect your graduation standing.",
-   slug: "semester-gpa-vs-cumulative-gpa",
-    category: "Academic Guides",
-    readTime: "13 min read",
-    date: "2026-03-01"
-  },
-  {
-    title: "Weighted GPA vs Unweighted GPA: Which Matters More?",
-    description: "Analyze the differences between standard unweighted GPAs and rigorous honors/AP weighted scales.",
+    title: "Weighted vs Unweighted GPA: AP, IB & Honors Calculation Guide",
+    description: "How AP, IB, Dual Enrollment, and Honors classes affect your weighted vs unweighted GPA, with three full worked case studies.",
     slug: "weighted-gpa-vs-unweighted-gpa",
     category: "US Admissions",
     readTime: "14 min read",

@@ -43,6 +43,17 @@ export default function Navbar() {
             Calculators
           </Link>
 
+          <Link
+            href="/guides"
+            className={`transition hover:text-cyan-400 ${
+              pathname.startsWith("/guides")
+                ? "text-cyan-400 border-b-[3px] border-cyan-400 pb-1"
+                : "text-white"
+            }`}
+          >
+            Guides
+          </Link>
+
           {/* Naveen Blog Link */}
           <Link
             href="/blog"
@@ -107,6 +118,15 @@ export default function Navbar() {
                 }`}
               >
                 Calculators
+              </Link>
+              <Link
+                href="/guides"
+                onClick={() => setMenuOpen(false)}
+                className={`hover:text-cyan-400 ${
+                  pathname.startsWith("/guides") ? "text-cyan-400" : "text-white"
+                }`}
+              >
+                Guides
               </Link>
               {/* Naveen Blog Link for Mobile */}
               <Link

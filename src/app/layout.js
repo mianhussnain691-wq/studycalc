@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://studycalc.co"),
+  metadataBase: new URL("https://www.studycalc.co"),
 
   title: {
     default: "StudyCalc - Free Student Calculators",
@@ -40,7 +40,7 @@ export const metadata = {
     title: "StudyCalc",
     description:
       "Free academic calculators for students worldwide.",
-    url: "https://studycalc.co",
+    url: "https://www.studycalc.co",
     siteName: "StudyCalc",
     type: "website",
   },
@@ -68,6 +68,19 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "StudyCalc",
+              url: "https://www.studycalc.co",
+            }),
+          }}
+        />
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TJYSYBE39F"

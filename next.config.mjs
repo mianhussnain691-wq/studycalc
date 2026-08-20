@@ -67,6 +67,14 @@ const nextConfig = {
       { source: '/marks-calculator', destination: '/grade-calculator', permanent: true },
       { source: '/grad', destination: '/grade-calculator', permanent: true },
       { source: '/gardcalculator', destination: '/grade-calculator', permanent: true }, // Typo
+
+      // ==========================================
+      // 6. Content Consolidation Redirects (duplicate/cannibalizing article merges)
+      // ==========================================
+      { source: '/semester-gpa-vs-cumulative-gpa', destination: '/semester-gpa-vs-cgpa', permanent: true },
+      { source: '/cumulative-vs-semester-gpa-calculator-guide', destination: '/semester-gpa-vs-cgpa', permanent: true },
+    { source: '/weighted-vs-unweighted-gpa-calculator-guide', destination: '/weighted-gpa-vs-unweighted-gpa', permanent: true },
+    
     ];
   },
 };
