@@ -1,14 +1,5 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "How to Calculate CGPA: Formula, Examples & Free CGPA Calculator (2026)",
-  description:
-    "Learn how to calculate CGPA with the official formula, step-by-step examples, GPA vs CGPA comparison, FAQs, and a free CGPA Calculator.",
-  alternates: {
-    canonical: "/how-to-calculate-cgpa",
-  },
-};
-
 export default function CalculateCGPA() {
   const toc = [
     { href: "#what-is-cgpa", label: "What Is CGPA?" },

@@ -1,19 +1,19 @@
 const stats = [
   {
-    number: "10K+",
-    label: "Calculations",
-  },
-  {
-    number: "99.9%",
-    label: "Accuracy",
+    number: "5+",
+    label: "Free Calculators",
   },
   {
     number: "100%",
-    label: "Free",
+    label: "Free, No Signup",
   },
   {
     number: "24/7",
     label: "Available",
+  },
+  {
+    number: "Instant",
+    label: "Accurate Results",
   },
 ];
 

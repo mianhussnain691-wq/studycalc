@@ -1,9 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
-title: "Final Grade Calculator: Target Exam Scores",
-  description:
-    "Master the final grade formula to determine the exact exam score required to pass or achieve your target course grade. Step-by-step math and strategic tips.",
+  alternates: { canonical: "https://www.studycalc.co/final-grade-calculator-guide" },
+  openGraph: {
+    title: "Final Grade Calculator: Target Exam Scores",
+    description: "The exact formula to find what score you need on your final exam to hit your target grade.",
+    url: "https://www.studycalc.co/final-grade-calculator-guide",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "final grade calculator guide",
     "how to calculate what I need on final exam",
@@ -14,9 +19,20 @@ title: "Final Grade Calculator: Target Exam Scores",
     "course grade recovery plan",
   ],
 };
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What if my syllabus uses points instead of percentages?", acceptedAnswer: { "@type": "Answer", text: "Divide your total earned points by total possible points to convert to a percentage, then apply the standard final grade formula." } },
+    { "@type": "Question", name: "Can a final exam lower my grade if I already have an A?", acceptedAnswer: { "@type": "Answer", text: "Yes. If the final carries real weight, such as 20-30%, scoring significantly lower on it will pull down your overall course average." } },
+    { "@type": "Question", name: "How do I ask my professor for extra credit if I'm close to a cutoff?", acceptedAnswer: { "@type": "Answer", text: "Approach them early, before finals week, present your calculation respectfully, and ask if supplementary assignments or retakes are available to bridge the gap." } },
+  ],
+};
 
 export default function FinalGradeCalculatorGuide() {
   return (
+    <main className="min-h-screen bg-slate-950 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <article className="mx-auto max-w-4xl px-6 py-12 text-slate-300">
       
       {/* Header Section */}
@@ -220,5 +236,6 @@ export default function FinalGradeCalculatorGuide() {
 
       </div>
     </article>
+    </main>
   );
 }

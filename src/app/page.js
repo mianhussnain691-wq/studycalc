@@ -5,6 +5,7 @@ import ToolCard from "@/components/ToolCard";
 import tools from "@/data/tools";
 import categories from "@/data/categories";
 import stats from "@/data/stats";
+import { articles } from "@/data/articles";
 import Link from "next/link";
 import { Search } from "lucide-react";
 
@@ -178,9 +179,10 @@ export default function Home() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {categories.map((category) => (
-            <div
+            <Link
               key={category.title}
-              className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition-all duration-300 hover:border-cyan-500 cursor-pointer"
+              href={category.href}
+              className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition-all duration-300 hover:border-cyan-500 block"
             >
               <h3 className="text-xl font-bold text-cyan-400">
                 {category.title}
@@ -188,8 +190,44 @@ export default function Home() {
               <p className="text-slate-400 mt-2">
                 {category.description}
               </p>
-            </div>
+            </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Popular Guides */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-4xl font-bold text-white mb-10">
+          Popular Guides
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {["letter-grade-to-percent-guide", "marks-to-grade-conversion", "pakistani-board-vs-us-gpa", "grade-scale-explained"]
+            .map((slug) => articles.find((a) => a.slug === slug))
+            .filter(Boolean)
+            .map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/${guide.slug}`}
+                className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition-all duration-300 hover:border-cyan-500 block"
+              >
+                <h3 className="text-lg font-bold text-white">
+                  {guide.title}
+                </h3>
+                <p className="text-slate-400 mt-2 text-sm">
+                  {guide.description}
+                </p>
+              </Link>
+            ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/guides"
+            className="inline-block rounded-xl border border-slate-700 px-6 py-3 font-semibold hover:border-cyan-400 hover:text-cyan-400 transition text-white"
+          >
+            View All Guides →
+          </Link>
         </div>
       </section>
 

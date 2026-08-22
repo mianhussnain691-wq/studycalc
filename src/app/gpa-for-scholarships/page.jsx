@@ -1,8 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "GPA for Scholarships: Requirements & Tips",
-  description: "Comprehensive guide on minimum GPA requirements for academic scholarships, merit-based financial aid, renewal thresholds, and strategies to protect your funding.",
+   alternates: { canonical: "https://www.studycalc.co/gpa-for-scholarships" },
+  openGraph: {
+    title: "GPA for Scholarships: Requirements & Tips",
+    description: "Minimum GPA requirements for merit scholarships, full-ride qualification, and renewal thresholds.",
+    url: "https://www.studycalc.co/gpa-for-scholarships",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "GPA for scholarships",
     "minimum GPA for merit scholarship",
@@ -13,8 +19,34 @@ export const metadata = {
   ],
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Can I get a full-ride scholarship with a 3.5 GPA?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes, but a 3.5 GPA usually needs to be balanced by exceptional standardized test scores, outstanding leadership achievements, or high course rigor such as multiple AP or IB classes." },
+    },
+    {
+      "@type": "Question",
+      name: "What happens if my GPA drops below 3.0 during my first college semester?",
+      acceptedAnswer: { "@type": "Answer", text: "If your scholarship requires a 3.0, dropping below it in semester one usually places you on academic financial probation, with one subsequent semester to raise your cumulative GPA back to the threshold." },
+    },
+    {
+      "@type": "Question",
+      name: "Are there scholarships available for students with a 2.5 GPA?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. Many need-based financial grants, community foundation awards, minority funding programs, and major-specific vocational grants accept applicants with GPAs between 2.50 and 2.99." },
+    },
+  ],
+};
+
 export default function GPAForScholarships() {
+  
+  
   return (
+    <main className="min-h-screen bg-slate-950 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <article className="mx-auto max-w-4xl px-6 py-12 text-slate-300">
       
       {/* Header Section */}
@@ -237,5 +269,6 @@ export default function GPAForScholarships() {
 
       </div>
     </article>
+    </main>
   );
 }

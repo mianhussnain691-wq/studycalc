@@ -1,8 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
-title: "High School vs College GPA: Key Differences",
-  description: "Learn how High School GPA differs from College GPA. Discover unweighted vs weighted 5.0 systems, credit hour impacts, and transcript evaluation rules.",
+  alternates: { canonical: "https://www.studycalc.co/high-school-vs-college-gpa" },
+  openGraph: {
+    title: "High School vs College GPA: Key Differences",
+    description: "How weighting, credit hours, and scale conventions differ between high school and college GPA.",
+    url: "https://www.studycalc.co/high-school-vs-college-gpa",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "high school vs college gpa",
     "difference between high school and college gpa",
@@ -12,9 +18,19 @@ title: "High School vs College GPA: Key Differences",
     "college academic standing gpa requirements",
   ],
 };
-
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Why don't colleges use 5.0 weighted GPAs?", acceptedAnswer: { "@type": "Answer", text: "Colleges use an unweighted 4.0 scale to standardize evaluations across applicants, regardless of how each high school weighted its own courses." } },
+    { "@type": "Question", name: "What is a good GPA in college compared to high school?", acceptedAnswer: { "@type": "Answer", text: "In high school, competitive students aim for 3.8-4.2+. In college, a 3.5+ is widely considered honor-level Dean's List performance." } },
+    { "@type": "Question", name: "Does a bad high school GPA affect my college GPA?", acceptedAnswer: { "@type": "Answer", text: "No. Your college GPA starts fresh at 0.00 on day one and is completely separate from your high school record, aside from any dual-enrollment credits that transfer in." } },
+  ],
+};
 export default function HighSchoolVsCollegeGPA() {
   return (
+    <main className="min-h-screen bg-slate-950 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <article className="mx-auto max-w-4xl px-6 py-12 text-slate-300">
       
       {/* Header Section */}
@@ -135,8 +151,8 @@ export default function HighSchoolVsCollegeGPA() {
             <Link href="/gpa-calculator" className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg text-sm transition">
               High School GPA Calculator 🚀
             </Link>
-            <Link href="/gpa-calculator" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
-              College GPA Calculator 📊
+                        <Link href="/how-to-calculate-cgpa" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
+              Calculate CGPA 📊
             </Link>
             <Link href="/grade-scale-explained" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg text-sm transition">
               Grading Scales Chart ⚖️
@@ -169,5 +185,6 @@ export default function HighSchoolVsCollegeGPA() {
 
       </div>
     </article>
+    </main>
   );
 }

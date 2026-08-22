@@ -3,6 +3,14 @@ import Link from "next/link";
 export const metadata = {
 title: "GPA Requirements: College Admissions & Graduate School",
   description: "Complete breakdown of GPA requirements for Ivy League, state universities, master's programs, medical schools, law schools, and corporate recruitment.",
+  alternates: { canonical: "https://www.studycalc.co/gpa-requirements" },
+  openGraph: {
+    title: "GPA Requirements: College Admissions & Graduate School",
+    description: "GPA thresholds for Ivy League, state universities, medical school, law school, and corporate recruitment.",
+    url: "https://www.studycalc.co/gpa-requirements",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "GPA requirements for college",
     "minimum GPA for university admission",
@@ -13,9 +21,32 @@ title: "GPA Requirements: College Admissions & Graduate School",
     "GPA benchmarks for job recruitment",
   ],
 };
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Can I get into college with a 2.5 GPA?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. While selective universities require higher scores, many public state universities, regional private colleges, and community colleges accept applicants with a 2.5 GPA or offer direct transfer pathways." },
+    },
+    {
+      "@type": "Question",
+      name: "Is Major GPA or Cumulative GPA more important for graduate school?",
+      acceptedAnswer: { "@type": "Answer", text: "Both matter, but Major GPA carries significant weight if your overall cumulative GPA was pulled down by unrelated general education subjects during freshman year." },
+    },
+    {
+      "@type": "Question",
+      name: "Do employers care about high school GPA after college?",
+      acceptedAnswer: { "@type": "Answer", text: "No. Once you enter university, your high school GPA becomes irrelevant to employers and professional institutions." },
+    },
+  ],
+};
 
 export default function GPARequirements() {
   return (
+    <main className="min-h-screen bg-slate-950 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <article className="mx-auto max-w-4xl px-6 py-12 text-slate-300">
       
       {/* Header Section */}
@@ -220,5 +251,6 @@ export default function GPARequirements() {
 
       </div>
     </article>
+    </main>
   );
 }

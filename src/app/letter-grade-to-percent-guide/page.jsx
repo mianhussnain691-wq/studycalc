@@ -3,6 +3,16 @@ import Link from "next/link";
 export const metadata = {
   title: "Letter Grade to Percentage Conversion Chart",
   description: "Comprehensive breakdown of converting letter grades (A+, A, B, C, D, F) to exact percentages and 4.0 GPA quality points. Features 10-point, 7-point, curved grading, and international standards.",
+  alternates: {
+    canonical: "https://www.studycalc.co/letter-grade-to-percent-guide",
+  },
+  openGraph: {
+    title: "Letter Grade to Percentage Conversion Chart",
+    description: "Exact percentage ranges for every letter grade, A+ through F, with a full conversion table.",
+    url: "https://www.studycalc.co/letter-grade-to-percent-guide",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "letter grade to percent chart",
     "convert letter grade to percentage",
@@ -18,9 +28,79 @@ export const metadata = {
   ],
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is an 89.5% score rounded up to an 'A' or an 'A-'?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most digital learning management systems such as Canvas and Blackboard automatically round scores to the nearest integer, making an 89.5% round up to a 90.0% (A- or A). However, individual course syllabus rounding policies ultimately supersede automated system defaults.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What minimum percentage is needed for a passing grade in college?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In most university undergraduate programs, a D- (60.0%) is technically considered passing to earn raw academic course credit. However, major-specific core courses usually require a C (73.0% or 2.0 GPA) or better to satisfy prerequisite progression rules.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does earning an A+ grant more GPA points than a standard A grade?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "At the majority of US colleges and high schools, both an A+ (97-100%) and an A (93-96%) yield the identical ceiling value of 4.00 quality points on an unweighted scale. A select group of universities awards 4.33 quality points for an A+.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do professors calculate weighted letter grades at the end of a semester?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Professors multiply each category's average score percentage by its designated weight factor, sum those product values together, and match the final percentage sum against the syllabus letter grade conversion key.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why does the same percentage yield different letter grades at different schools?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Because institutions choose between 10-point and 7-point scales, apply or omit plus/minus modifiers, and sometimes curve final grades relative to the class average, the exact same raw percentage can map to entirely different letters depending on where it was earned.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do weighted (Honors/AP) courses change how percentages convert to letters?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No, the percentage-to-letter cutoffs stay the same. What changes is the GPA quality-point value assigned to each letter, since many high schools add a bonus of 0.5 or 1.0 to the standard 4.0-scale value for Honors, AP, or IB courses, applied only after the percentage has already been converted to a letter grade.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can a failing percentage still earn a passing letter grade under a curve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Norm-referenced curving evaluates a student's raw score relative to the class distribution rather than against a fixed cutoff, so a raw score that would normally register as an F can be curved up to a C or higher if the entire class performed poorly on that assessment.",
+      },
+    },
+  ],
+};
+
+
 export default function LetterGradeToPercentGuide() {
   return (
-    <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12 text-slate-300">
+    <main className="min-h-screen bg-slate-950 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12 text-slate-300">
+
 
       {/* Header Section */}
       <header className="mb-12 text-center md:text-left border-b border-slate-800 pb-10">
@@ -260,19 +340,6 @@ export default function LetterGradeToPercentGuide() {
               <h3 className="font-bold text-yellow-400 text-lg">Method 2: Conservative Floor Threshold Conversion</h3>
               <p className="text-slate-400">
                 Assigns the minimum cutoff value of the letter bracket (e.g., an 'A' converts to 93.0%, a 'B' converts to 83.0%). Used primarily by strict graduate admissions boards to evaluate prerequisite credit compliance.
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-900/60 border border-slate-800 rounded-2xl space-y-3">
-              <h3 className="font-bold text-emerald-400 text-lg">Method 3: Quality Point Linear Interpolation</h3>
-              <p className="text-slate-400">
-                Utilizes the 4.0 GPA score to map linearly onto a 100-point scale using standard conversion offsets:
-              </p>
-              <div className="p-4 bg-slate-950 rounded-xl font-mono text-sm text-emerald-400 border border-slate-800">
-                Percentage = (GPA Quality Points × 10) + 60.0
-              </div>
-              <p className="text-xs text-slate-500">
-                Example: A 3.70 GPA yields (3.70 × 10) + 60 = 97.0% (Note: Scale varies based on institutional zero-point offsets).
               </p>
             </div>
           </div>
@@ -518,11 +585,11 @@ export default function LetterGradeToPercentGuide() {
             <Link href="/grade-calculator" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl text-base transition shadow-lg">
               Weighted Grade Calculator 📊
             </Link>
-            <Link href="/gpa-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
+                       <Link href="/gpa-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
               College GPA Calculator 🎓
             </Link>
-            <Link href="/gpa-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
-              High School GPA Tool 🎒
+            <Link href="/gpa-scale-explained" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
+              GPA Scale Comparison 🎒
             </Link>
           </div>
         </section>
@@ -586,6 +653,7 @@ export default function LetterGradeToPercentGuide() {
         </section>
 
       </div>
-    </article>
+          </article>
+    </main>
   );
 }
