@@ -1,7 +1,13 @@
 // src/app/guides/page.jsx
 import Link from "next/link";
 import { articles } from "@/data/articles";
-
+export const metadata = {
+  title: "All Study Guides | StudyCalc",
+  description: "Browse all GPA, CGPA, percentage, and grading guides on StudyCalc.",
+  alternates: {
+    canonical: "https://www.studycalc.co/guides",
+  },
+};
 export default function GuidesPage() {
   return (
     <div className="min-h-screen bg-[#070b19] text-slate-300 py-24 px-6 max-w-7xl mx-auto">
