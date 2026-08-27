@@ -39,6 +39,14 @@ const tools = [
     badgeColor: "bg-pink-500/20 text-pink-400",
     category: "School",
   },
+  {
+    title: "Pakistan CGPA to US GPA Converter",
+    description: "Convert your HEC CGPA or percentage to a US GPA equivalent.",
+    href: "/pakistan-cgpa-converter",
+    badge: "New",
+    badgeColor: "bg-blue-500/20 text-blue-400",
+    category: "University",
+  },
 ];
 
 export default tools;

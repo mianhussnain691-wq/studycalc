@@ -3,6 +3,16 @@ import Link from "next/link";
 export const metadata = {
   title: "Pakistani Board vs US GPA: Complete Conversion & WES Guide",
   description: "Master guide on converting Pakistani Matric and Intermediate (FSc/ICS) marks to the US 4.0 GPA scale. Learn WES evaluation, percentage formulas, and US admissions.",
+  alternates: {
+    canonical: "https://www.studycalc.co/pakistani-board-vs-us-gpa",
+  },
+  openGraph: {
+    title: "Pakistani Board vs US GPA: Complete Conversion & WES Guide",
+    description: "How Pakistani Matric and Intermediate marks map to the US 4.0 GPA scale, and how WES evaluation actually works.",
+    url: "https://www.studycalc.co/pakistani-board-vs-us-gpa",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "Pakistani Board vs US GPA",
     "Matric to GPA",
@@ -27,19 +37,19 @@ export default function PakistaniBoardVsUsGpaPage() {
     "author": {
       "@type": "Organization",
       "name": "StudyCalc",
-      "url": "https://studycalc.co"
+      "url": "https://www.studycalc.co"
     },
     "publisher": {
       "@type": "Organization",
       "name": "StudyCalc",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://studycalc.co/logo.png"
+        "url": "https://www.studycalc.co/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://studycalc.co/pakistani-board-vs-us-gpa"
+      "@id": "https://www.studycalc.co/pakistani-board-vs-us-gpa"
     },
     "datePublished": "2026-01-01",
     "dateModified": "2026-07-21"
@@ -53,57 +63,64 @@ export default function PakistaniBoardVsUsGpaPage() {
         "@type": "Question",
         "name": "How do I convert Pakistani Intermediate FSc marks to a US 4.0 GPA?",
         "acceptedAnswer": {
-          "@text": "Direct mathematical conversion is inaccurate. US universities and evaluation bodies like WES evaluate Pakistani intermediate marks subject-by-subject, mapping percentage tiers against North American credit hours and grade points."
+          "@type": "Answer",
+          "text": "Direct mathematical conversion is inaccurate. US universities and evaluation bodies like WES evaluate Pakistani intermediate marks subject-by-subject, mapping percentage tiers against North American credit hours and grade points."
         }
       },
       {
         "@type": "Question",
         "name": "What is considered a good percentage in Pakistani board exams?",
         "acceptedAnswer": {
-          "@text": "A score above 70% (First Division / A Grade) is considered strong in Pakistani boards, while 80%+ secures an A+ distinction, which roughly aligns with a competitive US GPA standing."
+          "@type": "Answer",
+          "text": "A score above 70% (First Division / A Grade) is considered strong in Pakistani boards, while 80%+ secures an A+ distinction, which roughly aligns with a competitive US GPA standing."
         }
       },
       {
         "@type": "Question",
         "name": "Do US universities require WES evaluation for Pakistani transcripts?",
-        "export const": true,
         "acceptedAnswer": {
-          "@text": "Most competitive US universities require official course-by-course credential evaluations through World Education Services (WES) or ECE to verify and convert Pakistani board and university transcripts."
+          "@type": "Answer",
+          "text": "Most competitive US universities require official course-by-course credential evaluations through World Education Services (WES) or ECE to verify and convert Pakistani board and university transcripts."
         }
       },
       {
         "@type": "Question",
         "name": "How is Matriculation grading structured in Pakistan?",
         "acceptedAnswer": {
-          "@text": "Matriculation (Grades 9 and 10) is evaluated out of total absolute marks (typically 1100), divided into letter grades ranging from A+ (80%+) down to D or Fail thresholds."
+          "@type": "Answer",
+          "text": "Matriculation (Grades 9 and 10) is evaluated out of total absolute marks (typically 1100), divided into letter grades ranging from A+ (80%+) down to D or Fail thresholds."
         }
       },
       {
         "@type": "Question",
         "name": "What is the passing mark percentage in Pakistani intermediate boards?",
         "acceptedAnswer": {
-          "@text": "The mandatory passing floor across most regional boards in Pakistan (such as FBISE and BISE Lahore) is 33% per subject."
+          "@type": "Answer",
+          "text": "The mandatory passing floor across most regional boards in Pakistan (such as FBISE and BISE Lahore) is 33% per subject."
         }
       },
       {
         "@type": "Question",
         "name": "Can I use a simple formula like (Percentage / 25) to find my US GPA?",
         "acceptedAnswer": {
-          "@text": "While some students use linear division formulas as rough estimates, they are inaccurate because US GPAs factor course credit weighting, honors courses, and institutional rigor."
+          "@type": "Answer",
+          "text": "While some students use linear division formulas as rough estimates, they are inaccurate because US GPAs factor course credit weighting, honors courses, and institutional rigor."
         }
       },
       {
         "@type": "Question",
         "name": "What GPA is required for US university scholarships from Pakistan?",
         "acceptedAnswer": {
-          "@text": "Competitive merit-based scholarships at US institutions typically look for an equivalent unweighted GPA of 3.5 to 4.0, corresponding to high first-division board percentages."
+          "@type": "Answer",
+          "text": "Competitive merit-based scholarships at US institutions typically look for an equivalent unweighted GPA of 3.5 to 4.0, corresponding to high first-division board percentages."
         }
       },
       {
         "@type": "Question",
         "name": "How do Pakistani university semester CGPAs translate to US scales?",
         "acceptedAnswer": {
-          "@text": "Pakistani universities using a 4.0 CGPA scale do not automatically equate to US 4.0 scales due to grading leniency or strictness differences; credential agencies analyze course syllabi and grading distribution curves."
+          "@type": "Answer",
+          "text": "Pakistani universities using a 4.0 CGPA scale do not automatically equate to US 4.0 scales due to grading leniency or strictness differences; credential agencies analyze course syllabi and grading distribution curves."
         }
       }
     ]
@@ -240,6 +257,9 @@ export default function PakistaniBoardVsUsGpaPage() {
           </p>
           <p className="text-slate-300">
             A 3.5 CGPA from a highly rigorous engineering institution in Pakistan carries different weight than a 3.5 CGPA from a less selective college. US admissions committees account for institutional accreditation, grade inflation, and course rigor when reviewing university transcripts.
+          </p>
+          <p className="text-slate-300">
+            If your university already reports a CGPA rather than a percentage, our <Link href="/pakistan-cgpa-converter" className="text-emerald-400 hover:underline">Pakistan CGPA to US GPA converter</Link> applies the official HEC formula (CGPA × 25) to give you a quick percentage and approximate US GPA reference before you pursue a formal WES evaluation.
           </p>
         </section>
 
@@ -526,6 +546,12 @@ export default function PakistaniBoardVsUsGpaPage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-4 font-medium text-sm">
             <Link
+              href="/pakistan-cgpa-converter"
+              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-blue-500/50 hover:bg-slate-900 text-blue-400 transition block"
+            >
+              ➔ Pakistan CGPA to US GPA Converter
+            </Link>
+            <Link
               href="/gpa-calculator"
               className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/50 hover:bg-slate-900 text-emerald-400 transition block"
             >
@@ -562,7 +588,7 @@ export default function PakistaniBoardVsUsGpaPage() {
           </p>
           <div className="pt-4">
             <Link
-              href="/gpa-calculator"
+              href="/pakistan-cgpa-converter"
               className="inline-block rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base px-8 py-4 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
             >
               Launch Calculators ➔
