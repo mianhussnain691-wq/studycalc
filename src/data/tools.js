@@ -28,7 +28,7 @@ const tools = [
     description: "Convert marks into percentage easily.",
     href: "/percentage-calculator",
     badge: "Useful",
-    badgeColor: "bg-purple-500/20 text-purple-400",
+    badgeColor: "bg-teal-500/20 text-teal-400",
     category: "School",
   },
   {

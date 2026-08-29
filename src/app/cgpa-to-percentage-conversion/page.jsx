@@ -1,8 +1,18 @@
 import Link from "next/link";
 
 export const metadata = {
-title: "How to Calculate GPA from Percentage: 2026 Guide",
+  title: "How to Calculate GPA from Percentage: 2026 Guide",
   description: "Learn how to calculate GPA from percentage with our complete 2026 step-by-step guide. Master percentage to GPA conversions across 4.0, 5.0, and 10.0 scale systems for university admissions.",
+  alternates: {
+    canonical: "https://www.studycalc.co/how-to-calculate-gpa-from-percentage",
+  },
+  openGraph: {
+    title: "How to Calculate GPA from Percentage: 2026 Guide",
+    description: "The exact formulas to convert percentage marks into semester and cumulative GPA, with a full worked example.",
+    url: "https://www.studycalc.co/how-to-calculate-gpa-from-percentage",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "how to calculate GPA from percentage",
     "percentage to GPA",
@@ -27,20 +37,91 @@ export default function HowToCalculateGpaFromPercentage() {
     "author": {
       "@type": "Organization",
       "name": "StudyCalc",
-      "url": "https://studycalc.co"
+      "url": "https://www.studycalc.co"
     },
     "publisher": {
       "@type": "Organization",
       "name": "StudyCalc",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://studycalc.co/logo.png"
+        "url": "https://www.studycalc.co/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://studycalc.co/how-to-calculate-gpa-from-percentage"
+      "@id": "https://www.studycalc.co/how-to-calculate-gpa-from-percentage"
     }
+  };
+
+  const faqSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I convert my percentage to a 4.0 GPA scale?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Map each course score to its letter grade equivalent (e.g., 90-100% = 4.0, 80-89% = 3.0, 70-79% = 2.0). Multiply each grade point by the course credit hours, sum total quality points, and divide by total attempted credits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is an 80% score considered a 3.0 or 4.0 GPA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On standard North American grading scales, an 80% mark translates to a 3.0 GPA (Grade B). Scores of 90% or higher are required to earn a 4.0 GPA (Grade A)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I calculate GPA by simply dividing percentage by 25?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, dividing percentage by 25 is inaccurate because academic grade conversions use letter grade bands or non-linear scaling curves. Credential evaluation services like WES reject simple division methods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good GPA on a 4.0 scale for university admissions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A GPA of 3.0 or higher (roughly 80-83%) is generally competitive for standard undergraduate and graduate admissions. Top-tier institutions and competitive programs often require a GPA of 3.5 to 3.7+ (87-92%+)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does WES calculate GPA from percentages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WES evaluates each individual subject on your official transcript using country-specific grading standards, converts each grade to a 4.0 scale equivalent, and then computes a credit-weighted cumulative GPA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Semester GPA (SGPA) and Cumulative GPA (CGPA)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SGPA measures academic performance for a single academic term, whereas CGPA represents the accumulated weighted grade average across all semesters completed throughout your entire degree program."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert a 10.0 scale CGPA to percentage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In many Indian universities and CBSE frameworks, multiplying your 10.0 CGPA by 9.5 yields your approximate percentage. Always check your institution's official conversion guideline on the back of your transcript."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a failed course affect cumulative GPA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, a failing grade earns 0.0 quality points while the credit hours remain in your total attempted credits, significantly pulling down your cumulative GPA until retaken or forgiven according to institutional policy."
+        }
+      }
+    ]
   };
 
   return (
@@ -48,6 +129,10 @@ export default function HowToCalculateGpaFromPercentage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
       />
 
       {/* Hero Section */}
@@ -221,9 +306,7 @@ export default function HowToCalculateGpaFromPercentage() {
           </p>
         </section>
 
-      </div>
-    
-{/* Section 6: Official Conversion Formulas & Algorithms */}
+        {/* Section 6: Official Conversion Formulas & Algorithms */}
         <section className="space-y-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-white border-b border-slate-800 pb-4">
             6. Mathematical Formulas for Percentage to GPA Conversion
@@ -278,7 +361,7 @@ export default function HowToCalculateGpaFromPercentage() {
                   <th className="p-4 border-r border-slate-800 text-emerald-400">Letter Grade</th>
                   <th className="p-4 border-r border-slate-800 text-cyan-400">US 4.0 Scale GPA</th>
                   <th className="p-4 border-r border-slate-800 text-yellow-400">10.0 Scale GPA Equivalent</th>
-                  <th className="p-4 text-purple-400">Performance Classification</th>
+                  <th className="p-4 text-emerald-300">Performance Classification</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-800/60 font-mono text-slate-300">
@@ -287,77 +370,77 @@ export default function HowToCalculateGpaFromPercentage() {
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">A / A+</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">4.00</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">9.50 – 10.00</td>
-                  <td className="p-4 text-purple-400 font-bold">Outstanding / Distinction</td>
+                  <td className="p-4 text-emerald-300 font-bold">Outstanding / Distinction</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">90% – 92%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">A-</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">3.70</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">9.00 – 9.49</td>
-                  <td className="p-4 text-purple-400 font-bold">Excellent</td>
+                  <td className="p-4 text-emerald-300 font-bold">Excellent</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">87% – 89%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">B+</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">3.30</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">8.50 – 8.99</td>
-                  <td className="p-4 text-purple-400 font-bold">Very Good</td>
+                  <td className="p-4 text-emerald-300 font-bold">Very Good</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">83% – 86%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">B</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">3.00</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">8.00 – 8.49</td>
-                  <td className="p-4 text-purple-400 font-bold">Good / Above Average</td>
+                  <td className="p-4 text-emerald-300 font-bold">Good / Above Average</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">80% – 82%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">B-</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">2.70</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">7.50 – 7.99</td>
-                  <td className="p-4 text-purple-400 font-bold">Above Average</td>
+                  <td className="p-4 text-emerald-300 font-bold">Above Average</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">77% – 79%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">C+</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">2.30</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">7.00 – 7.49</td>
-                  <td className="p-4 text-purple-400 font-bold">Satisfactory</td>
+                  <td className="p-4 text-emerald-300 font-bold">Satisfactory</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">73% – 76%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">C</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">2.00</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">6.50 – 6.99</td>
-                  <td className="p-4 text-purple-400 font-bold">Average</td>
+                  <td className="p-4 text-emerald-300 font-bold">Average</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">70% – 72%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">C-</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">1.70</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">6.00 – 6.49</td>
-                  <td className="p-4 text-purple-400 font-bold">Below Average</td>
+                  <td className="p-4 text-emerald-300 font-bold">Below Average</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">65% – 69%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">D+</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">1.30</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">5.50 – 5.99</td>
-                  <td className="p-4 text-purple-400 font-bold">Marginal Pass</td>
+                  <td className="p-4 text-emerald-300 font-bold">Marginal Pass</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">60% – 64%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">D</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">1.00</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">5.00 – 5.49</td>
-                  <td className="p-4 text-purple-400 font-bold">Minimum Pass</td>
+                  <td className="p-4 text-emerald-300 font-bold">Minimum Pass</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">Below 60%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">F</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">0.00</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">&lt; 5.00</td>
-                  <td className="p-4 text-purple-400 font-bold">Fail / No Credit</td>
+                  <td className="p-4 text-emerald-300 font-bold">Fail / No Credit</td>
                 </tr>
               </tbody>
             </table>
@@ -384,7 +467,7 @@ export default function HowToCalculateGpaFromPercentage() {
                     <th className="p-3 text-emerald-400">Raw Percentage</th>
                     <th className="p-3 text-cyan-400">Mapped Letter Grade</th>
                     <th className="p-3 text-yellow-400">Course Credits</th>
-                    <th className="p-3 text-purple-400">US 4.0 Grade Points</th>
+                    <th className="p-3 text-emerald-300">US 4.0 Grade Points</th>
                     <th className="p-3 text-emerald-300">Earned Quality Points</th>
                   </tr>
                 </thead>
@@ -394,7 +477,7 @@ export default function HowToCalculateGpaFromPercentage() {
                     <td className="p-3 text-emerald-400">92%</td>
                     <td className="p-3 text-cyan-400">A-</td>
                     <td className="p-3 text-yellow-400">4.0</td>
-                    <td className="p-3 text-purple-400">3.70</td>
+                    <td className="p-3 text-emerald-300">3.70</td>
                     <td className="p-3 text-emerald-300 font-bold">14.80</td>
                   </tr>
                   <tr>
@@ -402,7 +485,7 @@ export default function HowToCalculateGpaFromPercentage() {
                     <td className="p-3 text-emerald-400">85%</td>
                     <td className="p-3 text-cyan-400">B</td>
                     <td className="p-3 text-yellow-400">4.0</td>
-                    <td className="p-3 text-purple-400">3.00</td>
+                    <td className="p-3 text-emerald-300">3.00</td>
                     <td className="p-3 text-emerald-300 font-bold">12.00</td>
                   </tr>
                   <tr>
@@ -410,7 +493,7 @@ export default function HowToCalculateGpaFromPercentage() {
                     <td className="p-3 text-emerald-400">88%</td>
                     <td className="p-3 text-cyan-400">B+</td>
                     <td className="p-3 text-yellow-400">2.0</td>
-                    <td className="p-3 text-purple-400">3.30</td>
+                    <td className="p-3 text-emerald-300">3.30</td>
                     <td className="p-3 text-emerald-300 font-bold">6.60</td>
                   </tr>
                   <tr>
@@ -418,7 +501,7 @@ export default function HowToCalculateGpaFromPercentage() {
                     <td className="p-3 text-emerald-400">78%</td>
                     <td className="p-3 text-cyan-400">C+</td>
                     <td className="p-3 text-yellow-400">3.0</td>
-                    <td className="p-3 text-purple-400">2.30</td>
+                    <td className="p-3 text-emerald-300">2.30</td>
                     <td className="p-3 text-emerald-300 font-bold">6.90</td>
                   </tr>
                 </tbody>
@@ -504,140 +587,7 @@ export default function HowToCalculateGpaFromPercentage() {
             </div>
           </div>
         </section>
-{/* Section 11: Frequently Asked Questions */}
-        <section className="space-y-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white border-b border-slate-800 pb-4">
-            11. Frequently Asked Questions (FAQs)
-          </h2>
 
-          <div className="space-y-6">
-            <div className="p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
-              <h3 className="text-lg font-bold text-emerald-400">
-                How do I convert my percentage to a 4.0 GPA scale?
-              </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                To convert percentage to a 4.0 GPA scale accurately, map each course score to its letter grade equivalent (e.g., 90–100% = 4.0, 80–89% = 3.0, 70–79% = 2.0). Multiply each grade point by the course credit hours, sum total quality points, and divide by total attempted credits.
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
-              <h3 className="text-lg font-bold text-emerald-400">
-                Is an 80% score considered a 3.0 or 4.0 GPA?
-              </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                On standard North American grading scales, an 80% mark translates to a <strong>3.0 GPA</strong> (Grade B). Scores of 90% or higher are required to earn a 4.0 GPA (Grade A).
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
-              <h3 className="text-lg font-bold text-emerald-400">
-                Can I calculate GPA by simply dividing percentage by 25?
-              </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                No, dividing percentage by 25 is inaccurate because academic grade conversions use letter grade bands or non-linear scaling curves. Credential evaluation services like WES reject simple division methods.
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
-              <h3 className="text-lg font-bold text-emerald-400">
-                What is a good GPA on a 4.0 scale for university admissions?
-              </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                A GPA of <strong>3.0 or higher</strong> (roughly 80–83%) is generally competitive for standard undergraduate and graduate admissions. Top-tier institutions and competitive programs often require a GPA of 3.5 to 3.7+ (87–92%+).
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
-              <h3 className="text-lg font-bold text-emerald-400">
-                How does WES (World Education Services) calculate GPA from percentages?
-              </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                WES evaluates each individual subject on your official transcript using country-specific grading standards, converts each grade to a 4.0 scale equivalent, and then computes a credit-weighted cumulative GPA.
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
-              <h3 className="text-lg font-bold text-emerald-400">
-                What is the difference between Semester GPA (SGPA) and Cumulative GPA (CGPA)?
-              </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                SGPA measures academic performance for a single academic term, whereas CGPA represents the accumulated weighted grade average across all semesters completed throughout your entire degree program.
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
-              <h3 className="text-lg font-bold text-emerald-400">
-                How do I convert a 10.0 scale CGPA to percentage?
-              </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                In many Indian universities and CBSE frameworks, multiplying your 10.0 CGPA by 9.5 yields your approximate percentage (e.g., 8.0 CGPA × 9.5 = 76%). Always check your institution's official conversion guideline on the back of your transcript.
-              </p>
-            </div>
-
-            <div className="p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
-              <h3 className="text-lg font-bold text-emerald-400">
-                Does a failed course (Grade F) affect cumulative GPA?
-              </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Yes, a failing grade earns 0.0 quality points while the credit hours remain in your total attempted credits, significantly pulling down your cumulative GPA until retaken or forgiven according to institutional policy.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 12: Internal Links & Related Calculators */}
-        <section className="p-8 rounded-3xl border border-slate-800 bg-slate-950 space-y-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-white">
-            Related Academic Tools & Calculators
-          </h2>
-          <p className="text-slate-400 text-sm sm:text-base">
-            Explore our suite of automated academic tools to streamline your course planning and academic grade tracking:
-          </p>
-          <div className="grid sm:grid-cols-2 gap-4 font-medium text-sm">
-            <Link
-              href="/gpa-calculator"
-              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/50 hover:bg-slate-900 text-emerald-400 transition block"
-            >
-              ➔ Online GPA Calculator
-            </Link>
-            <Link
-              href="/cgpa-to-percentage-conversion"
-              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/50 hover:bg-slate-900 text-cyan-400 transition block"
-            >
-              ➔ CGPA to Percentage Converter
-            </Link>
-            <Link
-              href="/gpa-calculator"
-              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-yellow-500/50 hover:bg-slate-900 text-yellow-400 transition block"
-            >
-              ➔ High School Weighted GPA Calculator
-            </Link>
-            <Link
-              href="/cgpa-calculator"
-              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-slate-900 text-purple-400 transition block"
-            >
-              ➔ Cumulative GPA Calculator
-            </Link>
-          </div>
-        </section>
-
-        {/* Section 13: Conclusion & Call to Action */}
-        <section className="rounded-3xl border border-emerald-800/40 bg-gradient-to-b from-slate-900 via-slate-900/90 to-emerald-950/20 p-8 sm:p-12 text-center space-y-6 shadow-2xl">
-          <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
-            Calculate Your GPA Instantly with StudyCalc
-          </h2>
-          <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Manual GPA conversions can be tedious and prone to calculation errors. Use our free, automated GPA calculator to convert percentage marks into precise 4.0 or 10.0 scale metrics with zero hassle.
-          </p>
-          <div className="pt-4">
-            <Link
-              href="/gpa-calculator"
-              className="inline-block rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base px-8 py-4 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
-            >
-              Launch Automated GPA Calculator ➔
-            </Link>
-          </div>
-        </section>
         {/* Section 11: Frequently Asked Questions */}
         <section className="space-y-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-white border-b border-slate-800 pb-4">
@@ -741,14 +691,14 @@ export default function HowToCalculateGpaFromPercentage() {
               ➔ CGPA to Percentage Converter
             </Link>
             <Link
-              href="/gpa-calculator"
+              href="/weighted-gpa-vs-unweighted-gpa"
               className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-yellow-500/50 hover:bg-slate-900 text-yellow-400 transition block"
             >
-              ➔ High School Weighted GPA Calculator
+              ➔ High School Weighted GPA Guide
             </Link>
             <Link
               href="/cgpa-calculator"
-              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-slate-900 text-purple-400 transition block"
+              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/50 hover:bg-slate-900 text-emerald-400 transition block"
             >
               ➔ Cumulative GPA Calculator
             </Link>
@@ -772,6 +722,8 @@ export default function HowToCalculateGpaFromPercentage() {
             </Link>
           </div>
         </section>
+
+      </div>
     </article>
   );
 }

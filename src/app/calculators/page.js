@@ -5,6 +5,16 @@ import tools from "@/data/tools";
 export const metadata = {
   title: "All Calculators | StudyCalc",
   description: "Browse all free calculators available on StudyCalc.",
+  alternates: {
+    canonical: "https://www.studycalc.co/calculators",
+  },
+  openGraph: {
+    title: "All Calculators | StudyCalc",
+    description: "Browse all free academic calculators available on StudyCalc.",
+    url: "https://www.studycalc.co/calculators",
+    siteName: "StudyCalc",
+    type: "website",
+  },
 };
 
 export default function CalculatorsPage() {

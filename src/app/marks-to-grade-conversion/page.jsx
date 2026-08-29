@@ -1,8 +1,18 @@
 import Link from "next/link";
 
 export const metadata = {
-title: "Marks to Grade Conversion: US, UK, Pakistan & India",
+  title: "Marks to Grade Conversion: US, UK, Pakistan & India",
   description: "Exhaustive master guide on marks to grade conversion across US, UK, Pakistan, and India. Compare letter grades, percentage metrics, CGPA scales, and WES evaluation workflows.",
+  alternates: {
+    canonical: "https://www.studycalc.co/marks-to-grade-conversion",
+  },
+  openGraph: {
+    title: "Marks to Grade Conversion: US, UK, Pakistan & India",
+    description: "How raw marks map to letter grades, GPA, and degree classifications across US, UK, Pakistan, and India.",
+    url: "https://www.studycalc.co/marks-to-grade-conversion",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "marks to grade conversion",
     "grade conversion chart",
@@ -27,19 +37,19 @@ export default function MarksToGradeConversionPage() {
     "author": {
       "@type": "Organization",
       "name": "StudyCalc",
-      "url": "https://studycalc.co"
+      "url": "https://www.studycalc.co"
     },
     "publisher": {
       "@type": "Organization",
       "name": "StudyCalc",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://studycalc.co/logo.png"
+        "url": "https://www.studycalc.co/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://studycalc.co/marks-to-grade-conversion"
+      "@id": "https://www.studycalc.co/marks-to-grade-conversion"
     },
     "datePublished": "2026-01-01",
     "dateModified": "2026-07-21"
@@ -53,56 +63,64 @@ export default function MarksToGradeConversionPage() {
         "@type": "Question",
         "name": "What is marks to grade conversion?",
         "acceptedAnswer": {
-          "@text": "Marks to grade conversion is the mathematical and standardized process of translating absolute raw scores or percentage marks (e.g., 85 out of 100) into qualitative letter grades (A, B, C) or grade point averages (GPA)."
+          "@type": "Answer",
+          "text": "Marks to grade conversion is the mathematical and standardized process of translating absolute raw scores or percentage marks (e.g., 85 out of 100) into qualitative letter grades (A, B, C) or grade point averages (GPA)."
         }
       },
       {
         "@type": "Question",
         "name": "How does the US grading system differ from Pakistan and India?",
         "acceptedAnswer": {
-          "@text": "The US grading system relies on continuous assessment, letter grades (A–F), and a 4.0 GPA scale. Pakistan and India historically rely on summative board exams, absolute raw marks out of total aggregates, and percentage or 10-point CGPA systems."
+          "@type": "Answer",
+          "text": "The US grading system relies on continuous assessment, letter grades (A–F), and a 4.0 GPA scale. Pakistan and India historically rely on summative board exams, absolute raw marks out of total aggregates, and percentage or 10-point CGPA systems."
         }
       },
       {
         "@type": "Question",
         "name": "How do UK universities classify degree grades?",
         "acceptedAnswer": {
-          "@text": "UK universities use honours classifications based on final percentage bands: First-Class (70%+), Upper Second-Class or 2:1 (60–69%), Lower Second-Class or 2:2 (50–59%), and Third-Class (40–49%)."
+          "@type": "Answer",
+          "text": "UK universities use honours classifications based on final percentage bands: First-Class (70%+), Upper Second-Class or 2:1 (60–69%), Lower Second-Class or 2:2 (50–59%), and Third-Class (40–49%)."
         }
       },
       {
         "@type": "Question",
         "name": "Can I convert Pakistani Intermediate marks directly to a US GPA?",
         "acceptedAnswer": {
-          "@text": "Direct mathematical division is inaccurate. International credential evaluation agencies like WES evaluate Pakistani board marks subject-by-subject against North American course credit equivalents."
+          "@type": "Answer",
+          "text": "Direct mathematical division is inaccurate. International credential evaluation agencies like WES evaluate Pakistani board marks subject-by-subject against North American course credit equivalents."
         }
       },
       {
         "@type": "Question",
         "name": "Why do schools use grades instead of raw marks?",
         "acceptedAnswer": {
-          "@text": "Grades normalize minor variations in exam difficulty between different teachers or institutions, grouping performance into standardized performance tiers to reduce extreme competitiveness."
+          "@type": "Answer",
+          "text": "Grades normalize minor variations in exam difficulty between different teachers or institutions, grouping performance into standardized performance tiers to reduce extreme competitiveness."
         }
       },
       {
         "@type": "Question",
         "name": "What is the difference between a mark, a percentage, and a grade?",
         "acceptedAnswer": {
-          "@text": "A mark is the raw score earned on an assignment (e.g., 42/50). A percentage normalizes that mark out of 100 (84%). A grade is a categorical tier or letter assigned to that performance bracket (A)."
+          "@type": "Answer",
+          "text": "A mark is the raw score earned on an assignment (e.g., 42/50). A percentage normalizes that mark out of 100 (84%). A grade is a categorical tier or letter assigned to that performance bracket (A)."
         }
       },
       {
         "@type": "Question",
         "name": "How are grade boundaries determined?",
         "acceptedAnswer": {
-          "@text": "Grade boundaries are statistical thresholds set by educational boards or instructors based on candidate cohort performance curves, historical score distributions, and minimum competency criteria."
+          "@type": "Answer",
+          "text": "Grade boundaries are statistical thresholds set by educational boards or instructors based on candidate cohort performance curves, historical score distributions, and minimum competency criteria."
         }
       },
       {
         "@type": "Question",
         "name": "How does CGPA relate to percentage scales?",
         "acceptedAnswer": {
-          "@text": "On a 10-point CGPA scale, conversion formulas vary by institution. For example, CBSE multiplies CGPA by 9.5, while technical universities like VTU use [(CGPA - 0.75) × 10]."
+          "@type": "Answer",
+          "text": "On a 10-point CGPA scale, conversion formulas vary by institution. For example, CBSE multiplies CGPA by 9.5, while technical universities like VTU use [(CGPA - 0.75) × 10]."
         }
       }
     ]
@@ -377,7 +395,7 @@ export default function MarksToGradeConversionPage() {
                   <th className="p-4 border-r border-slate-800 text-emerald-400">US Letter Grade</th>
                   <th className="p-4 border-r border-slate-800 text-cyan-400">US 4.0 GPA</th>
                   <th className="p-4 border-r border-slate-800 text-yellow-400">UK Classification</th>
-                  <th className="p-4 text-purple-400">South Asian Tier</th>
+                  <th className="p-4 text-emerald-300">South Asian Tier</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-800/60 font-mono text-slate-300">
@@ -386,46 +404,49 @@ export default function MarksToGradeConversionPage() {
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">A / A+</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">3.8 – 4.0</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">First-Class (1st)</td>
-                  <td className="p-4 text-purple-400 font-bold">A+ / Distinction</td>
+                  <td className="p-4 text-emerald-300 font-bold">A+ / Distinction</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">80% – 89%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">A- / B+</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">3.3 – 3.7</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">First-Class (1st)</td>
-                  <td className="p-4 text-purple-400 font-bold">A Grade</td>
+                  <td className="p-4 text-emerald-300 font-bold">A Grade</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">70% – 79%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">B / B-</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">2.7 – 3.2</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">Upper Second (2:1)</td>
-                  <td className="p-4 text-purple-400 font-bold">B Grade</td>
+                  <td className="p-4 text-emerald-300 font-bold">B Grade</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">60% – 69%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">C+ / C</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">2.0 – 2.6</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">Lower Second (2:2)</td>
-                  <td className="p-4 text-purple-400 font-bold">C Grade (First Div)</td>
+                  <td className="p-4 text-emerald-300 font-bold">C Grade (First Div)</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
-                  <td className="p-4 font-bold text-white border-r border-slate-800">50% – 59%</td>
+                  <td className="p-4 font-bold text-white border-r border-slate-800">60% – 62%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">C- / D</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">1.0 – 1.9</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">Third-Class (3rd)</td>
-                  <td className="p-4 text-purple-400 font-bold">Second Division</td>
+                  <td className="p-4 text-emerald-300 font-bold">Second Division</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
-                  <td className="p-4 font-bold text-white border-r border-slate-800">Below 50%</td>
+                  <td className="p-4 font-bold text-white border-r border-slate-800">Below 60%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">F</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">0.0</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">Fail</td>
-                  <td className="p-4 text-purple-400 font-bold">Fail / Pass Threshold</td>
+                  <td className="p-4 text-emerald-300 font-bold">Fail / Pass Threshold</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p className="text-xs text-slate-500 mt-3">
+            Note: This matrix uses a 60% pass floor for consistency with the US letter-grade table above (Section 4). UK and South Asian institutions often set their own separate pass thresholds, so always confirm against your specific board or university's published scale.
+          </p>
         </section>
 
         {/* Section 10 */}
@@ -626,7 +647,7 @@ export default function MarksToGradeConversionPage() {
             </Link>
             <Link
               href="/percentage-calculator"
-              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-slate-900 text-purple-400 transition block"
+              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/50 hover:bg-slate-900 text-emerald-400 transition block"
             >
               ➔ Marks Percentage Calculator
             </Link>

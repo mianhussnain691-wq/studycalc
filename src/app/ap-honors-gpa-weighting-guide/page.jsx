@@ -1,8 +1,18 @@
 import Link from "next/link";
 
 export const metadata = {
-title: "Weighted vs. Unweighted GPA: AP, IB & Honors Guide",
+  title: "Weighted vs. Unweighted GPA: AP, IB & Honors Guide",
   description: "Exhaustive breakdown on how high schools calculate weighted vs. unweighted GPA. Complete breakdown of AP (5.0), Honors (4.5), IB (5.0), Dual Enrollment, Texas 6.0 scales, UC Weighted Capped algorithms, and college admissions recalculation methods.",
+  alternates: {
+    canonical: "https://www.studycalc.co/ap-honors-gpa-weighting-guide",
+  },
+  openGraph: {
+    title: "Weighted vs. Unweighted GPA: AP, IB & Honors Guide",
+    description: "How AP (5.0), Honors (4.5), IB, Dual Enrollment, and regional scales like Texas 6.0 affect your weighted GPA.",
+    url: "https://www.studycalc.co/ap-honors-gpa-weighting-guide",
+    siteName: "StudyCalc",
+    type: "article",
+  },
   keywords: [
     "weighted vs unweighted gpa",
     "how to calculate weighted gpa",
@@ -27,19 +37,19 @@ export default function APHonorsGpaWeightingGuide() {
     "author": {
       "@type": "Organization",
       "name": "StudyCalc",
-      "url": "https://studycalc.co"
+      "url": "https://www.studycalc.co"
     },
     "publisher": {
       "@type": "Organization",
       "name": "StudyCalc",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://studycalc.co/logo.png"
+        "url": "https://www.studycalc.co/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://studycalc.co/ap-honors-gpa-weighting-guide"
+      "@id": "https://www.studycalc.co/ap-honors-gpa-weighting-guide"
     }
   };
 
@@ -243,6 +253,13 @@ export default function APHonorsGpaWeightingGuide() {
                   <td className="p-4 text-emerald-400 font-bold">1.00 (No Bonus)</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
+                  <td className="p-4 font-bold text-orange-400 border-r border-slate-800">D- (60–62%)</td>
+                  <td className="p-4 border-r border-slate-800">60.0% – 62.9%</td>
+                  <td className="p-4 border-r border-slate-800 text-slate-400 font-bold">0.70</td>
+                  <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">0.70 (No Bonus)</td>
+                  <td className="p-4 text-emerald-400 font-bold">0.70 (No Bonus)</td>
+                </tr>
+                <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-red-500 border-r border-slate-800">F (Below 60%)</td>
                   <td className="p-4 border-r border-slate-800">0.0% – 59.9%</td>
                   <td className="p-4 border-r border-slate-800 text-slate-400 font-bold">0.00</td>
@@ -310,7 +327,7 @@ export default function APHonorsGpaWeightingGuide() {
             </div>
 
             <div className="p-8 bg-slate-950/90 border border-slate-800 rounded-2xl space-y-4 shadow-xl">
-              <h3 className="font-bold text-purple-400 text-xl border-b border-slate-800 pb-2">
+              <h3 className="font-bold text-emerald-400 text-xl border-b border-slate-800 pb-2">
                 4. International Baccalaureate (IB) Diploma
               </h3>
               <p className="text-sm text-slate-400 leading-relaxed">
@@ -543,8 +560,8 @@ export default function APHonorsGpaWeightingGuide() {
             <Link href="/gpa-calculator" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl text-base transition shadow-lg">
               High School Weighted GPA Tool 🎒
             </Link>
-            <Link href="/gpa-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
-              College GPA Calculator 🎓
+            <Link href="/how-to-calculate-cgpa" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
+              College CGPA Calculator 🎓
             </Link>
             <Link href="/grade-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
               Weighted Grade Calculator 📊
