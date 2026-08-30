@@ -1,19 +1,5 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "GPA Calculator - Calculate Your GPA Instantly (Free & Accurate)",
-  description:
-    "Use our free GPA calculator to find your grade point average in seconds. Learn the GPA formula, see a worked example, and check your grade scale.",
-  alternates: {
-    canonical: "/gpa-calculator",
-  },
-  openGraph: {
-    title: "GPA Calculator - Calculate Your GPA Instantly",
-    description:
-      "Free online GPA calculator with step-by-step formula, grade scale chart, and worked examples. No sign-up needed.",
-  },
-};
-
 export default function GPACalculatorGuide() {
   const toc = [
     { href: "#what-is-gpa-calculator", label: "What Is a GPA Calculator?" },
@@ -37,8 +23,8 @@ export default function GPACalculatorGuide() {
     { letter: "C+", percent: "77–79%", points: "2.30" },
     { letter: "C", percent: "73–76%", points: "2.00" },
     { letter: "C-", percent: "70–72%", points: "1.70" },
-    { letter: "D", percent: "65–69%", points: "1.00" },
-    { letter: "F", percent: "Below 65%", points: "0.00" },
+    { letter: "D", percent: "60–69%", points: "1.00" },
+    { letter: "F", percent: "Below 60%", points: "0.00" },
   ];
 
   const exampleCourses = [
@@ -157,16 +143,20 @@ export default function GPACalculatorGuide() {
     headline: "GPA Calculator - Calculate Your GPA Instantly",
     description:
       "Free GPA calculator with formula explanation, worked example, grade scale chart, and FAQs.",
-    author: { "@type": "Organization", name: "StudyCalc" },
+    author: { "@type": "Organization", name: "StudyCalc", url: "https://www.studycalc.co" },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://www.studycalc.co/gpa-calculator",
+    },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://studycalc.co" },
-      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://studycalc.co/calculators" },
-      { "@type": "ListItem", position: 3, name: "GPA Calculator", item: "https://studycalc.co/gpa-calculator" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://www.studycalc.co/calculators" },
+      { "@type": "ListItem", position: 3, name: "GPA Calculator", item: "https://www.studycalc.co/gpa-calculator" },
     ],
   };
 
@@ -176,7 +166,6 @@ export default function GPACalculatorGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* Hero Heading */}
       <div className="border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400 border border-cyan-500/20 mb-4">
           🎓 GPA Calculator Guide
@@ -191,7 +180,6 @@ export default function GPACalculatorGuide() {
         </p>
       </div>
 
-      {/* TOC */}
       <nav className="mt-8 rounded-xl border border-slate-800 bg-slate-950/40 p-5">
         <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400 mb-3">On This Page</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm">
@@ -205,7 +193,6 @@ export default function GPACalculatorGuide() {
         </ul>
       </nav>
 
-      {/* What Is a GPA Calculator */}
       <div id="what-is-gpa-calculator" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">What Is a GPA Calculator?</h2>
         <p className="mt-4 leading-7 text-slate-300">
@@ -220,7 +207,6 @@ export default function GPACalculatorGuide() {
         </p>
       </div>
 
-      {/* Why Use This Calculator */}
       <div id="why-use" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">Why Use This Calculator</h2>
         <p className="mt-4 leading-7 text-slate-300">
@@ -252,7 +238,6 @@ export default function GPACalculatorGuide() {
         </ul>
       </div>
 
-      {/* How This Calculator Works */}
       <div id="how-it-works" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">How This Calculator Works</h2>
         <p className="mt-4 leading-7 text-slate-300">
@@ -267,7 +252,6 @@ export default function GPACalculatorGuide() {
         </p>
       </div>
 
-      {/* Formula */}
       <div id="formula" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">GPA Formula</h2>
         <p className="mt-4 leading-7 text-slate-300">
@@ -308,7 +292,6 @@ export default function GPACalculatorGuide() {
         </p>
       </div>
 
-      {/* Step-by-Step Example */}
       <div id="example" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">Step-by-Step Example</h2>
         <p className="mt-4 leading-7 text-slate-300">
@@ -353,7 +336,6 @@ export default function GPACalculatorGuide() {
         </p>
       </div>
 
-      {/* Weighted vs Unweighted */}
       <div id="weighted-vs-unweighted" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">Weighted vs Unweighted GPA</h2>
         <p className="mt-4 leading-7 text-slate-300">
@@ -395,7 +377,6 @@ export default function GPACalculatorGuide() {
         </p>
       </div>
 
-      {/* Common Mistakes */}
       <div id="mistakes" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">Common Mistakes</h2>
         <div className="mt-6 space-y-4">
@@ -408,7 +389,6 @@ export default function GPACalculatorGuide() {
         </div>
       </div>
 
-      {/* Tips */}
       <div id="tips" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">Tips for Accurate Results</h2>
         <div className="mt-6 space-y-4">
@@ -421,7 +401,6 @@ export default function GPACalculatorGuide() {
         </div>
       </div>
 
-      {/* FAQs */}
       <div id="faqs" className="mt-16 border-t border-slate-800/60 pt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white mb-2">Frequently Asked Questions</h2>
         <p className="text-slate-400 text-sm mb-6">
@@ -439,7 +418,6 @@ export default function GPACalculatorGuide() {
         </div>
       </div>
 
-      {/* Related Tools */}
       <div id="related-tools" className="mt-16 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white mb-4">Related Tools & Guides</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -447,11 +425,11 @@ export default function GPACalculatorGuide() {
             <span className="font-semibold text-white">CGPA Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Combine every semester into one cumulative score.</p>
           </Link>
-          <Link href="/attendance-percentage-formula" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/attendance-calculator" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">Attendance Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Check if you meet your exam eligibility requirements.</p>
           </Link>
-          <Link href="/percentage-formula-explained" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/percentage-calculator" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">Percentage Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Convert raw scores into final weighted grades.</p>
           </Link>
@@ -459,7 +437,7 @@ export default function GPACalculatorGuide() {
             <span className="font-semibold text-white">Grade Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Find out what score you need on your final exam.</p>
           </Link>
-          <Link href="/how-to-calculate-gpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/blog/how-to-calculate-gpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">How to Calculate GPA</span>
             <p className="mt-1 text-sm text-slate-400">The full step-by-step guide behind this calculator.</p>
           </Link>
@@ -470,7 +448,6 @@ export default function GPACalculatorGuide() {
         </div>
       </div>
 
-      {/* Key Takeaways */}
       <div className="mt-12 rounded-xl border border-slate-800 bg-slate-950/40 p-6">
         <h2 className="text-xl font-bold text-white mb-4">Key Takeaways</h2>
         <ul className="space-y-2 text-slate-300 leading-7 list-disc list-inside">
@@ -482,7 +459,6 @@ export default function GPACalculatorGuide() {
         </ul>
       </div>
 
-      {/* Final Summary */}
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-white mb-3">Final Summary</h2>
         <p className="leading-7 text-slate-300">
@@ -500,7 +476,6 @@ export default function GPACalculatorGuide() {
         </p>
       </div>
 
-      {/* CTA */}
       <div className="mt-10 rounded-xl bg-gradient-to-r from-slate-950 to-slate-900 border border-slate-800 p-6 sm:p-8 text-center sm:text-left sm:flex sm:items-center sm:justify-between gap-6">
         <div>
           <h3 className="text-lg font-bold text-white">Ready to Check Your GPA?</h3>

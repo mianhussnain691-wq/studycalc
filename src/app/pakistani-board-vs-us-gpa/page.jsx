@@ -332,7 +332,7 @@ export default function PakistaniBoardVsUsGpaPage() {
                   <th className="p-4 border-r border-slate-800 text-emerald-400">Local Board Division</th>
                   <th className="p-4 border-r border-slate-800 text-cyan-400">US Letter Grade</th>
                   <th className="p-4 border-r border-slate-800 text-yellow-400">Estimated US GPA</th>
-                  <th className="p-4 text-purple-400">Admission Competitiveness</th>
+                  <th className="p-4 text-orange-400">Admission Competitiveness</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-800/60 font-mono text-slate-300">
@@ -341,42 +341,42 @@ export default function PakistaniBoardVsUsGpaPage() {
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">A+ / Distinction</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">A / A+</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">3.8 – 4.0</td>
-                  <td className="p-4 text-purple-400 font-bold">Ivy League / Top Tier</td>
+                  <td className="p-4 text-orange-400 font-bold">Ivy League / Top Tier</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">70% – 79%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">A Grade (1st Div)</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">A- / B+</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">3.3 – 3.7</td>
-                  <td className="p-4 text-purple-400 font-bold">Competitive Universities</td>
+                  <td className="p-4 text-orange-400 font-bold">Competitive Universities</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">60% – 69%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">B Grade (1st Div)</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">B / B-</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">2.7 – 3.2</td>
-                  <td className="p-4 text-purple-400 font-bold">Good State Universities</td>
+                  <td className="p-4 text-orange-400 font-bold">Good State Universities</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">50% – 59%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">C Grade (2nd Div)</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">C+ / C</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">2.0 – 2.6</td>
-                  <td className="p-4 text-purple-400 font-bold">Moderate Admission</td>
+                  <td className="p-4 text-orange-400 font-bold">Moderate Admission</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">40% – 49%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">D Grade (3rd Div)</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">C- / D</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">1.0 – 1.9</td>
-                  <td className="p-4 text-purple-400 font-bold">Minimum Threshold</td>
+                  <td className="p-4 text-orange-400 font-bold">Minimum Threshold</td>
                 </tr>
                 <tr className="hover:bg-slate-900/50 transition">
                   <td className="p-4 font-bold text-white border-r border-slate-800">Below 40%</td>
                   <td className="p-4 border-r border-slate-800 text-emerald-400 font-bold">Fail / Unsatisfactory</td>
                   <td className="p-4 border-r border-slate-800 text-cyan-400 font-bold">F</td>
                   <td className="p-4 border-r border-slate-800 text-yellow-400 font-bold">0.0</td>
-                  <td className="p-4 text-purple-400 font-bold">Ineligible</td>
+                  <td className="p-4 text-orange-400 font-bold">Ineligible</td>
                 </tr>
               </tbody>
             </table>
@@ -571,7 +571,7 @@ export default function PakistaniBoardVsUsGpaPage() {
             </Link>
             <Link
               href="/percentage-calculator"
-              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-slate-900 text-purple-400 transition block"
+              className="p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-orange-500/50 hover:bg-slate-900 text-orange-400 transition block"
             >
               ➔ Marks Percentage Calculator
             </Link>

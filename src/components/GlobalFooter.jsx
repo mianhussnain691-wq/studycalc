@@ -48,7 +48,7 @@ export default function GlobalFooter() {
 
         {/* Academic Core Articles Column */}
         <div>
-          <h4 className="text-white font-bold tracking-wider uppercase text-xs mb-4 text-violet-400">
+          <h4 className="text-white font-bold tracking-wider uppercase text-xs mb-4 text-emerald-400">
             Academic Reference Logs
           </h4>
           <ul className="space-y-2.5">

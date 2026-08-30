@@ -1,19 +1,5 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "Attendance Calculator - Check Your Attendance Percentage Instantly",
-  description:
-    "Calculate your attendance percentage and find out how many classes you can miss or need to attend to hit your required percentage. Free and instant.",
-  alternates: {
-    canonical: "/attendance-percentage-formula",
-  },
-  openGraph: {
-    title: "Attendance Calculator - Check Your Attendance Percentage",
-    description:
-      "Free attendance calculator with formula, worked examples, and a chart showing how many classes you can safely miss.",
-  },
-};
-
 export default function AttendanceCalculatorGuide() {
   const toc = [
     { href: "#what-is-attendance-calculator", label: "What Is an Attendance Calculator?" },
@@ -39,11 +25,9 @@ export default function AttendanceCalculatorGuide() {
   const examplePercent = ((exampleData.attended / exampleData.total) * 100).toFixed(1);
 
   const requiredPercent = 75;
-  const totalClassesForYear = 120;
   const attendedSoFar = 78;
   const remainingClasses = 20;
-  // classes needed such that (attended + x) / (totalSoFar + remaining) >= required%
-  const totalSoFar = 98; // attended + missed so far
+  const totalSoFar = 98;
   const neededMinAttendance = Math.ceil(
     (requiredPercent / 100) * (totalSoFar + remainingClasses) - attendedSoFar
   );
@@ -145,16 +129,20 @@ export default function AttendanceCalculatorGuide() {
     headline: "Attendance Calculator - Check Your Attendance Percentage Instantly",
     description:
       "Free attendance calculator with formula, worked example, and a chart showing how many classes you can safely miss.",
-    author: { "@type": "Organization", name: "StudyCalc" },
+    author: { "@type": "Organization", name: "StudyCalc", url: "https://www.studycalc.co" },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://www.studycalc.co/attendance-calculator",
+    },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://studycalc.co" },
-      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://studycalc.co/calculators" },
-      { "@type": "ListItem", position: 3, name: "Attendance Calculator", item: "https://studycalc.co/attendance-percentage-formula" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://www.studycalc.co/calculators" },
+      { "@type": "ListItem", position: 3, name: "Attendance Calculator", item: "https://www.studycalc.co/attendance-calculator" },
     ],
   };
 
@@ -372,7 +360,7 @@ export default function AttendanceCalculatorGuide() {
             <span className="font-semibold text-white">CGPA Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Combine every semester into one cumulative score.</p>
           </Link>
-          <Link href="/percentage-formula-explained" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/percentage-calculator" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">Percentage Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Convert raw scores into final weighted grades.</p>
           </Link>
@@ -380,7 +368,7 @@ export default function AttendanceCalculatorGuide() {
             <span className="font-semibold text-white">Grade Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Find out what score you need on your final exam.</p>
           </Link>
-          <Link href="/how-to-calculate-gpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/blog/how-to-calculate-gpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">How to Calculate GPA</span>
             <p className="mt-1 text-sm text-slate-400">The full step-by-step guide for a single semester.</p>
           </Link>

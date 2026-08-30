@@ -227,7 +227,7 @@ export default function WeightedVsUnweightedGPAGuide() {
             </div>
 
             <div className="bg-slate-950 p-6 rounded-xl border border-slate-800 space-y-4">
-              <h3 className="text-lg font-bold text-purple-400">Case Study C: Mixed Dual Enrollment</h3>
+              <h3 className="text-lg font-bold text-orange-400">Case Study C: Mixed Dual Enrollment</h3>
               <ul className="list-disc pl-6 space-y-1 text-sm text-slate-300">
                 <li>Dual Enrollment Composition: A (4.0 / 5.0)</li>
                 <li>Dual Enrollment Calculus I: B (3.0 / 4.0)</li>
@@ -241,10 +241,10 @@ export default function WeightedVsUnweightedGPAGuide() {
                   <p>18.7 pts ÷ 5 credits</p>
                   <p className="mt-2 text-white font-bold font-sans text-base border-t border-slate-800 pt-2">= 3.74</p>
                 </div>
-                <div className="p-4 bg-slate-900 rounded-lg border border-purple-900/40">
-                  <p className="text-purple-400 font-bold text-base mb-1 font-sans">Weighted</p>
+                <div className="p-4 bg-slate-900 rounded-lg border border-orange-900/40">
+                  <p className="text-orange-400 font-bold text-base mb-1 font-sans">Weighted</p>
                   <p>21.2 pts ÷ 5 credits</p>
-                  <p className="mt-2 text-purple-400 font-bold font-sans text-base border-t border-slate-800 pt-2">= 4.24</p>
+                  <p className="mt-2 text-orange-400 font-bold font-sans text-base border-t border-slate-800 pt-2">= 4.24</p>
                 </div>
               </div>
             </div>

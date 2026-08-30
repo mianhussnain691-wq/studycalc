@@ -1,19 +1,5 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "Grade Calculator - Find Your Final Exam Score Needed (Free)",
-  description:
-    "Calculate what score you need on your final exam to reach your target course grade. Free grade calculator with formula and worked examples.",
-  alternates: {
-    canonical: "/grade-calculator",
-  },
-  openGraph: {
-    title: "Grade Calculator - Find Your Final Exam Score Needed",
-    description:
-      "Free grade calculator with weighted grade formula, worked example, and a chart showing what you need on your final.",
-  },
-};
-
 export default function GradeCalculatorGuide() {
   const toc = [
     { href: "#what-is-grade-calculator", label: "What Is a Grade Calculator?" },
@@ -36,7 +22,7 @@ export default function GradeCalculatorGuide() {
 
   const weightedSoFar = gradeComponents.reduce((s, c) => s + (c.weight * c.score) / 100, 0);
   const weightSoFar = gradeComponents.reduce((s, c) => s + c.weight, 0);
-  const finalWeight = 100 - weightSoFar; // 40%
+  const finalWeight = 100 - weightSoFar;
   const targetGrade = 85;
   const neededFinalScore = ((targetGrade - weightedSoFar) / finalWeight) * 100;
 
@@ -147,16 +133,20 @@ export default function GradeCalculatorGuide() {
     headline: "Grade Calculator - Find Your Final Exam Score Needed",
     description:
       "Free grade calculator with weighted grade formula, worked example, and a chart showing what you need on your final exam.",
-    author: { "@type": "Organization", name: "StudyCalc" },
+    author: { "@type": "Organization", name: "StudyCalc", url: "https://www.studycalc.co" },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://www.studycalc.co/grade-calculator",
+    },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://studycalc.co" },
-      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://studycalc.co/calculators" },
-      { "@type": "ListItem", position: 3, name: "Grade Calculator", item: "https://studycalc.co/grade-calculator" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://www.studycalc.co/calculators" },
+      { "@type": "ListItem", position: 3, name: "Grade Calculator", item: "https://www.studycalc.co/grade-calculator" },
     ],
   };
 
@@ -382,15 +372,15 @@ export default function GradeCalculatorGuide() {
             <span className="font-semibold text-white">CGPA Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Combine every semester into one cumulative score.</p>
           </Link>
-          <Link href="/attendance-percentage-formula" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/attendance-calculator" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">Attendance Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Check if you meet your exam eligibility requirements.</p>
           </Link>
-          <Link href="/percentage-formula-explained" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/percentage-calculator" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">Percentage Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Convert raw scores into final weighted grades.</p>
           </Link>
-          <Link href="/how-to-calculate-gpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/blog/how-to-calculate-gpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">How to Calculate GPA</span>
             <p className="mt-1 text-sm text-slate-400">The full step-by-step guide for a single semester.</p>
           </Link>

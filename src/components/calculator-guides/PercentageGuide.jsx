@@ -1,19 +1,5 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "Percentage Calculator - Calculate Marks Percentage Instantly (Free)",
-  description:
-    "Calculate your marks percentage, convert percentage to GPA or CGPA, and find your aggregate percentage across subjects. Free and instant.",
-  alternates: {
-    canonical: "/percentage-formula-explained",
-  },
-  openGraph: {
-    title: "Percentage Calculator - Calculate Marks Percentage Instantly",
-    description:
-      "Free percentage calculator with formula, worked examples, and conversion charts for GPA and CGPA.",
-  },
-};
-
 export default function PercentageCalculatorGuide() {
   const toc = [
     { href: "#what-is-percentage-calculator", label: "What Is a Percentage Calculator?" },
@@ -183,16 +169,20 @@ export default function PercentageCalculatorGuide() {
     headline: "Percentage Calculator - Calculate Marks Percentage Instantly",
     description:
       "Free percentage calculator with formula, worked examples, and a percentage-to-GPA conversion chart.",
-    author: { "@type": "Organization", name: "StudyCalc" },
+    author: { "@type": "Organization", name: "StudyCalc", url: "https://www.studycalc.co" },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://www.studycalc.co/percentage-calculator",
+    },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://studycalc.co" },
-      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://studycalc.co/calculators" },
-      { "@type": "ListItem", position: 3, name: "Percentage Calculator", item: "https://studycalc.co/percentage-formula-explained" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://www.studycalc.co/calculators" },
+      { "@type": "ListItem", position: 3, name: "Percentage Calculator", item: "https://www.studycalc.co/percentage-calculator" },
     ],
   };
 
@@ -482,7 +472,7 @@ export default function PercentageCalculatorGuide() {
             <span className="font-semibold text-white">CGPA Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Combine every semester into one cumulative score.</p>
           </Link>
-          <Link href="/attendance-percentage-formula" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/attendance-calculator" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">Attendance Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Check if you meet your exam eligibility requirements.</p>
           </Link>
@@ -490,7 +480,7 @@ export default function PercentageCalculatorGuide() {
             <span className="font-semibold text-white">Grade Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Find out what score you need on your final exam.</p>
           </Link>
-          <Link href="/how-to-calculate-gpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+          <Link href="/blog/how-to-calculate-gpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">How to Calculate GPA</span>
             <p className="mt-1 text-sm text-slate-400">The full step-by-step guide for a single semester.</p>
           </Link>
