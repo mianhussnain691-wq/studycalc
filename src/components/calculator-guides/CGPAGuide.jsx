@@ -15,12 +15,12 @@ export default function CGPACalculatorGuide() {
   ];
 
   const scaleChart = [
-    { scale4: "3.90 – 4.00", scale10: "9.5 – 10.0", percentage: "90% – 100%", standing: "First Class with Distinction" },
-    { scale4: "3.70 – 3.89", scale10: "8.5 – 9.4", percentage: "80% – 89%", standing: "First Class / Excellent" },
-    { scale4: "3.30 – 3.69", scale10: "7.5 – 8.4", percentage: "75% – 79%", standing: "Upper Second Class" },
-    { scale4: "3.00 – 3.29", scale10: "6.5 – 7.4", percentage: "65% – 74%", standing: "Good Standing" },
-    { scale4: "2.00 – 2.99", scale10: "5.0 – 6.4", percentage: "50% – 64%", standing: "Satisfactory / Pass" },
-    { scale4: "Below 2.00", scale10: "Below 5.0", percentage: "Below 50%", standing: "Academic Probation" },
+    { scale4: "3.90 – 4.00", scale10: "9.5 – 10.0", standing: "First Class with Distinction" },
+    { scale4: "3.70 – 3.89", scale10: "8.5 – 9.4", standing: "First Class / Excellent" },
+    { scale4: "3.30 – 3.69", scale10: "7.5 – 8.4", standing: "Upper Second Class" },
+    { scale4: "3.00 – 3.29", scale10: "6.5 – 7.4", standing: "Good Standing" },
+    { scale4: "2.00 – 2.99", scale10: "5.0 – 6.4", standing: "Satisfactory / Pass" },
+    { scale4: "Below 2.00", scale10: "Below 5.0", standing: "Academic Probation" },
   ];
 
   const semesters = [
@@ -301,7 +301,6 @@ export default function CGPACalculatorGuide() {
               <tr>
                 <th className="px-5 py-3.5 text-left">4.0 Scale</th>
                 <th className="px-5 py-3.5 text-left">10.0 Scale</th>
-                <th className="px-5 py-3.5 text-left">Percentage</th>
                 <th className="px-5 py-3.5 text-left">Standing</th>
               </tr>
             </thead>
@@ -310,7 +309,6 @@ export default function CGPACalculatorGuide() {
                 <tr key={idx}>
                   <td className="px-5 py-3.5 font-mono font-bold text-white">{row.scale4}</td>
                   <td className="px-5 py-3.5 font-mono text-slate-200">{row.scale10}</td>
-                  <td className="px-5 py-3.5 font-mono text-slate-400">{row.percentage}</td>
                   <td className="px-5 py-3.5 font-semibold text-slate-200">{row.standing}</td>
                 </tr>
               ))}

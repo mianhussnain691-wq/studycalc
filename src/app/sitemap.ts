@@ -11,11 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/guides",
     "/blog",
+    "/calculators",
     "/about",
     "/contact",
     "/privacy-policy",
     "/terms",
     "/disclaimer",
+    "/cookie-policy",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

@@ -7,6 +7,21 @@ import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Grade Manual
 import GradeGuide from "@/components/calculator-guides/GradeGuide";
 
+// Mirrors the published scale in GPAGuide.jsx so the tool and the article
+// beneath it never disagree. Ordered high to low; first match wins.
+const GRADE_SCALE = [
+  { min: 93, grade: "A", point: "4.00", status: "Excellent 🟢" },
+  { min: 90, grade: "A-", point: "3.70", status: "Excellent 🟢" },
+  { min: 87, grade: "B+", point: "3.30", status: "Very Good 🔵" },
+  { min: 83, grade: "B", point: "3.00", status: "Very Good 🔵" },
+  { min: 80, grade: "B-", point: "2.70", status: "Good 🟡" },
+  { min: 77, grade: "C+", point: "2.30", status: "Good 🟡" },
+  { min: 73, grade: "C", point: "2.00", status: "Average 🟠" },
+  { min: 70, grade: "C-", point: "1.70", status: "Average 🟠" },
+  { min: 60, grade: "D", point: "1.00", status: "Pass 🟠" },
+  { min: 0, grade: "F", point: "0.00", status: "Fail 🔴" },
+];
+
 export default function GradeCalculator() {
 
   const [marks, setMarks] = useState("");
@@ -20,52 +35,13 @@ export default function GradeCalculator() {
       percentage > 100
     ) {
       return {
-        grade: "-",
-        point: "0.00",
-        status: "Invalid 🔴",
+        grade: "—",
+        point: "—",
+        status: "",
       };
     }
 
-    if (percentage >= 90)
-      return {
-        grade: "A+",
-        point: "4.00",
-        status: "Excellent 🟢",
-      };
-
-    if (percentage >= 80)
-      return {
-        grade: "A",
-        point: "3.70",
-        status: "Very Good 🔵",
-      };
-
-    if (percentage >= 70)
-      return {
-        grade: "B",
-        point: "3.00",
-        status: "Good 🟡",
-      };
-
-    if (percentage >= 60)
-      return {
-        grade: "C",
-        point: "2.00",
-        status: "Average 🟠",
-      };
-
-    if (percentage >= 50)
-      return {
-        grade: "D",
-        point: "1.00",
-        status: "Pass 🟠",
-      };
-
-    return {
-      grade: "F",
-      point: "0.00",
-      status: "Fail 🔴",
-    };
+    return GRADE_SCALE.find((band) => percentage >= band.min);
   }
 
   function getError() {
@@ -82,6 +58,9 @@ export default function GradeCalculator() {
     setMarks("");
   }
 
+  const result = calculateGrade();
+  const hasResult = result.status !== "";
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-6 py-16">
@@ -94,10 +73,12 @@ export default function GradeCalculator() {
         <div className="mt-12">
           <input
             type="number"
+            inputMode="decimal"
+            aria-label="Percentage score"
             placeholder="Enter Percentage"
             value={marks}
             onChange={(e) => setMarks(e.target.value)}
-            className="w-full rounded-xl bg-slate-800 p-4 outline-none"
+            className="w-full rounded-xl bg-slate-800 p-4 outline-none text-white border border-slate-700 transition-all duration-200 focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500"
           />
 
           {getError() && (
@@ -108,28 +89,31 @@ export default function GradeCalculator() {
         </div>
 
         <ResultCard
-          title="Your Result"
-          value={`Grade: ${calculateGrade().grade}`}
-          status={calculateGrade().status}
+          title="Your Grade"
+          value={result.grade}
+          status={result.status}
         >
-          <p className="mt-4 text-3xl font-bold">
-            Grade Point: {calculateGrade().point}
+          <p className="mt-4 text-2xl sm:text-3xl font-bold">
+            Grade Point: {result.point}
           </p>
 
           <Button
             onClick={resetCalculator}
-            className="mt-6 border border-slate-700 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-500"
+            variant="secondary"
+            className="mt-6"
           >
             Reset
           </Button>
 
-          <div className="mt-8">
-            <div className="h-4 w-full rounded-full bg-slate-700 overflow-hidden">
-              <ProgressBar
-                value={Math.min(Math.max(parseFloat(marks) || 0, 0), 100)}
-              />
-            </div>
-          </div>
+          {hasResult ? (
+            <ProgressBar
+              value={Math.min(Math.max(parseFloat(marks) || 0, 0), 100)}
+            />
+          ) : (
+            <p className="mt-8 text-slate-500">
+              Enter a percentage between 0 and 100 to see your grade.
+            </p>
+          )}
         </ResultCard>
 
         {/* 🔥 EXACT INJECTION ZONE: Authority manual loaded securely beneath your engine */}

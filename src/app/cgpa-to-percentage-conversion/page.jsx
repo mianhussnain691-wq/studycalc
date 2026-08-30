@@ -4,12 +4,12 @@ export const metadata = {
   title: "How to Calculate GPA from Percentage: 2026 Guide",
   description: "Learn how to calculate GPA from percentage with our complete 2026 step-by-step guide. Master percentage to GPA conversions across 4.0, 5.0, and 10.0 scale systems for university admissions.",
   alternates: {
-    canonical: "https://www.studycalc.co/how-to-calculate-gpa-from-percentage",
+    canonical: "https://www.studycalc.co/cgpa-to-percentage-conversion",
   },
   openGraph: {
     title: "How to Calculate GPA from Percentage: 2026 Guide",
     description: "The exact formulas to convert percentage marks into semester and cumulative GPA, with a full worked example.",
-    url: "https://www.studycalc.co/how-to-calculate-gpa-from-percentage",
+    url: "https://www.studycalc.co/cgpa-to-percentage-conversion",
     siteName: "StudyCalc",
     type: "article",
   },
@@ -49,7 +49,7 @@ export default function HowToCalculateGpaFromPercentage() {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.studycalc.co/how-to-calculate-gpa-from-percentage"
+      "@id": "https://www.studycalc.co/cgpa-to-percentage-conversion"
     }
   };
 

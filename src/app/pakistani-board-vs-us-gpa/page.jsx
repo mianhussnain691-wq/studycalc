@@ -591,7 +591,7 @@ export default function PakistaniBoardVsUsGpaPage() {
               href="/pakistan-cgpa-converter"
               className="inline-block rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base px-8 py-4 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
             >
-              Launch Calculators ➔
+              Convert Your CGPA to US GPA ➔
             </Link>
           </div>
         </section>

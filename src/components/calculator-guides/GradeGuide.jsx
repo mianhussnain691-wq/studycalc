@@ -164,9 +164,12 @@ export default function GradeCalculatorGuide() {
           Grade Calculator: Find Your Final Exam Score Needed
         </h2>
         <p className="mt-4 text-base sm:text-lg leading-8 text-slate-300">
-          Enter your current assignment scores and their weights into the calculator above to find exactly what
-          you need on your final exam. Below, you'll find the formula, a full worked example, and a chart showing
-          what score is needed for a few common target grades.
+          Enter a percentage into the calculator above to instantly see your letter grade and grade point. Below,
+          you'll find the grading scale it uses, a worked example, and — for courses where assignments carry
+          different weights — how to project the final exam score you need using our{" "}
+          <Link href="/final-grade-calculator-guide" className="text-cyan-400 hover:underline">
+            Final Grade Calculator guide
+          </Link>.
         </p>
       </div>
 
@@ -222,10 +225,14 @@ export default function GradeCalculatorGuide() {
       <div id="how-it-works" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">How This Calculator Works</h2>
         <p className="mt-4 leading-7 text-slate-300">
-          Enter each graded component of your course along with its weight and your score. The calculator
-          multiplies each score by its weight to find your current weighted grade. Then, if you enter a target
-          overall grade and the weight of your remaining final exam, it solves for the exact score you'd need on
-          that final to hit your target.
+          Enter a percentage score and the calculator matches it against the grading scale below to return a
+          letter grade and grade point instantly — no weights or components required. If your course grade is
+          made up of several weighted assignments and you want to know what you need on a remaining final exam,
+          that's a different calculation, covered in our{" "}
+          <Link href="/final-grade-calculator-guide" className="text-cyan-400 hover:underline">
+            Final Grade Calculator guide
+          </Link>{" "}
+          (illustrated below for reference).
         </p>
       </div>
 
@@ -248,7 +255,11 @@ export default function GradeCalculatorGuide() {
       <div id="example" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-white">Step-by-Step Example</h2>
         <p className="mt-4 leading-7 text-slate-300">
-          Say a course is broken down like this, with the final exam still remaining:
+          This example walks through a weighted course grade by hand — the calculator above doesn't take weights
+          as input, so if you want this computed automatically, use our{" "}
+          <Link href="/final-grade-calculator-guide" className="text-cyan-400 hover:underline">
+            Final Grade Calculator
+          </Link>. Say a course is broken down like this, with the final exam still remaining:
         </p>
         <div className="mt-6 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/30">
           <table className="w-full border-collapse text-sm">

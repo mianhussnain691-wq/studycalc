@@ -165,7 +165,10 @@ export default function PakistanCGPAConverter() {
               <p className="text-lg font-bold text-cyan-400 font-mono">Percentage = CGPA × 25</p>
             </div>
             <p className="text-sm text-slate-400">
-              For example, a 3.5 CGPA gives 3.5 × 25 = 87.5%. The reverse works the same way: divide your percentage by 25 to get your CGPA.
+              For example, a 3.5 CGPA gives 3.5 × 25 = 87.5%. The reverse works the same way: divide your percentage by 25 to get your CGPA. For the full breakdown of how Pakistani board marks and university CGPA map onto the US 4.0 scale, see our{" "}
+              <Link href="/pakistani-board-vs-us-gpa" className="text-cyan-400 hover:underline">
+                Pakistani board vs US GPA conversion guide
+              </Link>.
             </p>
           </section>
 

@@ -2,7 +2,10 @@ import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
   title: "Contact StudyCalc",
-  description: "Contact the StudyCalc team.",
+  description: "Contact the StudyCalc team with feedback, bug reports, or calculator requests.",
+  alternates: {
+    canonical: "https://www.studycalc.co/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -23,8 +26,10 @@ export default function ContactPage() {
           </h2>
 
           <p className="mt-6 text-slate-300 leading-8">
-            If you have suggestions, find a bug, or want to request a new
-            calculator, feel free to contact us.
+            If you have suggestions, find a bug, spot an incorrect
+            calculation, or want to request a new calculator, feel free to
+            contact us. We read every message and use this feedback to
+            prioritize fixes and new tools.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -33,7 +38,7 @@ export default function ContactPage() {
               <span className="font-bold text-cyan-400">
                 Email:
               </span>{" "}
-              support@studycalc.com
+              support@studycalc.co
             </div>
 
             <div>

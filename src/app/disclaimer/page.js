@@ -1,17 +1,26 @@
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
+
+export const metadata = {
+  title: "Disclaimer",
+  description: "StudyCalc's disclaimer on the accuracy and use of its academic calculators.",
+  alternates: {
+    canonical: "https://www.studycalc.co/disclaimer",
+  },
+};
 
 export default function DisclaimerPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-6 py-16">
-        
-        <PageHeader 
-          title="Disclaimer" 
-          description="Last updated: 2026" 
+
+        <PageHeader
+          title="Disclaimer"
+          description="Last updated: January 2026"
         />
 
         <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900 p-8 md:p-10 space-y-6 text-slate-300 leading-relaxed">
-          
+
           <p>
             StudyCalc is provided for educational and informational purposes only. The calculators and tools available on this website are designed to assist students with academic estimations.
           </p>
@@ -30,9 +39,9 @@ export default function DisclaimerPage() {
 
           <p className="pt-4 border-t border-slate-800 text-slate-400">
             If you find any issues, errors, or discrepancies with our calculators, please reach out to us via our{" "}
-            <a href="/contact" className="text-cyan-400 hover:underline">
+            <Link href="/contact" className="text-cyan-400 hover:underline">
               Contact Page
-            </a>.
+            </Link>.
           </p>
 
         </div>

@@ -1,17 +1,25 @@
 import PageHeader from "@/components/PageHeader";
 
+export const metadata = {
+  title: "Cookie Policy",
+  description: "How StudyCalc uses cookies for analytics and advertising.",
+  alternates: {
+    canonical: "https://www.studycalc.co/cookie-policy",
+  },
+};
+
 export default function CookiePolicyPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-6 py-16">
 
-        <PageHeader 
-          title="Cookie Policy" 
-          description="Last updated: 2026" 
+        <PageHeader
+          title="Cookie Policy"
+          description="Last updated: January 2026"
         />
 
         <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900 p-8 md:p-10 space-y-6 text-slate-300 leading-relaxed">
-          
+
           <h2 className="text-2xl font-bold text-white">1. What Are Cookies</h2>
           <p>
             Cookies are small text files that are stored on your device (computer or mobile) when you visit websites. They help us make your browsing experience smoother, remember your preferences, and analyze how our visitors use the site.
