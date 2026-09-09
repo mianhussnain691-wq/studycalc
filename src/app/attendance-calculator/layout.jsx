@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Attendance Calculator | StudyCalc",
+  title: "Attendance Calculator",
   description: "Track your attendance percentage instantly and free using StudyCalc.",
   alternates: {
     canonical: "https://www.studycalc.co/attendance-calculator",

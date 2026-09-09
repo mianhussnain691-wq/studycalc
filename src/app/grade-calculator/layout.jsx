@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Grade Calculator | StudyCalc",
+  title: "Grade Calculator",
   description: "Find your grade and grade points instantly, free using StudyCalc.",
   alternates: {
     canonical: "https://www.studycalc.co/grade-calculator",

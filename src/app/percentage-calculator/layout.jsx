@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Percentage Calculator | StudyCalc",
+  title: "Percentage Calculator",
   description: "Convert marks into percentage easily and free using StudyCalc.",
   alternates: {
     canonical: "https://www.studycalc.co/percentage-calculator",

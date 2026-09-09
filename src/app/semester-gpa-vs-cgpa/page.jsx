@@ -260,7 +260,7 @@ export default function SemesterVsCGPAGuide() {
             </div>
           </section>
 
-          <section className="space-y-6">
+          <section id="credit-inertia" className="space-y-6 scroll-mt-20">
             <h2 className="text-2xl font-bold text-white border-b border-slate-800 pb-2">
               6. Credit Inertia and Grade Forgiveness
             </h2>

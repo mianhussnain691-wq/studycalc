@@ -47,6 +47,46 @@ const tools = [
     badgeColor: "bg-blue-500/20 text-blue-400",
     category: "University",
   },
+  {
+    title: "GPA to Percentage Calculator",
+    description: "Convert your GPA into an equivalent percentage range.",
+    href: "/gpa-to-percentage-calculator",
+    badge: "New",
+    badgeColor: "bg-emerald-500/20 text-emerald-400",
+    category: "University",
+  },
+  {
+    title: "Percentage to GPA Calculator",
+    description: "Convert your percentage marks into a 4.0 scale GPA.",
+    href: "/percentage-to-gpa-calculator",
+    badge: "New",
+    badgeColor: "bg-sky-500/20 text-sky-400",
+    category: "University",
+  },
+  {
+    title: "Target GPA Calculator",
+    description: "Find the GPA you need this semester to hit your target.",
+    href: "/target-gpa-calculator",
+    badge: "New",
+    badgeColor: "bg-amber-500/20 text-amber-400",
+    category: "University",
+  },
+  {
+    title: "Target CGPA Calculator",
+    description: "Find the GPA you need in future semesters to reach your target CGPA.",
+    href: "/target-cgpa-calculator",
+    badge: "New",
+    badgeColor: "bg-rose-500/20 text-rose-400",
+    category: "University",
+  },
+  {
+    title: "Weighted Average Calculator",
+    description: "Calculate any weighted average from scores and weights.",
+    href: "/weighted-average-calculator",
+    badge: "New",
+    badgeColor: "bg-lime-500/20 text-lime-400",
+    category: "University",
+  },
 ];
 
 export default tools;

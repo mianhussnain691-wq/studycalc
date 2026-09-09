@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "CGPA Calculator | StudyCalc",
+  title: "CGPA Calculator",
   description: "Calculate your cumulative CGPA online for free using StudyCalc.",
   alternates: {
     canonical: "https://www.studycalc.co/cgpa-calculator",

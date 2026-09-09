@@ -1,9 +1,9 @@
 export const metadata = {
-  title: "GPA Calculator | StudyCalc",
+  title: "GPA Calculator",
   description:
     "Free online GPA Calculator for university students. Calculate your semester GPA instantly with StudyCalc.",
   alternates: {
-    canonical: "/gpa-calculator",
+    canonical: "https://www.studycalc.co/gpa-calculator",
   },
 };
 

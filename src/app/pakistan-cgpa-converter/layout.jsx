@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Pakistan CGPA to US GPA Calculator | StudyCalc",
+  title: "Pakistan CGPA to US GPA Calculator",
   description:
     "Convert your Pakistani HEC CGPA or percentage to a US 4.0 GPA equivalent instantly, with the exact formula and what it means for study-abroad applications.",
   keywords: [

@@ -6,21 +6,19 @@ import Button from "@/components/Button";
 import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Grade Manual
 import GradeGuide from "@/components/calculator-guides/GradeGuide";
+import { lookupByPercent } from "@/data/gradeScale";
 
-// Mirrors the published scale in GPAGuide.jsx so the tool and the article
-// beneath it never disagree. Ordered high to low; first match wins.
-const GRADE_SCALE = [
-  { min: 93, grade: "A", point: "4.00", status: "Excellent 🟢" },
-  { min: 90, grade: "A-", point: "3.70", status: "Excellent 🟢" },
-  { min: 87, grade: "B+", point: "3.30", status: "Very Good 🔵" },
-  { min: 83, grade: "B", point: "3.00", status: "Very Good 🔵" },
-  { min: 80, grade: "B-", point: "2.70", status: "Good 🟡" },
-  { min: 77, grade: "C+", point: "2.30", status: "Good 🟡" },
-  { min: 73, grade: "C", point: "2.00", status: "Average 🟠" },
-  { min: 70, grade: "C-", point: "1.70", status: "Average 🟠" },
-  { min: 60, grade: "D", point: "1.00", status: "Pass 🟠" },
-  { min: 0, grade: "F", point: "0.00", status: "Fail 🔴" },
-];
+// Status/emoji flavor text is presentation-specific to this calculator, so
+// it stays local rather than living in the shared scale table — everything
+// numeric (grade, GPA point) comes from gradeScale.js.
+function getStatus(gpa) {
+  if (gpa >= 3.7) return "Excellent 🟢";
+  if (gpa >= 3.0) return "Very Good 🔵";
+  if (gpa >= 2.3) return "Good 🟡";
+  if (gpa >= 1.7) return "Average 🟠";
+  if (gpa >= 1.0) return "Pass 🟠";
+  return "Fail 🔴";
+}
 
 export default function GradeCalculator() {
 
@@ -41,7 +39,13 @@ export default function GradeCalculator() {
       };
     }
 
-    return GRADE_SCALE.find((band) => percentage >= band.min);
+    const row = lookupByPercent(percentage);
+
+    return {
+      grade: row.letter,
+      point: row.gpa.toFixed(2),
+      status: getStatus(row.gpa),
+    };
   }
 
   function getError() {
