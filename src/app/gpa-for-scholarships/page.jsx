@@ -149,7 +149,7 @@ export default function GPAForScholarships() {
             </div>
 
             <div className="p-5 rounded-xl border border-slate-800 bg-slate-900/80">
-              <h3 className="text-lg font-bold text-violet-400 mb-2">Weighted Rigor Consideration</h3>
+              <h3 className="text-lg font-bold text-emerald-400 mb-2">Weighted Rigor Consideration</h3>
               <p className="text-sm leading-relaxed">
                 Institutional scholarships (offered directly by specific universities) often review <strong>Weighted GPA</strong> alongside course rigor. An applicant with a 3.7 unweighted GPA taking 6 AP courses will frequently outrank an applicant with a 4.0 unweighted GPA taking only standard-level courses.
               </p>
