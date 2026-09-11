@@ -57,6 +57,14 @@ export const articles = [
     date: "2026-03-01"
   },
   {
+    title: "GPA to Percentage Conversion: Complete Guide",
+    description: "Why GPA-to-percentage conversion isn't perfectly linear, when you actually need it, worked examples both directions, and the mistakes to avoid.",
+    slug: "gpa-to-percentage-guide",
+    category: "US Grading",
+    readTime: "9 min read",
+    date: "2026-09-11"
+  },
+  {
     title: "Grade Scale Explained: Letter Grades, GPA & Percentages",
     description: "Detailed overview of standard grading scales and letter equivalents used worldwide.",
     slug: "grade-scale-explained",
@@ -135,5 +143,13 @@ export const articles = [
     category: "US Admissions",
     readTime: "14 min read",
     date: "2026-03-01"
+  },
+  {
+    title: "How to Set and Reach a Target GPA: Complete Strategy Guide",
+    description: "The math behind target-setting, realistic goal-setting advice, and what to do when the required GPA turns out to be mathematically impossible.",
+    slug: "target-gpa-strategy-guide",
+    category: "Academic Guides",
+    readTime: "9 min read",
+    date: "2026-09-11"
   }
 ];

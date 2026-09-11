@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import GPAGuide from "@/components/calculator-guides/GPAGuide"; // <--- Perfect Import Path
+import ShareResultButton from "@/components/ShareResultButton";
 
 // Matches the scale published in GPAGuide.jsx, which renders on this same page.
 const GRADE_OPTIONS = [
@@ -192,6 +193,15 @@ export default function GPACalculator() {
         >
           Reset Calculator
         </button>
+
+        {hasCalculated && (
+          <div className="mt-3">
+            <ShareResultButton
+              text={`My GPA: ${gpa} — calculated at studycalc.co`}
+              className="w-full"
+            />
+          </div>
+        )}
 
         {/* Result Board */}
         <div className="mt-8 rounded-2xl border border-slate-800 bg-slate-900 p-6 text-white transition-all duration-300 hover:border-cyan-500/40 hover:shadow-2xl hover:shadow-cyan-500/10">

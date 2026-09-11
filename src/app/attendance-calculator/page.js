@@ -3,6 +3,7 @@
 import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import AttendanceGuide from "@/components/calculator-guides/AttendanceGuide";
+import ShareResultButton from "@/components/ShareResultButton";
 
 const TARGET = 75;
 
@@ -188,12 +189,20 @@ export default function AttendanceCalculator() {
             </div>
           </div>
 
-          <button
-            onClick={resetCalculator}
-            className="mt-8 w-full rounded-xl border border-slate-700 py-4 text-lg font-bold text-slate-200 transition-all duration-200 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-500 active:scale-[0.97]"
-          >
-            Reset
-          </button>
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={resetCalculator}
+              className="flex-1 rounded-xl border border-slate-700 py-4 text-lg font-bold text-slate-200 transition-all duration-200 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-500 active:scale-[0.97]"
+            >
+              Reset
+            </button>
+            {hasResult && (
+              <ShareResultButton
+                text={`My attendance: ${percentage}% — calculated at studycalc.co`}
+                className="flex-1"
+              />
+            )}
+          </div>
         </div>
 
         {/* 🔥 EXTRA ZONE: Production-ready 2000-word Authority SEO Structure renders beautifully below layout */}

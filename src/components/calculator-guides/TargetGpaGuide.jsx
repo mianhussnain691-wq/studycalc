@@ -17,6 +17,22 @@ const faqs = [
     q: "Is this the same as CGPA?",
     a: "This calculator is scoped to a single semester's remaining credits. If you're tracking a multi-semester recovery plan, use the Target CGPA Calculator instead, which is framed cumulatively.",
   },
+  {
+    q: "Why does adding more remaining credits change the needed GPA?",
+    a: "More remaining credits give the new semester proportionally more weight in your final average, so each one has to work slightly less hard to reach the same target — the needed GPA generally drops as remaining credits increase, all else equal. Fewer remaining credits means each one carries more weight, pushing the needed GPA higher.",
+  },
+  {
+    q: "Can I use this to set a target for just one course instead of a whole semester?",
+    a: "Not directly — this formula is built around aggregate GPA and total credit hours, not individual course grades. For a single upcoming assessment's impact on one course's grade, use the Course Weight Impact Calculator instead.",
+  },
+  {
+    q: "Does this account for pass/fail courses?",
+    a: "No — the formula assumes every credit hour you enter carries a standard letter grade that contributes to GPA. Pass/fail courses typically don't factor into GPA calculations at all, so exclude their credit hours from both your current credits and remaining credits when using this tool.",
+  },
+  {
+    q: "How often should I recalculate my target?",
+    a: "Any time your actual GPA or completed credits change — after each graded assignment cycle or at minimum once per semester, since both numbers feed directly into the formula and a stale input will give you a stale, potentially misleading target.",
+  },
 ];
 
 const faqJsonLd = {
@@ -46,12 +62,33 @@ export default function TargetGpaGuide() {
         </div>
         <p className="mt-4 leading-7">
           This works out what your remaining credits need to average, given the weight your existing
-          credits already carry.
+          credits already carry. It&apos;s the same algebra as solving a weighted average backwards: you know
+          the target overall average and one of the two components, and you&apos;re solving for the other.
         </p>
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-bold text-white">Worked Example</h2>
+        <h2 className="text-2xl font-bold text-white">How This Differs From the Target CGPA Calculator</h2>
+        <p className="mt-4 leading-7">
+          The two tools share the exact same formula shape, so it&apos;s worth being clear about what actually
+          separates them.{" "}
+          <Link href="/target-cgpa-calculator" className="text-cyan-400 hover:underline">
+            Target CGPA
+          </Link>{" "}
+          is meant for planning across multiple future semesters — your &quot;remaining credits&quot; input there
+          might represent your entire rest of a degree. This tool is scoped narrowly to a single semester:
+          the &quot;remaining credits&quot; here are just the credits you&apos;re currently registered for right now.
+          Use this one when you&apos;re asking &quot;what do I need to average this term,&quot; and switch to the
+          cumulative version when the question spans more than one semester. Our{" "}
+          <Link href="/target-gpa-strategy-guide" className="text-cyan-400 hover:underline">
+            complete target-setting strategy guide
+          </Link>{" "}
+          covers both scenarios side by side with realistic goal-setting advice.
+        </p>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-white">Worked Example 1: An Unreachable Target</h2>
         <p className="mt-4 leading-7">
           A student has a 3.0 GPA across 60 completed credits and wants to reach a 3.3 GPA by the end of
           a semester with 15 remaining credits:
@@ -62,6 +99,21 @@ export default function TargetGpaGuide() {
         <p className="mt-4 leading-7">
           A needed GPA of 4.5 is above the 4.0 maximum — this target isn&apos;t reachable in one semester.
           Spreading the recovery over more semesters (Target CGPA Calculator) would lower the number needed.
+        </p>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-white">Worked Example 2: A Demanding But Reachable Target</h2>
+        <p className="mt-4 leading-7">
+          A student has a 3.5 GPA across 40 completed credits and wants to reach 3.6 by the end of a
+          semester with 12 remaining credits:
+        </p>
+        <div className="mt-4 rounded-xl bg-slate-900 border border-slate-800 p-5 font-mono text-sm">
+          [3.6 × (40 + 12) − 3.5 × 40] ÷ 12 = [187.2 − 140] ÷ 12 ≈ 3.93
+        </div>
+        <p className="mt-4 leading-7">
+          A 3.93 average this semester would hit the target — demanding (essentially straight A&apos;s and
+          A-&apos;s), but mathematically possible, unlike the first example.
         </p>
       </div>
 
@@ -78,11 +130,15 @@ export default function TargetGpaGuide() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-bold text-white">Related Calculators</h2>
+        <h2 className="text-2xl font-bold text-white">Related Calculators & Guides</h2>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link href="/target-cgpa-calculator" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">Target CGPA Calculator</span>
             <p className="mt-1 text-sm text-slate-400">Plan a recovery across multiple future semesters.</p>
+          </Link>
+          <Link href="/target-gpa-strategy-guide" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+            <span className="font-semibold text-white">Target GPA Strategy Guide</span>
+            <p className="mt-1 text-sm text-slate-400">Realistic goal-setting and what to do if your target is out of reach.</p>
           </Link>
           <Link href="/gpa-calculator" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
             <span className="font-semibold text-white">GPA Calculator</span>

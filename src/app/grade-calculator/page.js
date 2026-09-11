@@ -7,6 +7,7 @@ import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Grade Manual
 import GradeGuide from "@/components/calculator-guides/GradeGuide";
 import { lookupByPercent } from "@/data/gradeScale";
+import ShareResultButton from "@/components/ShareResultButton";
 
 // Status/emoji flavor text is presentation-specific to this calculator, so
 // it stays local rather than living in the shared scale table — everything
@@ -101,13 +102,19 @@ export default function GradeCalculator() {
             Grade Point: {result.point}
           </p>
 
-          <Button
-            onClick={resetCalculator}
-            variant="secondary"
-            className="mt-6"
-          >
-            Reset
-          </Button>
+          <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+            <Button
+              onClick={resetCalculator}
+              variant="secondary"
+            >
+              Reset
+            </Button>
+            {hasResult && (
+              <ShareResultButton
+                text={`My grade: ${result.grade} (${result.point} GPA) — calculated at studycalc.co`}
+              />
+            )}
+          </div>
 
           {hasResult ? (
             <ProgressBar

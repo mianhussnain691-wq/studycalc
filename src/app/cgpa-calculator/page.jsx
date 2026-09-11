@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import CGPAGuide from "@/components/calculator-guides/CGPAGuide";
+import ShareResultButton from "@/components/ShareResultButton";
 
 export default function CGPACalculator() {
   const [semesters, setSemesters] = useState([
@@ -244,6 +245,14 @@ export default function CGPACalculator() {
               <p className="mt-4 text-slate-500">
                 Enter a GPA and credit hours for each semester to see your CGPA.
               </p>
+            )}
+
+            {hasResult && (
+              <div className="mt-6">
+                <ShareResultButton
+                  text={`My CGPA: ${calculateCGPA()} — calculated at studycalc.co`}
+                />
+              </div>
             )}
           </div>
         </div>

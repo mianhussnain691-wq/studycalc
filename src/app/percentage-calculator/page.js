@@ -3,6 +3,7 @@
 import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import PercentageGuide from "@/components/calculator-guides/PercentageGuide";
+import ShareResultButton from "@/components/ShareResultButton";
 
 export default function PercentageCalculator() {
   const [obtainedMarks, setObtainedMarks] = useState("");
@@ -160,12 +161,19 @@ export default function PercentageCalculator() {
             </div>
           </div>
 
-          <button
-            onClick={resetCalculator}
-            className="mt-8 inline-block rounded-xl border border-slate-700 px-6 py-3 text-base font-bold text-slate-200 transition-all duration-200 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-500 active:scale-[0.97]"
-          >
-            Reset All
-          </button>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+            <button
+              onClick={resetCalculator}
+              className="rounded-xl border border-slate-700 px-6 py-3 text-base font-bold text-slate-200 transition-all duration-200 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-500 active:scale-[0.97]"
+            >
+              Reset All
+            </button>
+            {hasResult && (
+              <ShareResultButton
+                text={`My percentage: ${percentage}% — calculated at studycalc.co`}
+              />
+            )}
+          </div>
         </div>
 
         {/* 🔥 INJECTED ZONE: Pure Authority SEO Manual loaded right beneath the layout */}
