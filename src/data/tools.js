@@ -167,6 +167,30 @@ const tools = [
     badgeColor: "bg-cyan-500/20 text-cyan-400",
     category: "University",
   },
+  {
+    title: "AMCAS Science GPA Calculator",
+    description: "Calculate your BCPM (science) and overall GPA for medical school applications.",
+    href: "/amcas-science-gpa-calculator",
+    badge: "New",
+    badgeColor: "bg-emerald-500/20 text-emerald-400",
+    category: "University",
+  },
+  {
+    title: "LSAC Law School GPA Calculator",
+    description: "Calculate your LSAC (CAS) cumulative GPA for law school applications.",
+    href: "/lsac-law-school-gpa-calculator",
+    badge: "New",
+    badgeColor: "bg-blue-500/20 text-blue-400",
+    category: "University",
+  },
+  {
+    title: "Time Value of Money Calculator",
+    description: "Calculate present value, future value, and annuity growth.",
+    href: "/time-value-of-money-calculator",
+    badge: "New",
+    badgeColor: "bg-rose-500/20 text-rose-400",
+    category: "University",
+  },
 ];
 
 export default tools;
