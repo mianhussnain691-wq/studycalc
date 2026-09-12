@@ -151,5 +151,21 @@ export const articles = [
     category: "Academic Guides",
     readTime: "9 min read",
     date: "2026-09-11"
+  },
+  {
+    title: "What GPA Do You Need for Medical School? (2026 MD & DO Data)",
+    description: "The real average GPA for MD and DO matriculants from AAMC data, how GPA and MCAT are read together, and the AMCAS retake rule that surprises most applicants.",
+    slug: "what-gpa-do-you-need-for-medical-school",
+    category: "Admissions",
+    readTime: "8 min read",
+    date: "2026-09-12"
+  },
+  {
+    title: "How LSAC Recalculates Your GPA for Law School (2026-2027 Rules)",
+    description: "Why your CAS GPA can look different from your transcript GPA — the 4.33 scale, the repeated-course rule, the W vs WF distinction, and the 2027-2028 dual-enrollment change.",
+    slug: "how-lsac-calculates-your-gpa",
+    category: "Admissions",
+    readTime: "8 min read",
+    date: "2026-09-12"
   }
 ];
