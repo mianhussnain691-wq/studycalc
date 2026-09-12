@@ -167,5 +167,13 @@ export const articles = [
     category: "Admissions",
     readTime: "8 min read",
     date: "2026-09-12"
+  },
+  {
+    title: "Time Value of Money Explained: PV, FV & Annuities for Finance Students",
+    description: "Plain-language explanations of present value, future value, and annuities, with original worked examples and a financial calculator quick-reference.",
+    slug: "time-value-of-money-explained",
+    category: "Finance Fundamentals",
+    readTime: "8 min read",
+    date: "2026-09-12"
   }
 ];
