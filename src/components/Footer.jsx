@@ -59,9 +59,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="pt-2">
-                <Link 
-                  href="/guides" 
-                  className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold text-xs uppercase tracking-wider hover:bg-cyan-500 hover:text-slate-950 transition-all duration-300 shadow-lg shadow-cyan-500/10"
+                <Link
+                  href="/guides"
+                  className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold text-xs uppercase tracking-wider hover:bg-cyan-500 hover:text-slate-950 active:scale-[0.97] transition-all duration-300 shadow-lg shadow-cyan-500/10"
                 >
                   Explore →
                 </Link>
@@ -73,6 +73,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-white text-xs tracking-wider uppercase">Company</h3>
             <ul className="mt-4 space-y-3 text-slate-400 text-sm">
+              <li><Link href="/blog" className="hover:text-cyan-400 transition-colors">Blog</Link></li>
               <li><Link href="/about" className="hover:text-cyan-400 transition-colors">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
               <li><Link href="/privacy-policy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link></li>

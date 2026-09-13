@@ -5,7 +5,7 @@ const tools = [
     href: "/gpa-calculator",
     badge: "Popular",
     badgeColor: "bg-cyan-500/20 text-cyan-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "CGPA Calculator",
@@ -13,7 +13,7 @@ const tools = [
     href: "/cgpa-calculator",
     badge: "Popular",
     badgeColor: "bg-green-500/20 text-green-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "Attendance Calculator",
@@ -29,7 +29,7 @@ const tools = [
     href: "/percentage-calculator",
     badge: "Useful",
     badgeColor: "bg-teal-500/20 text-teal-400",
-    category: "School",
+    category: "GPA & Grades",
   },
   {
     title: "Grade Calculator",
@@ -37,7 +37,7 @@ const tools = [
     href: "/grade-calculator",
     badge: "New",
     badgeColor: "bg-pink-500/20 text-pink-400",
-    category: "School",
+    category: "GPA & Grades",
   },
   {
     title: "Pakistan CGPA to US GPA Converter",
@@ -45,7 +45,7 @@ const tools = [
     href: "/pakistan-cgpa-converter",
     badge: "New",
     badgeColor: "bg-blue-500/20 text-blue-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "GPA to Percentage Calculator",
@@ -53,7 +53,7 @@ const tools = [
     href: "/gpa-to-percentage-calculator",
     badge: "New",
     badgeColor: "bg-emerald-500/20 text-emerald-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "Percentage to GPA Calculator",
@@ -61,7 +61,7 @@ const tools = [
     href: "/percentage-to-gpa-calculator",
     badge: "New",
     badgeColor: "bg-sky-500/20 text-sky-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "Target GPA Calculator",
@@ -69,7 +69,7 @@ const tools = [
     href: "/target-gpa-calculator",
     badge: "New",
     badgeColor: "bg-amber-500/20 text-amber-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "Target CGPA Calculator",
@@ -77,7 +77,7 @@ const tools = [
     href: "/target-cgpa-calculator",
     badge: "New",
     badgeColor: "bg-rose-500/20 text-rose-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "Weighted Average Calculator",
@@ -85,7 +85,7 @@ const tools = [
     href: "/weighted-average-calculator",
     badge: "New",
     badgeColor: "bg-lime-500/20 text-lime-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "Letter Grade Average Calculator",
@@ -93,7 +93,7 @@ const tools = [
     href: "/letter-grade-average-calculator",
     badge: "New",
     badgeColor: "bg-red-500/20 text-red-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "Reverse Percentage Calculator",
@@ -101,7 +101,7 @@ const tools = [
     href: "/reverse-percentage-calculator",
     badge: "New",
     badgeColor: "bg-yellow-500/20 text-yellow-400",
-    category: "University",
+    category: "GPA & Grades",
   },
   {
     title: "Class Rank & Percentile Calculator",
@@ -109,7 +109,7 @@ const tools = [
     href: "/class-rank-percentile-calculator",
     badge: "New",
     badgeColor: "bg-teal-500/20 text-teal-400",
-    category: "University",
+    category: "Academic Planning",
   },
   {
     title: "Semester Credit Load Checker",
@@ -117,7 +117,7 @@ const tools = [
     href: "/semester-credit-load-checker",
     badge: "New",
     badgeColor: "bg-blue-500/20 text-blue-400",
-    category: "University",
+    category: "Academic Planning",
   },
   {
     title: "Grade Curve Calculator",
@@ -125,7 +125,7 @@ const tools = [
     href: "/grade-curve-calculator",
     badge: "New",
     badgeColor: "bg-green-500/20 text-green-400",
-    category: "University",
+    category: "Academic Planning",
   },
   {
     title: "Dean's List Calculator",
@@ -133,7 +133,7 @@ const tools = [
     href: "/deans-list-calculator",
     badge: "New",
     badgeColor: "bg-pink-500/20 text-pink-400",
-    category: "University",
+    category: "Academic Planning",
   },
   {
     title: "Academic Standing Checker",
@@ -141,7 +141,7 @@ const tools = [
     href: "/academic-standing-checker",
     badge: "New",
     badgeColor: "bg-sky-500/20 text-sky-400",
-    category: "University",
+    category: "Academic Planning",
   },
   {
     title: "Course Weight Impact Calculator",
@@ -149,7 +149,7 @@ const tools = [
     href: "/course-weight-impact-calculator",
     badge: "New",
     badgeColor: "bg-amber-500/20 text-amber-400",
-    category: "University",
+    category: "Academic Planning",
   },
   {
     title: "Credit Hour Estimator",
@@ -157,7 +157,7 @@ const tools = [
     href: "/credit-hour-estimator",
     badge: "New",
     badgeColor: "bg-orange-500/20 text-orange-400",
-    category: "University",
+    category: "Academic Planning",
   },
   {
     title: "Scholarship GPA Eligibility Checker",
@@ -165,7 +165,7 @@ const tools = [
     href: "/scholarship-gpa-checker",
     badge: "New",
     badgeColor: "bg-cyan-500/20 text-cyan-400",
-    category: "University",
+    category: "Admissions",
   },
   {
     title: "AMCAS Science GPA Calculator",
@@ -173,7 +173,7 @@ const tools = [
     href: "/amcas-science-gpa-calculator",
     badge: "New",
     badgeColor: "bg-emerald-500/20 text-emerald-400",
-    category: "University",
+    category: "Admissions",
   },
   {
     title: "LSAC Law School GPA Calculator",
@@ -181,7 +181,7 @@ const tools = [
     href: "/lsac-law-school-gpa-calculator",
     badge: "New",
     badgeColor: "bg-blue-500/20 text-blue-400",
-    category: "University",
+    category: "Admissions",
   },
   {
     title: "Time Value of Money Calculator",
@@ -189,7 +189,7 @@ const tools = [
     href: "/time-value-of-money-calculator",
     badge: "New",
     badgeColor: "bg-rose-500/20 text-rose-400",
-    category: "University",
+    category: "Finance",
   },
 ];
 

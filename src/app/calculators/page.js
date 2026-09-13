@@ -34,8 +34,7 @@ export default function CalculatorsPage() {
             title={tool.title}
             description={tool.description}
             href={tool.href}
-            badge={tool.badge}
-            badgeColor={tool.badgeColor}
+            category={tool.category}
           />
         ))}
 

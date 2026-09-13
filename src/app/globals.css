@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -26,6 +27,158 @@ body {
 .animate-fade-in-up {
   animation: fade-in-up 0.35s ease-out both;
 }
+
+/* --- Homepage hero/section entrance + decorative animations, ported from
+   the approved Figma reference (reference/figma.css). Scoped by class name
+   only — the classes are just used within the homepage components. --- */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(.22,1,.36,1) both;
+}
+.delay-100 { animation-delay: 0.10s; }
+.delay-200 { animation-delay: 0.20s; }
+.delay-300 { animation-delay: 0.30s; }
+.delay-400 { animation-delay: 0.40s; }
+.delay-500 { animation-delay: 0.50s; }
+.delay-600 { animation-delay: 0.60s; }
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.30; transform: scale(1); }
+  50%      { opacity: 0.55; transform: scale(1.12); }
+}
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-10px); }
+}
+.animate-float   { animation: float 4s ease-in-out infinite; }
+.animate-float-2 { animation: float 5s ease-in-out infinite 0.8s; }
+.animate-float-3 { animation: float 4.5s ease-in-out infinite 1.5s; }
+.animate-float-4 { animation: float 5.5s ease-in-out infinite 0.3s; }
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spinSlow 18s linear infinite; }
+.animate-spin-reverse { animation: spinSlow 24s linear infinite reverse; }
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(45,212,191,0.08) 0%, rgba(45,212,191,0.22) 50%, rgba(45,212,191,0.08) 100%);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50%      { opacity: 0.9;  transform: scale(1.3); }
+}
+
+.tool-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.tool-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 60%);
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.tool-card:hover::before { opacity: 1; }
+.tool-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px rgba(45,212,191,0.08);
+}
+
+.icon-glass {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(.22,1,.36,1), box-shadow 0.25s ease;
+}
+.icon-glass::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 50%;
+  height: 50%;
+  background: rgba(255,255,255,0.35);
+  transform: rotate(30deg);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+.icon-glass:hover::after {
+  opacity: 1;
+  transform: rotate(30deg) translate(160%, 160%);
+}
+.icon-glass:hover {
+  transform: scale(1.15) rotate(-3deg);
+  box-shadow: 0 0 18px var(--glow, rgba(45,212,191,0.5));
+}
+
+/* Same effect, but triggered by hovering the surrounding card/row —
+   the icon square itself is too small a hover target on its own. */
+.tool-card:hover .icon-glass::after,
+.floating-card:hover .icon-glass::after,
+.journey-step:hover .icon-glass::after {
+  opacity: 1;
+  transform: rotate(30deg) translate(160%, 160%);
+}
+.tool-card:hover .icon-glass,
+.floating-card:hover .icon-glass,
+.journey-step:hover .icon-glass {
+  transform: scale(1.15) rotate(-3deg);
+  box-shadow: 0 0 18px var(--glow, rgba(45,212,191,0.5));
+}
+
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.7); }
+  70%  { transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.animate-pop { animation: popIn 0.5s cubic-bezier(.22,1,.36,1) both; }
+
+.cat-pill {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.cat-pill:hover {
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 10px 30px var(--pill-glow, rgba(45,212,191,0.35)), 0 0 22px var(--pill-glow, rgba(45,212,191,0.25));
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cat-dropdown {
+  animation: slideDown 0.2s ease-out both;
+}
+
+@keyframes revealLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.animate-reveal-left { animation: revealLeft 0.8s cubic-bezier(.22,1,.36,1) both; }
+
+@keyframes blink { 50% { opacity: 0; } }
+.cursor-blink { animation: blink 1s step-end infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   html {

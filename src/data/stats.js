@@ -1,6 +1,6 @@
 const stats = [
   {
-    number: "5+",
+    number: "24+",
     label: "Free Calculators",
   },
   {
