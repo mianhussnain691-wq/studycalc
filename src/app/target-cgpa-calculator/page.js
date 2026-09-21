@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import TargetCgpaGuide from "@/components/calculator-guides/TargetCgpaGuide";
+import { computeNeededGpa } from "@/lib/semesterMath";
 
 export default function TargetCgpaCalculator() {
   const [currentCgpa, setCurrentCgpa] = useState("");
@@ -30,8 +31,12 @@ export default function TargetCgpaCalculator() {
     const { cCgpa, cCredits, tCgpa, rCredits, valid } = parseInputs();
     if (!valid) return null;
 
-    const neededGpa =
-      (tCgpa * (cCredits + rCredits) - cCgpa * cCredits) / rCredits;
+    const neededGpa = computeNeededGpa({
+      current: cCgpa,
+      currentCredits: cCredits,
+      target: tCgpa,
+      remainingCredits: rCredits,
+    });
 
     return { neededGpa, rCredits };
   }

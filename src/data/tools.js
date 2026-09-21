@@ -160,6 +160,14 @@ const tools = [
     category: "Academic Planning",
   },
   {
+    title: "Semester Planning Dashboard",
+    description: "See the GPA you need this semester and your credit load status together, in one place.",
+    href: "/semester-planner",
+    badge: "New",
+    badgeColor: "bg-cyan-500/20 text-cyan-400",
+    category: "Academic Planning",
+  },
+  {
     title: "Scholarship GPA Eligibility Checker",
     description: "See what scholarship tier your GPA typically qualifies for.",
     href: "/scholarship-gpa-checker",

@@ -4,6 +4,7 @@ import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import AttendanceGuide from "@/components/calculator-guides/AttendanceGuide";
 import ShareResultButton from "@/components/ShareResultButton";
+import DownloadResultCard from "@/components/DownloadResultCard";
 
 const TARGET = 75;
 
@@ -197,10 +198,20 @@ export default function AttendanceCalculator() {
               Reset
             </button>
             {hasResult && (
-              <ShareResultButton
-                text={`My attendance: ${percentage}% — calculated at studycalc.co`}
-                className="flex-1"
-              />
+              <>
+                <ShareResultButton
+                  text={`My attendance: ${percentage}% — calculated at studycalc.co`}
+                  className="flex-1"
+                />
+                <DownloadResultCard
+                  toolName="Attendance Calculator"
+                  label="Your Attendance"
+                  value={`${percentage}%`}
+                  caption={getAttendanceStatus()}
+                  fileName="studycalc-attendance"
+                  className="flex-1"
+                />
+              </>
             )}
           </div>
         </div>

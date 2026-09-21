@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import CGPAGuide from "@/components/calculator-guides/CGPAGuide";
 import ShareResultButton from "@/components/ShareResultButton";
+import DownloadResultCard from "@/components/DownloadResultCard";
 
 export default function CGPACalculator() {
   const [semesters, setSemesters] = useState([
@@ -248,9 +249,16 @@ export default function CGPACalculator() {
             )}
 
             {hasResult && (
-              <div className="mt-6">
+              <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
                 <ShareResultButton
                   text={`My CGPA: ${calculateCGPA()} — calculated at studycalc.co`}
+                />
+                <DownloadResultCard
+                  toolName="CGPA Calculator"
+                  label="Your CGPA"
+                  value={calculateCGPA()}
+                  caption="Cumulative GPA"
+                  fileName="studycalc-cgpa"
                 />
               </div>
             )}

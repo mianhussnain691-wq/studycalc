@@ -4,28 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import SemesterCreditLoadGuide from "@/components/calculator-guides/SemesterCreditLoadGuide";
-
-function getStatus(credits) {
-  if (credits < 12) {
-    return {
-      label: "Part-Time",
-      color: "text-sky-400",
-      message: "Below the common 12-credit full-time threshold. This can affect financial aid, insurance, and visa status eligibility at many institutions.",
-    };
-  }
-  if (credits <= 17) {
-    return {
-      label: "Full-Time",
-      color: "text-cyan-400",
-      message: "Within the typical 12-17 credit full-time range most US institutions use.",
-    };
-  }
-  return {
-    label: "Overload",
-    color: "text-amber-400",
-    message: "At or above 18 credits, most schools classify this as an overload and may require advisor or dean approval.",
-  };
-}
+import { getCreditLoadStatus } from "@/lib/semesterMath";
 
 export default function SemesterCreditLoadChecker() {
   const [credits, setCredits] = useState("");
@@ -48,7 +27,7 @@ export default function SemesterCreditLoadChecker() {
   }
 
   const { value, valid } = parseInput();
-  const status = valid ? getStatus(value) : null;
+  const status = valid ? getCreditLoadStatus(value) : null;
   const error = getError();
 
   return (

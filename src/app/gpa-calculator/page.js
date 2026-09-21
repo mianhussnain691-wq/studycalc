@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import GPAGuide from "@/components/calculator-guides/GPAGuide"; // <--- Perfect Import Path
 import ShareResultButton from "@/components/ShareResultButton";
+import DownloadResultCard from "@/components/DownloadResultCard";
 
 // Matches the scale published in GPAGuide.jsx, which renders on this same page.
 const GRADE_OPTIONS = [
@@ -195,10 +196,18 @@ export default function GPACalculator() {
         </button>
 
         {hasCalculated && (
-          <div className="mt-3">
+          <div className="mt-3 flex flex-col sm:flex-row gap-3">
             <ShareResultButton
               text={`My GPA: ${gpa} — calculated at studycalc.co`}
-              className="w-full"
+              className="flex-1"
+            />
+            <DownloadResultCard
+              toolName="GPA Calculator"
+              label="Your GPA"
+              value={gpa}
+              caption="On a 4.0 scale"
+              fileName="studycalc-gpa"
+              className="flex-1"
             />
           </div>
         )}
