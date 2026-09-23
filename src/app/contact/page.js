@@ -38,14 +38,14 @@ export default function ContactPage() {
               <span className="font-bold text-cyan-400">
                 Email:
               </span>{" "}
-              support@studycalc.co
+              mugtechofficial@gmail.com
             </div>
 
             <div>
               <span className="font-bold text-cyan-400">
                 Alternate Email:
               </span>{" "}
-              mugtechofficial@gmail.com
+              support@studycalc.co
             </div>
 
             <div>
