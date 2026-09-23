@@ -43,6 +43,13 @@ export default function ContactPage() {
 
             <div>
               <span className="font-bold text-cyan-400">
+                Alternate Email:
+              </span>{" "}
+              mugtechofficial@gmail.com
+            </div>
+
+            <div>
+              <span className="font-bold text-cyan-400">
                 Response Time:
               </span>{" "}
               Within 24–48 hours
