@@ -304,7 +304,11 @@ export default function AttendanceCalculatorGuide() {
         </div>
         <p className="mt-3 text-xs text-slate-500">
           This table assumes a 100-class term for easy scaling. Use the calculator above with your school's actual
-          total for an exact number.
+          total for an exact number, or see the{" "}
+          <Link href="/attendance-percentage-formula" className="text-cyan-400 hover:underline">
+            full breakdown across 20 to 100 classes
+          </Link>{" "}
+          for other term lengths.
         </p>
       </div>
 

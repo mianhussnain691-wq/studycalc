@@ -65,13 +65,17 @@ export default function AttendancePercentage() {
     { step: "3", title: "Divide and multiply by 100", desc: "Attended divided by held, then multiply by 100. That's your current attendance percentage — the same number your school's system is tracking." }
   ];
 
-  const scenarioTable = [
-    { total: "30 classes", target: "75%", canMiss: "7 classes" },
-    { total: "40 classes", target: "75%", canMiss: "10 classes" },
-    { total: "60 classes", target: "75%", canMiss: "15 classes" },
-    { total: "60 classes", target: "80%", canMiss: "12 classes" },
-    { total: "100 classes", target: "75%", canMiss: "25 classes" },
-  ];
+  // Max absences you can have out of `total` classes and still be AT OR
+  // ABOVE `target` — same closed-form math as the live calculator, just
+  // solved for "how many can I miss" instead of "what's my percentage".
+  // total - ceil(total * target) avoids floating-point drift that
+  // total * (1 - target) runs into (e.g. 1 - 0.8 !== 0.2 in JS).
+  const totalsRow = [20, 30, 40, 50, 60, 80, 100];
+  const targetsCol = [0.75, 0.8, 0.85, 0.9];
+  const missMatrix = totalsRow.map((total) => ({
+    total,
+    misses: targetsCol.map((target) => total - Math.ceil(total * target)),
+  }));
 
   return (
     <article className="mx-auto mt-12 max-w-5xl rounded-2xl border border-slate-800 bg-slate-900/40 p-6 sm:p-10 text-left">
@@ -157,23 +161,26 @@ export default function AttendancePercentage() {
           </p>
         </div>
         <p className="mt-4 leading-7 text-slate-300">
-          Here's what that looks like across a few common scenarios, so you can find one close to your own course:
+          Here's the max number of absences you can have — out of a given number of total classes — and still
+          be at or above each common required percentage:
         </p>
         <div className="mt-6 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/30">
           <table className="w-full border-collapse text-sm">
             <thead className="bg-slate-800/80 text-cyan-400 font-semibold">
               <tr>
-                <th className="px-5 py-3.5 text-left">Total Classes This Term</th>
-                <th className="px-5 py-3.5 text-left">Required Attendance</th>
-                <th className="px-5 py-3.5 text-left">Max You Can Miss</th>
+                <th className="px-5 py-3.5 text-left">Total Classes</th>
+                {targetsCol.map((t) => (
+                  <th key={t} className="px-5 py-3.5 text-left">{Math.round(t * 100)}% required</th>
+                ))}
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-800 text-slate-300">
-              {scenarioTable.map((row, idx) => (
-                <tr key={idx} className="hover:bg-slate-900/20 transition-colors">
+              {missMatrix.map((row) => (
+                <tr key={row.total} className="hover:bg-slate-900/20 transition-colors">
                   <td className="px-5 py-3.5 font-bold text-white">{row.total}</td>
-                  <td className="px-5 py-3.5 text-slate-200">{row.target}</td>
-                  <td className="px-5 py-3.5 text-cyan-400 font-semibold">{row.canMiss}</td>
+                  {row.misses.map((m, i) => (
+                    <td key={i} className="px-5 py-3.5 text-cyan-400 font-semibold">{m}</td>
+                  ))}
                 </tr>
               ))}
             </tbody>
@@ -181,6 +188,11 @@ export default function AttendancePercentage() {
         </div>
         <p className="mt-4 leading-7 text-slate-300 text-sm">
           One important catch: this number shrinks as the term goes on. Missing 3 classes out of 10 held so far is a very different risk than missing 3 out of 40 — the earlier in the term you're calculating, the more conservative you should be, since a rough patch later can still tip you under the line.
+        </p>
+        <p className="mt-4 leading-7 text-slate-300 text-sm">
+          Going the other direction — checking your attendance after already knowing how many you missed — is
+          simpler: if 94 lessons have been held and you missed 7, you attended 87, so 87 ÷ 94 = 92.6%. Still
+          comfortably above a 90% requirement.
         </p>
       </div>
 
