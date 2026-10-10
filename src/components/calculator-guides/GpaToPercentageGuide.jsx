@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GRADE_SCALE } from "@/data/gradeScale";
 
 const faqs = [
   {
@@ -90,9 +91,10 @@ export default function GpaToPercentageGuide() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-bold text-white">Worked Example 1: A Clean Band Match</h2>
+        <h2 className="text-2xl font-bold text-white">Is a 3.3 GPA Good? What It Converts To</h2>
         <p className="mt-4 leading-7">
-          A student has a 3.3 GPA. Looking that up on the scale, 3.3 corresponds to a B+, which spans
+          3.3 is the single most common GPA-to-percentage question this calculator gets, so it&apos;s worth
+          walking through directly. On the common US 4.0 scale, 3.3 corresponds to a B+, which spans
           87%-89%.
         </p>
         <div className="mt-4 rounded-xl bg-slate-900 border border-slate-800 p-5 font-mono text-sm">
@@ -100,8 +102,56 @@ export default function GpaToPercentageGuide() {
         </div>
         <p className="mt-4 leading-7">
           The calculator reports the full 87-89% range along with a midpoint estimate of 88% — useful if
-          you need a single representative number, while the range itself is the more honest answer.
+          you need a single representative number, while the range itself is the more honest answer. As a
+          standalone number, a 3.3 is solidly above average and competitive for most undergraduate and
+          many graduate programs, though some scholarships and honors programs set their bar at 3.5 or
+          higher.
         </p>
+        <p className="mt-4 leading-7">
+          One important catch: a &quot;3.3 GPA&quot; does not mean the same thing on every scale. On a 4.3-point
+          scale (used by many Canadian universities and some US schools alongside the 4.0 scale), grade
+          points are assigned differently — B+ is often still 3.3, but the overall scale sits differently
+          relative to 4.0, so the same number does not automatically mean the same percentage. On a
+          10-point scale (common in India and some other countries), CGPA bands follow their own
+          institution-specific grading tables rather than a simple proportional scaling of the US 4.0
+          system. There is no single verified formula to convert a 4.0-scale 3.3 directly into a 10-point
+          CGPA — check which scale your own institution actually uses before comparing numbers across
+          systems. See{" "}
+          <Link href="/gpa-scale-explained" className="text-cyan-400 hover:underline">
+            GPA Scale Explained
+          </Link>{" "}
+          for how the 4.0, 5.0, and 10.0 scales relate.
+        </p>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-white">Full GPA to Percentage Chart (US 4.0 Scale)</h2>
+        <p className="mt-4 leading-7">
+          Every band on the standard US 4.0 scale, for quick reference without typing a number into the
+          calculator above:
+        </p>
+        <div className="mt-6 overflow-x-auto rounded-xl border border-slate-800">
+          <table className="w-full text-left text-sm">
+            <thead>
+              <tr className="bg-slate-900 text-slate-300">
+                <th className="p-3">GPA</th>
+                <th className="p-3">Letter Grade</th>
+                <th className="p-3">Percentage Range</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800">
+              {GRADE_SCALE.map((row) => (
+                <tr key={row.letter} className="bg-slate-950">
+                  <td className="p-3 font-mono text-cyan-400 font-bold">{row.gpa.toFixed(1)}</td>
+                  <td className="p-3 text-white font-semibold">{row.letter}</td>
+                  <td className="p-3 text-slate-400">
+                    {row.gpa === 0 ? "Below 60%" : `${row.minPercent}–${row.maxPercent}%`}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div className="mt-12">
