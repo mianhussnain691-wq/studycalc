@@ -28,6 +28,61 @@ export const metadata = {
   ],
 };
 
+const faqs = [
+  {
+    q: "Is a 4.0 weighted GPA good for top universities?",
+    a: "A 4.0 weighted GPA means a student is averaging mostly 'B' grades in advanced courses (AP/IB/Honors) or 'A' grades in unweighted standard courses. Top competitive universities usually look for an unweighted GPA near 3.8-4.0 combined with rigorous AP/IB course selection that pushes the weighted GPA above 4.3+.",
+  },
+  {
+    q: "How much does an AP class boost your GPA?",
+    a: "On a standard 5.0 weighted scale, an AP (Advanced Placement) or IB (International Baccalaureate) Higher Level class adds a +1.0 grade point bonus. Earning an 'A' in an AP class gives 5.0 quality points instead of the standard 4.0 unweighted points.",
+  },
+  {
+    q: "Do colleges recalculate high school GPAs during admissions?",
+    a: "Yes, over 80% of major universities recalculate applicant GPAs onto a standardized unweighted 4.0 scale or an internal proprietary system. They evaluate course rigor separately using the official high school transcript profile.",
+  },
+  {
+    q: "What is the difference between Honors (4.5) and AP (5.0) weighting?",
+    a: "Honors classes typically grant a +0.5 quality point bonus (an 'A' equals 4.5), reflecting accelerated high school curriculum. AP classes are college-level courses audited by the College Board, granting a full +1.0 bonus (an 'A' equals 5.0).",
+  },
+  {
+    q: "How does the Texas 6.0 GPA scale work?",
+    a: "Several Texas districts use a 6.0 weighted scale where AP/IB/dual-credit classes sit at the top tier and Pre-AP/advanced courses sit one tier below, partly to support the state's Automatic Admission Top 6% rule (UT Austin). Exact tier names and point values vary by district — confirm with your own district's academic guide.",
+  },
+  {
+    q: "What is the University of California (UC) Capped Weighted GPA?",
+    a: "The UC system calculates a Capped Weighted GPA by adding extra grade points only for honors-level/AP/IB courses taken in 10th and 11th grade, capping the maximum bonus points at 8 semester units (4 full-year courses).",
+  },
+  {
+    q: "Is it better to get a 'B' in an AP class or an 'A' in a Regular class?",
+    a: "Selective university admissions committees generally prefer a 'B' in an Advanced Placement (AP) or IB course over an 'A' in a regular one. A 'B' in an AP class demonstrates academic ambition and willingness to challenge yourself with college-level work, whereas an 'A' in a regular class indicates you stayed within your comfort zone.",
+  },
+  {
+    q: "What is the highest possible weighted GPA you can achieve?",
+    a: "Assuming a high school uses a standard 5.0 weighted scale for AP/IB courses and a student earns straight 'A's (5.0) in every single course taken across 4 years with no unweighted electives, the theoretical maximum weighted GPA is 5.00. Realistically, taking required unweighted classes (PE, Health, Fine Arts) caps most valedictorian GPAs around 4.60-4.85.",
+  },
+  {
+    q: "Do college admissions officers prefer AP or IB courses?",
+    a: "Colleges generally view Advanced Placement (AP) and International Baccalaureate (IB) courses with equal prestige. AP allows students flexibility to pick individual subject strengths, whereas IB offers an integrated, holistic diploma track. Admissions officers evaluate you based on taking the most rigorous options available at your specific high school.",
+  },
+  {
+    q: "Does Dual Enrollment boost GPA as much as AP classes?",
+    a: "In most US school districts, yes — Dual Enrollment (taking real college courses at a local community college or university while in high school) receives the maximum +1.0 weighting bonus on a 5.0 scale, matching AP and IB HL parity. Confirm with your specific district, since this isn't universal.",
+  },
+  {
+    q: "Do high school freshman year grades count toward cumulative GPA?",
+    a: "Generally yes — overall high school cumulative GPAs calculated by your school district include freshman year grades. However, certain college systems (such as the University of California system) exclude 9th-grade marks from their own proprietary admission GPA calculations, focusing heavily on 10th and 11th-grade performance trends.",
+  },
+  {
+    q: "What's a class called that's weighted but isn't AP or IB?",
+    a: "Usually \"Honors\" or \"Pre-AP\" — these typically earn a smaller weighting bonus (often +0.5, vs. AP/IB's full +1.0) for being more rigorous than a standard course without carrying full college-level/exam-board status. Exact naming and bonus size vary by school.",
+  },
+  {
+    q: "Is a 60 in an AP class treated the same as a 70 in a regular class?",
+    a: "A small number of schools use a percentage-point grading adjustment (commonly +10 percentage points) for AP/Honors classes, separate from the quality-point bonus system this guide mainly covers. Under that specific convention, a 60 in an AP class could be read as a 70. This method is far less common than the quality-point approach and isn't universal — check your own school's grading handbook for which convention (if either) it actually uses.",
+  },
+];
+
 export default function APHonorsGpaWeightingGuide() {
   const jsonLdData = {
     "@context": "https://schema.org",
@@ -56,56 +111,11 @@ export default function APHonorsGpaWeightingGuide() {
   const faqSchemaData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is a 4.0 weighted GPA good for top universities?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A 4.0 weighted GPA means a student is averaging mostly 'B' grades in advanced courses (AP/IB/Honors) or 'A' grades in unweighted standard courses. Top competitive universities usually look for an unweighted GPA near 3.8-4.0 combined with rigorous AP/IB course selection that pushes the weighted GPA above 4.3+."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does an AP class boost your GPA?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "On a standard 5.0 weighted scale, an AP (Advanced Placement) or IB (International Baccalaureate) Higher Level class adds a +1.0 grade point bonus. Earning an 'A' in an AP class gives 5.0 quality points instead of the standard 4.0 unweighted points."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do colleges recalculate high school GPAs during admissions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, over 80% of major universities recalculate applicant GPAs onto a standardized unweighted 4.0 scale or an internal proprietary system. They evaluate course rigor separately using the official high school transcript profile."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between Honors (4.5) and AP (5.0) weighting?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Honors classes typically grant a +0.5 quality point bonus (an 'A' equals 4.5), reflecting accelerated high school curriculum. AP classes are college-level courses audited by the College Board, granting a full +1.0 bonus (an 'A' equals 5.0)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the Texas 6.0 GPA scale work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Many Texas school districts use a 6.0 weighted scale where AP/IB classes yield up to 6.0 quality points for 100%, Advanced/Honors yield 5.5, and Regular courses yield 5.0. It allows fine-grained percentage-to-quality-point conversion for state class rank automatic admission requirements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the University of California (UC) Capped Weighted GPA?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The UC system calculates a Capped Weighted GPA by adding extra grade points only for honors-level/AP/IB courses taken in 10th and 11th grade, capping the maximum bonus points at 8 semester units (4 full-year courses)."
-        }
-      }
-    ]
+    "mainEntity": faqs.map((f) => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a },
+    })),
   };
 
   return (
@@ -355,7 +365,13 @@ export default function APHonorsGpaWeightingGuide() {
             <div className="p-8 bg-slate-950 border border-slate-800 rounded-2xl space-y-4 shadow-xl">
               <h3 className="font-bold text-cyan-400 text-xl">The Texas 6.0 Weighted GPA Scale</h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Many school districts across Texas (such as Katy ISD, Frisco ISD, and North East ISD) utilize a <strong>6.0 Weighted Scale</strong> to handle competitive class rankings for the state's Automatic Admission Top 6% Rule (UT Austin).
+                Several Texas school districts use a <strong>6.0 weighted scale</strong> instead of the more
+                common 5.0, partly to support fine-grained class ranking for the state&apos;s Automatic
+                Admission Top 6% rule (UT Austin). Frisco ISD, for example, publicly documents a tiered
+                system where AP, IB, and dual-credit courses sit at the top tier and Pre-AP/advanced
+                courses sit one tier below. Exact tier names, point values, and which courses qualify vary
+                by district — the table below illustrates the common 6/5.5/5 pattern, not one specific
+                district&apos;s exact published table.
               </p>
               <div className="overflow-x-auto my-4">
                 <table className="w-full text-left border-collapse font-mono text-xs sm:text-sm">
@@ -397,13 +413,18 @@ export default function APHonorsGpaWeightingGuide() {
             <div className="p-8 bg-slate-950 border border-slate-800 rounded-2xl space-y-4 shadow-xl">
               <h3 className="font-bold text-yellow-400 text-xl">100-Point Weighted Cumulative Percentage Scales</h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Certain districts in New York, New Jersey, and Pennsylvania report GPAs as a direct weighted percentage (e.g., 98.45% or 102.30%). In these systems, instead of converting grades to 4.0 or 5.0 quality points, a multiplier or addition factor is applied directly to final semester numeric grades:
+                Some districts report GPAs as a direct weighted percentage (occasionally above 100%, like 102.30%) rather than converting grades to 4.0/5.0/6.0 quality points. In these systems, a multiplier or flat addition is applied directly to the raw numeric grade for weighted courses:
               </p>
               <div className="p-4 bg-slate-900 rounded-xl font-mono text-xs sm:text-sm text-yellow-400 border border-slate-800">
-                AP Course Weighted Grade = Raw Percentage Score × 1.10 (or Raw Percentage + 7 Points)
+                AP Course Weighted Grade = Raw Percentage Score × a district-set multiplier (or + a flat point bonus)
                 <br />
-                Example: 92% in AP Chemistry × 1.10 = 101.20% Weighted Grade Score
+                Example pattern: 92% × 1.10 = 101.20% weighted grade score
               </div>
+              <p className="text-xs text-slate-400">
+                The exact multiplier or bonus (and whether a district uses this method at all instead of
+                quality points) is set locally — confirm with your own district&apos;s grading policy rather
+                than assuming the example above.
+              </p>
             </div>
           </div>
         </section>
@@ -576,40 +597,12 @@ export default function APHonorsGpaWeightingGuide() {
           </h2>
 
           <div className="space-y-6">
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
-              <h3 className="font-bold text-white text-lg">Is it better to get a 'B' in an AP class or an 'A' in a Regular class?</h3>
-              <p className="text-slate-400 text-base leading-relaxed">
-                Admissions officers famously answer this question with: "It is best to get an 'A' in an AP class." However, when forced to choose, selective university admissions committees almost universally prefer a 'B' in an Advanced Placement (AP) or IB course. A 'B' in an AP class demonstrates academic ambition and willingness to challenge yourself with college-level work, whereas an 'A' in a regular class indicates you stayed within your comfort zone.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
-              <h3 className="font-bold text-white text-lg">What is the highest possible weighted GPA you can achieve?</h3>
-              <p className="text-slate-400 text-base leading-relaxed">
-                Assuming a high school uses a standard 5.0 weighted scale for AP/IB courses and a student earns straight 'A's (5.0) in every single course taken across 4 years with no unweighted electives, the theoretical maximum weighted GPA is <strong>5.00</strong>. Realistically, taking required unweighted classes (PE, Health, Fine Arts) caps most valedictorian GPAs around 4.60 - 4.85.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
-              <h3 className="font-bold text-white text-lg">Do college admissions officers prefer AP or IB courses?</h3>
-              <p className="text-slate-400 text-base leading-relaxed">
-                Colleges view Advanced Placement (AP) and International Baccalaureate (IB) courses with equal high prestige. AP allows students flexibility to pick individual subject strengths, whereas IB offers an integrated holistic diploma track. Admissions officers evaluate you based on taking the most rigorous options available at your specific high school.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
-              <h3 className="font-bold text-white text-lg">Does Dual Enrollment boost GPA as much as AP classes?</h3>
-              <p className="text-slate-400 text-base leading-relaxed">
-                Yes, in almost all US school districts, Dual Enrollment (taking real college courses at a local community college or university while in high school) receives the maximum +1.0 weighting bonus on a 5.0 scale, matching AP and IB HL parity.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
-              <h3 className="font-bold text-white text-lg">Do high school freshman year grades count toward cumulative GPA?</h3>
-              <p className="text-slate-400 text-base leading-relaxed">
-                Yes, overall high school cumulative GPAs calculated by your school district include freshman year grades. However, certain college systems (such as the University of California system and Stanford University) exclude 9th-grade marks from their proprietary admission GPA calculations, focusing heavily on 10th and 11th-grade performance trends.
-              </p>
-            </div>
+            {faqs.map((f) => (
+              <div key={f.q} className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+                <h3 className="font-bold text-white text-lg">{f.q}</h3>
+                <p className="text-slate-400 text-base leading-relaxed">{f.a}</p>
+              </div>
+            ))}
           </div>
         </section>
 

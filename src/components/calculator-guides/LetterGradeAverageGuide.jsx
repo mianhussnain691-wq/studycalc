@@ -29,6 +29,10 @@ const faqs = [
     q: "Is a B+ worth more than a B in this calculator?",
     a: "Yes — B+ converts to 3.3 and B converts to 3.0 before averaging, so a B+ pulls your average slightly higher than a plain B would.",
   },
+  {
+    q: "What would be the GPA for an A and B+ average?",
+    a: "A converts to 4.0 and B+ converts to 3.3. Averaged: (4.0 + 3.3) / 2 = 3.65, which falls just short of the 3.7 needed for A-, landing in the B+ (3.3) band.",
+  },
 ];
 
 const faqJsonLd = {
@@ -134,6 +138,21 @@ export default function LetterGradeAverageGuide() {
           This is exactly the effect an unweighted plain average produces — a single D or C can pull the
           average down more than a few strong grades can pull it back up, since every grade counts
           equally regardless of how many you have.
+        </p>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-white">Worked Example 3: A-, A, B+</h2>
+        <p className="mt-4 leading-7">
+          Three grades: A-, A, B+. Converted to GPA points: 3.7, 4.0, 3.3.
+        </p>
+        <div className="mt-4 rounded-xl bg-slate-900 border border-slate-800 p-5 font-mono text-sm">
+          (3.7 + 4.0 + 3.3) ÷ 3 = 11.0 ÷ 3 ≈ 3.67
+        </div>
+        <p className="mt-4 leading-7">
+          A 3.67 average hasn&apos;t quite reached the 3.7 needed for an A-, so it lands in the B+ band (3.3)
+          — a reminder that averaging three strong grades doesn&apos;t automatically round up to the highest
+          of the three.
         </p>
       </div>
 
