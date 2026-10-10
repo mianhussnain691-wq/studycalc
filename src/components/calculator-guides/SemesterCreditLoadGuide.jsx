@@ -33,6 +33,14 @@ const faqs = [
     q: "Can my credit load status change mid-semester?",
     a: "Yes — dropping a course after the semester begins can shift you from full-time to part-time status if your remaining credits fall below the threshold, sometimes with financial aid or visa consequences. Most schools have an add/drop deadline after which dropping a course still counts toward your credit load for status purposes even if you receive a partial refund. Check with your registrar before dropping anything close to a threshold.",
   },
+  {
+    q: "Is there a maximum number of credit hours allowed during a summer semester?",
+    a: "Usually yes, and it's typically lower than the regular-semester overload cap, since summer terms are compressed into fewer weeks. Many schools cap summer enrollment well below 18 credits specifically to prevent an unmanageable workload in a shorter timeframe — check your summer-term registration policy rather than assuming your regular-semester overload rules apply.",
+  },
+  {
+    q: "Is taking 20 credits in graduate school unreasonable?",
+    a: "It depends heavily on the program — graduate credit hours often represent more intensive per-credit work than undergraduate ones, so many graduate programs set a normal full-time load well below 20 and would classify that as a significant overload requiring advisor approval. Some professional or accelerated programs do expect higher loads as standard. Check your specific program's typical course load and talk to your advisor before committing to a number that high.",
+  },
 ];
 
 const faqJsonLd = {
@@ -52,6 +60,15 @@ export default function SemesterCreditLoadGuide() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-white">What Does &quot;Credit Load&quot; Mean?</h2>
+        <p className="rounded-xl border border-cyan-500/20 bg-slate-950 p-4 text-sm text-slate-300">
+          <strong className="text-cyan-400">Quick answer:</strong> Your credit load (or course load) is
+          simply the total number of credit hours you&apos;re registered for in a given term. It&apos;s the number
+          that determines whether you&apos;re classified part-time, full-time, or an overload.
+        </p>
+      </div>
 
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-white">Why Credit Load Status Matters</h2>

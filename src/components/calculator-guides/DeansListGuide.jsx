@@ -63,6 +63,12 @@ export default function DeansListGuide() {
 
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-white">What the Dean&apos;s List Recognizes</h2>
+        <p className="rounded-xl border border-cyan-500/20 bg-slate-950 p-4 text-sm text-slate-300">
+          <strong className="text-cyan-400">Quick answer:</strong> To find out if you&apos;re on the Dean&apos;s
+          List (sometimes searched as &quot;dean lister&quot;), check whether your semester GPA and credit hours
+          both clear your school&apos;s published threshold — enter them above for an instant read against the
+          common convention, then confirm with your registrar for the official result.
+        </p>
         <p className="mt-4 leading-7">
           The Dean&apos;s List is an academic honor most colleges and universities award each semester to
           students who combine a strong GPA with a substantial course load. It&apos;s meant to recognize
