@@ -119,8 +119,14 @@ export default function GradeScaleExplained() {
 
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white border-b border-slate-800 pb-2">
-              3. Where the Passing Line Actually Sits
+              3. What Is a Grade Threshold? Where the Passing Line Actually Sits
             </h2>
+            <p className="rounded-xl border border-cyan-500/20 bg-slate-950 p-4 text-sm text-slate-300">
+              <strong className="text-cyan-400">Quick answer:</strong> A grade threshold is any fixed
+              cutoff score that triggers a specific outcome — passing a course, qualifying for honors,
+              or landing on academic probation. The passing threshold specifically is the minimum score
+              needed to receive credit for a course at all.
+            </p>
             <p>
               There's no single universal passing threshold — it's genuinely different by country, and often by individual institution within the same country. Many US high schools and universities set the line around 60%. Several South Asian and Middle Eastern education systems set it lower, often around 33-40% for board exams specifically. The UK's degree classification system doesn't use a single "pass/fail" percentage at all in the same way — it uses classification bands (First, 2:1, 2:2, Third) with their own separate cutoffs.
             </p>
@@ -131,10 +137,16 @@ export default function GradeScaleExplained() {
 
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white border-b border-slate-800 pb-2">
-              4. What Sits Above and Below the Middle of the Scale
+              4. What Is a Grade Band? Named Tiers Above and Below Average
             </h2>
+            <p className="rounded-xl border border-cyan-500/20 bg-slate-950 p-4 text-sm text-slate-300">
+              <strong className="text-cyan-400">Quick answer:</strong> A grade band is a named range on a
+              grading scale — like &quot;Dean&apos;s List,&quot; &quot;Good Standing,&quot; or &quot;Academic Probation&quot; — that
+              groups a range of GPAs or scores under one label with a shared consequence, rather than
+              treating every individual number as its own separate outcome.
+            </p>
             <p>
-              Grading scales aren't just about pass vs. fail — most schools define named thresholds above and below the average that trigger something real:
+              Grading scales aren't just about pass vs. fail — most schools define named bands above and below the average that trigger something real:
             </p>
             <div className="grid md:grid-cols-2 gap-4 my-6 text-sm">
               <div className="p-4 rounded-xl border border-slate-800 bg-slate-900/80 space-y-2">
@@ -161,7 +173,36 @@ export default function GradeScaleExplained() {
 
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white border-b border-slate-800 pb-2">
-              5. Why Weighted Scales Exist at All
+              5. Pass/Fail vs. Letter Grading
+            </h2>
+            <p className="rounded-xl border border-cyan-500/20 bg-slate-950 p-4 text-sm text-slate-300">
+              <strong className="text-cyan-400">Quick answer:</strong> In a pass/fail course, your
+              performance is recorded as just &quot;Pass&quot; or &quot;Fail&quot; instead of a letter grade, and most
+              schools exclude pass/fail courses from your GPA calculation entirely — the letter grade you
+              would have earned usually doesn&apos;t appear on your transcript or count toward your average.
+            </p>
+            <p>
+              Some schools offer a middle option — &quot;Pass/No Record&quot; or a credit/no-credit system — where a
+              passing grade shows no numeric value at all, while others still record the underlying letter
+              grade privately for the instructor&apos;s records even though it&apos;s hidden from your official GPA.
+              The exact behavior varies by institution, so check whether a pass/fail course on your
+              transcript truly carries zero GPA weight or just a reduced one before assuming it won&apos;t
+              affect your overall average.
+            </p>
+            <p>
+              If you&apos;re trying to calculate your GPA and have a mix of letter-graded and pass/fail
+              courses, exclude the pass/fail credit hours entirely from both the numerator and denominator
+              in the{" "}
+              <Link href="/gpa-calculator" className="text-cyan-400 hover:underline">
+                GPA Calculator
+              </Link>
+              , the same way you would for a non-GPA-bearing course.
+            </p>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold text-white border-b border-slate-800 pb-2">
+              6. Why Weighted Scales Exist at All
             </h2>
             <p>
               Some high schools add extra points for harder classes — Honors, AP, IB — so a demanding course load isn't penalized relative to an easier one. This is a design choice on top of the base grading scale, not a separate scale entirely, and it's genuinely worth understanding in detail if you're a high schooler weighing course selection or comparing GPAs. We cover the full mechanics, with worked examples, in our dedicated{" "}
