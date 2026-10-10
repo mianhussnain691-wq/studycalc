@@ -18,7 +18,7 @@ export const articles = [
   },
   {
     title: "CGPA to Percentage Calculator: Formula & Conversion Guide",
-    description: "Master formula guide to convert cumulative grade point averages into absolute percentages.",
+    description: "Convert CGPA to percentage for India (×9.5) and Pakistan (×25), with worked examples and full lookup charts for both.",
     slug: "cgpa-to-percentage-conversion",
     category: "Academic Calculators",
     readTime: "14 min read",

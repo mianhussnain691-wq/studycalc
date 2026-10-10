@@ -2,24 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
-const usScaleTable = [
-  { min: 93, letter: "A+ / A", gpa: 4.0 },
-  { min: 90, letter: "A-", gpa: 3.7 },
-  { min: 87, letter: "B+", gpa: 3.3 },
-  { min: 83, letter: "B", gpa: 3.0 },
-  { min: 80, letter: "B-", gpa: 2.7 },
-  { min: 77, letter: "C+", gpa: 2.3 },
-  { min: 73, letter: "C", gpa: 2.0 },
-  { min: 70, letter: "C-", gpa: 1.7 },
-  { min: 60, letter: "D", gpa: 1.0 },
-  { min: 0, letter: "F", gpa: 0.0 },
-];
-
-function lookupUsEquivalent(percentage) {
-  const row = usScaleTable.find((r) => percentage >= r.min);
-  return row || usScaleTable[usScaleTable.length - 1];
-}
+import { lookupByPercent } from "@/data/gradeScale";
+import {
+  PAKISTAN_CGPA_TO_PERCENT_FACTOR,
+  pakistanCgpaToPercent,
+  pakistanPercentToCgpa,
+} from "@/data/boardGrades";
 
 const faqs = [
   {
@@ -27,12 +15,12 @@ const faqs = [
     a: "Usually no, not yourself. Pakistani CGPA is already reported on a 4.0 scale under HEC's standard, so many US universities accept it directly. For formal admissions or visa purposes, schools typically require an official evaluation from a credential agency like WES rather than a self-calculated conversion.",
   },
   {
-    q: "What is the official HEC formula for converting CGPA to percentage?",
-    a: "Percentage = CGPA × 25. This is the standard formula used across HEC-recognized universities in Pakistan, equivalent to dividing your CGPA by 4.0 and multiplying by 100.",
+    q: "Is CGPA × 25 the official HEC formula for converting CGPA to percentage?",
+    a: "No single HEC-published document mandating this as official policy could be verified. CGPA × 25 is simply the direct linear read-out of Pakistan's 4.0-scale CGPA (CGPA ÷ 4.0 × 100), and it's the convention most Pakistani universities and students use in practice. Confirm the exact figure with your own registrar for anything official.",
   },
   {
     q: "Is a 3.5 CGPA in Pakistan considered good for study abroad?",
-    a: "Yes. A 3.5 CGPA converts to 87.5% under the HEC formula, which is a strong result at most Pakistani universities and generally competitive for graduate program applications abroad, though specific program requirements vary.",
+    a: "Yes. A 3.5 CGPA converts to about 87.5% under this convention, which is a strong result at most Pakistani universities and generally competitive for graduate program applications abroad, though specific program requirements vary.",
   },
   {
     q: "Why does this calculator give an approximate US letter grade too?",
@@ -67,12 +55,12 @@ export default function PakistanCGPAConverter() {
   if (isValid) {
     if (mode === "cgpa") {
       cgpa = numericValue;
-      percentage = numericValue * 25;
+      percentage = pakistanCgpaToPercent(numericValue);
     } else {
       percentage = numericValue;
-      cgpa = numericValue / 25;
+      cgpa = pakistanPercentToCgpa(numericValue);
     }
-    usEquivalent = lookupUsEquivalent(percentage);
+    usEquivalent = lookupByPercent(percentage);
   }
 
   return (
@@ -92,7 +80,7 @@ export default function PakistanCGPAConverter() {
             Pakistan CGPA to US GPA Calculator
           </h1>
           <p className="mt-4 text-base md:text-lg text-slate-400 leading-relaxed max-w-3xl">
-            Enter your HEC CGPA or percentage and get an instant US 4.0 GPA reference, using the official HEC conversion formula.
+            Enter your Pakistani CGPA or percentage and get an instant US 4.0 GPA reference, using the most common HEC-scale conversion convention.
           </p>
         </header>
 
@@ -159,10 +147,12 @@ export default function PakistanCGPAConverter() {
               The Formula Behind This
             </h2>
             <p>
-              HEC-recognized Pakistani universities use a standard 4.0 CGPA scale. The official formula to convert that into a percentage is straightforward:
+              HEC-recognized Pakistani universities use a standard 4.0 CGPA scale. No single HEC-published document
+              mandates one official conversion formula, but the convention nearly everyone uses is the direct
+              linear read-out of that scale:
             </p>
             <div className="rounded-xl border border-cyan-500/20 bg-slate-950 p-6 text-center">
-              <p className="text-lg font-bold text-cyan-400 font-mono">Percentage = CGPA × 25</p>
+              <p className="text-lg font-bold text-cyan-400 font-mono">Percentage = CGPA × {PAKISTAN_CGPA_TO_PERCENT_FACTOR}</p>
             </div>
             <p className="text-sm text-slate-400">
               For example, a 3.5 CGPA gives 3.5 × 25 = 87.5%. The reverse works the same way: divide your percentage by 25 to get your CGPA. For the full breakdown of how Pakistani board marks and university CGPA map onto the US 4.0 scale, see our{" "}
