@@ -33,6 +33,10 @@ const faqs = [
     q: "Can this calculator tell me exactly which grades I need in which courses?",
     a: "No — it only tells you the average GPA needed across your remaining credits as a whole, not how that should be distributed across individual courses. In practice, some courses are easier to score high in than others, so you have flexibility in how you actually hit the average, as long as the credit-weighted result comes out at or above the needed figure.",
   },
+  {
+    q: "I want to go from a 9.5 to a 9.7 CGPA over my next two semesters — how do I work that out?",
+    a: "Enter your current CGPA (9.5) and current total credits as they stand now, your target (9.7), and the combined credits across both upcoming semesters as \"remaining credits.\" The result is the average you need across both semesters combined, not semester-by-semester — if you want a semester-by-semester plan, run the calculation again after the first semester's actual results are in, using your new current CGPA and credits.",
+  },
 ];
 
 const faqJsonLd = {
@@ -61,8 +65,33 @@ export default function TargetCgpaGuide() {
           </p>
         </div>
         <p className="mt-4 leading-7">
+          Written out in plain terms, the same formula reads:{" "}
+          <span className="font-mono text-cyan-400">
+            required GPA = (target × total credits − current points) / remaining credits
+          </span>
+          , where &quot;current points&quot; is your current CGPA multiplied by your current credits (the quality
+          points you&apos;ve already banked) and &quot;total credits&quot; is current plus remaining combined.
+        </p>
+        <p className="mt-4 leading-7">
           Same shape as the semester-level version, but framed cumulatively — this treats your entire
-          remaining academic career as one block of credits that needs to average a certain GPA.
+          remaining academic career as one block of credits that needs to average a certain GPA. The
+          formula is also scale-agnostic: it works identically whether your CGPA is reported on a 4.0
+          scale or a 10-point scale (common in India and elsewhere) — see Worked Example 3 below.
+        </p>
+      </div>
+
+      <div className="mt-12 rounded-2xl border border-amber-800/60 bg-amber-950/20 p-6 sm:p-8">
+        <h2 className="text-xl font-bold text-amber-400">Can I Still Reach My Target?</h2>
+        <p className="mt-3 leading-7 text-slate-300">
+          If the calculator returns a needed GPA above your scale&apos;s maximum (4.0, 4.3, or 10.0 depending
+          on your system), the target isn&apos;t reachable with the remaining credits you entered — no grade
+          can exceed the maximum. If it returns 0 or a negative number, the opposite is true: you&apos;re
+          already mathematically guaranteed to hit your target even with the lowest possible grades left.
+          Either way, see the{" "}
+          <Link href="/target-gpa-strategy-guide" className="text-amber-400 hover:underline">
+            target-setting strategy guide
+          </Link>{" "}
+          for what to do next — extending your timeline, retakes, or adjusting the target itself.
         </p>
       </div>
 
@@ -114,6 +143,22 @@ export default function TargetCgpaGuide() {
           Even a modest 0.05 increase in overall CGPA requires a 3.9 average across the remaining credits
           — a direct illustration of credit inertia: with 100 credits already locked in, even a small
           target movement demands a disproportionately strong finish.
+        </p>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-white">Worked Example 3: A 10-Point Scale (India-Style CGPA)</h2>
+        <p className="mt-4 leading-7">
+          The formula works the same way regardless of scale. A student has a 7.6 CGPA (out of 10) across
+          80 completed credits and wants to reach 8.0, with 20 credits remaining:
+        </p>
+        <div className="mt-4 rounded-xl bg-slate-900 border border-slate-800 p-5 font-mono text-sm">
+          [8.0 × (80 + 20) − 7.6 × 80] ÷ 20 = [800 − 608] ÷ 20 = 9.6
+        </div>
+        <p className="mt-4 leading-7">
+          A 9.6 average across the remaining 20 credits would reach the target — just plug in your scale&apos;s
+          own numbers above; the maximum-reachable check (10.0 here instead of 4.0) is the only thing that
+          changes between scales.
         </p>
       </div>
 

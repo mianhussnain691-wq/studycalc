@@ -61,6 +61,13 @@ export default function TargetGpaGuide() {
           </p>
         </div>
         <p className="mt-4 leading-7">
+          Written out in plain terms:{" "}
+          <span className="font-mono text-cyan-400">
+            required GPA = (target × total credits − current points) / remaining credits
+          </span>
+          , where &quot;current points&quot; is your current GPA multiplied by your current credits.
+        </p>
+        <p className="mt-4 leading-7">
           This works out what your remaining credits need to average, given the weight your existing
           credits already carry. It&apos;s the same algebra as solving a weighted average backwards: you know
           the target overall average and one of the two components, and you&apos;re solving for the other.
