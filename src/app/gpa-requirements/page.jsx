@@ -147,7 +147,7 @@ export default function GPARequirements() {
             </div>
 
             <div className="p-5 rounded-xl border border-slate-800 bg-slate-900/80 space-y-3">
-              <h3 className="text-lg font-bold text-violet-400">Law School (JD) Requirements</h3>
+              <h3 className="text-lg font-bold text-rose-400">Law School (JD) Requirements</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
                 Law school admissions operate on a heavy index formula heavily combining undergraduate GPA and LSAT scores. Top 14 (T14) law schools generally expect a cumulative undergraduate score between <strong>3.80 and 3.95</strong>.
               </p>

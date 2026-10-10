@@ -4,6 +4,7 @@ import { useState } from "react";
 import ShareResultButton from "@/components/ShareResultButton";
 import { lookupByGpa } from "@/data/gradeScale";
 import GpaToPercentageGuide from "@/components/calculator-guides/GpaToPercentageGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 export default function GpaToPercentageCalculator() {
   const [gpa, setGpa] = useState("");
@@ -115,6 +116,13 @@ export default function GpaToPercentageCalculator() {
             </p>
           )}
         </div>
+
+        <SourcesBlock
+          formula="GPA → matching band on the standard US 4.0 scale → percentage range"
+          note="Uses the common US 4.0 scale (93-100% = 4.0 down to below 60% = F). Individual schools can use slightly different cutoffs — check your institution's official grading policy for anything that affects your transcript."
+          guideHref="/gpa-to-percentage-guide"
+          guideLabel="Full conversion guide, chart, and FAQ"
+        />
 
         <GpaToPercentageGuide />
 

@@ -3,6 +3,7 @@
 import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import PercentageGuide from "@/components/calculator-guides/PercentageGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 import ShareResultButton from "@/components/ShareResultButton";
 
 export default function PercentageCalculator() {
@@ -181,6 +182,13 @@ export default function PercentageCalculator() {
         </div>
 
         {/* 🔥 INJECTED ZONE: Pure Authority SEO Manual loaded right beneath the layout */}
+        <SourcesBlock
+          formula="Percentage = (Obtained Marks ÷ Total Marks) × 100"
+          note="The universal percentage formula — the same math everywhere, regardless of grading system."
+          guideHref="/marks-to-grade-conversion"
+          guideLabel="How marks map to grades across the US, UK, Pakistan, and India"
+        />
+
         <PercentageGuide />
 
       </div>

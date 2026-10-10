@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Grade Manual
 import GradeGuide from "@/components/calculator-guides/GradeGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 import { lookupByPercent } from "@/data/gradeScale";
 import ShareResultButton from "@/components/ShareResultButton";
 
@@ -128,6 +129,13 @@ export default function GradeCalculator() {
         </ResultCard>
 
         {/* 🔥 EXACT INJECTION ZONE: Authority manual loaded securely beneath your engine */}
+        <SourcesBlock
+          formula="Percentage → letter grade band on the standard US 4.0 scale"
+          note="Uses the common US grading convention (93-100% = A down to below 60% = F). Individual schools can use slightly different cutoffs — check your institution's official grading policy for your exact transcript grade."
+          guideHref="/letter-grade-to-percent-guide"
+          guideLabel="Full letter grade to percentage chart and FAQ"
+        />
+
         <GradeGuide />
 
       </div>

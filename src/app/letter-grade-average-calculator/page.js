@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import ShareResultButton from "@/components/ShareResultButton";
 import { GRADE_SCALE, lookupByGpa } from "@/data/gradeScale";
 import LetterGradeAverageGuide from "@/components/calculator-guides/LetterGradeAverageGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 // Excludes the F row's separate display quirks — F is still selectable, its
 // gpa of 0 works fine in a plain arithmetic mean.
@@ -116,6 +117,13 @@ export default function LetterGradeAverageCalculator() {
             />
           </div>
         </div>
+
+        <SourcesBlock
+          formula="Average = Σ(GPA value of each letter grade) ÷ number of grades"
+          note="Letter grades use the standard US 4.0 scale (A = 4.0 down to F = 0.0). This is a plain average, not credit-weighted — see the GPA Calculator for a real, credit-weighted semester GPA."
+          guideHref="/letter-grade-to-percent-guide"
+          guideLabel="Full letter-grade conversion chart"
+        />
 
         <LetterGradeAverageGuide />
 

@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import CGPAGuide from "@/components/calculator-guides/CGPAGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 import ShareResultButton from "@/components/ShareResultButton";
 import DownloadResultCard from "@/components/DownloadResultCard";
 
@@ -264,6 +265,13 @@ export default function CGPACalculator() {
             )}
           </div>
         </div>
+
+        <SourcesBlock
+          formula="CGPA = Σ(GPA × credit hours) ÷ Σ(credit hours)"
+          note="Standard credit-weighted cumulative GPA, used on the common US 4.0 scale. If your institution reports CGPA on a 10-point or other scale, see the CGPA to Percentage guide for how those scales differ."
+          guideHref="/how-to-calculate-cgpa"
+          guideLabel="Full step-by-step guide with worked examples"
+        />
 
         {/* 🔥 EXACTLY INJECTED BELOW THE INTERACTIVE ENGINE */}
         <CGPAGuide />

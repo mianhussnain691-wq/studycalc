@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import SemesterCreditLoadGuide from "@/components/calculator-guides/SemesterCreditLoadGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 import { getCreditLoadStatus } from "@/lib/semesterMath";
 
 export default function SemesterCreditLoadChecker() {
@@ -102,6 +103,12 @@ export default function SemesterCreditLoadChecker() {
             Use the Credit Hour Estimator
           </Link>.
         </p>
+
+        <SourcesBlock
+          note="Below 12 = part-time, 12-17 = full-time, 18+ = overload — the common convention at most US institutions, not a universal rule. Exact thresholds vary by school, degree level, and program; confirm with your registrar for anything affecting financial aid or visa status."
+          guideHref="/credit-hour-estimator"
+          guideLabel="How credit hours themselves are calculated"
+        />
 
         <SemesterCreditLoadGuide />
 

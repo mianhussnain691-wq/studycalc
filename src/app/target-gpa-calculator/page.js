@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import TargetGpaGuide from "@/components/calculator-guides/TargetGpaGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 import { computeNeededGpa } from "@/lib/semesterMath";
 
 export default function TargetGpaCalculator() {
@@ -199,6 +200,13 @@ export default function TargetGpaCalculator() {
             Semester GPA vs CGPA
           </Link>.
         </p>
+
+        <SourcesBlock
+          formula="required GPA = (target × total credits − current points) / remaining credits"
+          note="Standard algebra for a credit-weighted average — solving a weighted average backwards for the unknown component."
+          guideHref="/target-gpa-strategy-guide"
+          guideLabel="What to do if the required GPA is out of reach"
+        />
 
         <TargetGpaGuide />
 

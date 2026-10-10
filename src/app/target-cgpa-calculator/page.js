@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import TargetCgpaGuide from "@/components/calculator-guides/TargetCgpaGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 import { computeNeededGpa } from "@/lib/semesterMath";
 
 export default function TargetCgpaCalculator() {
@@ -195,6 +196,13 @@ export default function TargetCgpaCalculator() {
             why credit inertia matters
           </Link>.
         </p>
+
+        <SourcesBlock
+          formula="required GPA = (target × total credits − current points) / remaining credits"
+          note="Standard algebra for a credit-weighted average, scale-agnostic (works for 4.0, 4.3, or 10-point CGPA systems)."
+          guideHref="/target-gpa-strategy-guide"
+          guideLabel="What to do if the required GPA is out of reach"
+        />
 
         <TargetCgpaGuide />
 
