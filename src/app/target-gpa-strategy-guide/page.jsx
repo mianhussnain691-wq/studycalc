@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "How to Set and Reach a Target GPA: Complete Strategy Guide",
+  description: "The math behind setting a target GPA, realistic goal-setting advice, and what to do when the required GPA turns out mathematically impossible to reach.",
   alternates: { canonical: "https://www.studycalc.co/target-gpa-strategy-guide" },
   openGraph: {
     title: "How to Set and Reach a Target GPA: Complete Strategy Guide",

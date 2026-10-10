@@ -2,7 +2,7 @@ import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
   title: "Cookie Policy",
-  description: "How StudyCalc uses cookies for analytics and advertising.",
+  description: "How StudyCalc uses cookies for analytics and advertising, what data is collected, and how you can manage or disable cookies in your own browser.",
   alternates: {
     canonical: "https://www.studycalc.co/cookie-policy",
   },

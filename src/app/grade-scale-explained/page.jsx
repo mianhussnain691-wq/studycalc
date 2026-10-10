@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How Grading Scales Work: Pass/Fail Thresholds & Grade Bands Explained",
+  title: "How Grading Scales Work: Pass/Fail & Grade Bands",
   description:
-    "How academic grading scales actually work — pass/fail thresholds, honor roll and probation cutoffs, curved vs absolute grading, and why different schools grade differently.",
+    "How academic grading scales work — pass/fail thresholds, grade bands, curved vs absolute grading, and why the same score means different things elsewhere.",
   keywords: [
     "how grading scales work",
     "pass fail threshold",

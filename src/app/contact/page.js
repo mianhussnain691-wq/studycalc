@@ -2,7 +2,7 @@ import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
   title: "Contact StudyCalc",
-  description: "Contact the StudyCalc team with feedback, bug reports, or calculator requests.",
+  description: "Contact the StudyCalc team with feedback, bug reports, or calculator requests — we read every message and use it to prioritize fixes and new tools.",
   alternates: {
     canonical: "https://www.studycalc.co/contact",
   },

@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "What GPA Do You Need for Medical School? (2026 MD & DO Data)",
+  description: "The real average GPA for MD and DO matriculants, straight from AAMC data, plus how GPA and MCAT are read together — with a free AMCAS GPA calculator.",
   alternates: { canonical: "https://www.studycalc.co/what-gpa-do-you-need-for-medical-school" },
   openGraph: {
     title: "What GPA Do You Need for Medical School? (2026 MD & DO Data)",

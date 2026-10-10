@@ -95,10 +95,14 @@ export default function PercentageCalculator() {
         </h1>
 
         <p className="mt-4 text-center text-slate-400">
-          Calculate percentage instantly.
+          Enter any &quot;obtained out of total&quot; marks to get your percentage instantly.
         </p>
 
-        <div className="mt-12 space-y-6">
+        <p className="mt-2 text-center text-sm text-slate-500">
+          Example: 353 out of 500 = <span className="font-semibold text-cyan-400">70.60%</span>
+        </p>
+
+        <div className="mt-10 space-y-6">
           <input
             type="number"
             inputMode="decimal"

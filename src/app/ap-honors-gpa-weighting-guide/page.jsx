@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Weighted vs. Unweighted GPA: AP, IB & Honors Guide",
-  description: "Exhaustive breakdown on how high schools calculate weighted vs. unweighted GPA. Complete breakdown of AP (5.0), Honors (4.5), IB (5.0), Dual Enrollment, Texas 6.0 scales, UC Weighted Capped algorithms, and college admissions recalculation methods.",
+  description: "How high schools weight AP, Honors, IB, and Dual Enrollment classes — the quality-point matrix, regional scales like Texas 6.0, and how colleges recalculate it.",
   alternates: {
     canonical: "https://www.studycalc.co/ap-honors-gpa-weighting-guide",
   },

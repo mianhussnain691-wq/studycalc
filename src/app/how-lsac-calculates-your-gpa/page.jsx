@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How LSAC Recalculates Your GPA for Law School (2026-2027 Rules)",
+  title: "How LSAC Recalculates Your GPA for Law School",
+  description: "Why your CAS GPA can look different from your transcript GPA — the 4.33 scale, the repeated-course rule, and a free LSAC GPA calculator to check yours.",
   alternates: { canonical: "https://www.studycalc.co/how-lsac-calculates-your-gpa" },
   openGraph: {
     title: "How LSAC Recalculates Your GPA for Law School (2026-2027 Rules)",

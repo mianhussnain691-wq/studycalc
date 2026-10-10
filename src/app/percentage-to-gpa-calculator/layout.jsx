@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Percentage to GPA Calculator",
-  description: "Convert your percentage marks into a 4.0 scale GPA online for free using StudyCalc.",
+  description: "Convert your percentage marks into a 4.0 scale GPA instantly — free calculator with the conversion formula, a lookup chart, and worked examples.",
   alternates: {
     canonical: "https://www.studycalc.co/percentage-to-gpa-calculator",
   },

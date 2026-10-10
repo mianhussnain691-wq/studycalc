@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Marks to Grade Conversion: US, UK, Pakistan & India",
-  description: "Exhaustive master guide on marks to grade conversion across US, UK, Pakistan, and India. Compare letter grades, percentage metrics, CGPA scales, and WES evaluation workflows.",
+  description: "Marks to grade conversion across the US, UK, Pakistan, and India — compare letter grades, percentages, CGPA scales, and WES evaluation in one guide.",
   alternates: {
     canonical: "https://www.studycalc.co/marks-to-grade-conversion",
   },

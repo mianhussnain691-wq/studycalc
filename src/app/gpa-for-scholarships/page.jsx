@@ -1,7 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-   alternates: { canonical: "https://www.studycalc.co/gpa-for-scholarships" },
+  title: "GPA for Scholarships: Requirements & Tips",
+  description: "Minimum GPA requirements for merit scholarships, full-ride awards, and renewal thresholds — know exactly what GPA colleges expect, free on StudyCalc.",
+  alternates: { canonical: "https://www.studycalc.co/gpa-for-scholarships" },
   openGraph: {
     title: "GPA for Scholarships: Requirements & Tips",
     description: "Minimum GPA requirements for merit scholarships, full-ride qualification, and renewal thresholds.",

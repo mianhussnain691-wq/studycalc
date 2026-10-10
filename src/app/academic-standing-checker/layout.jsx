@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Academic Standing Checker",
-  description: "Understand your GPA status against the common academic standing threshold. Free, neutral, informative — by StudyCalc.",
+  description: "Understand your academic standing — Good Standing, Probation, or Dismissal — against the common GPA threshold, instantly, free, with real examples.",
   alternates: {
     canonical: "https://www.studycalc.co/academic-standing-checker",
   },

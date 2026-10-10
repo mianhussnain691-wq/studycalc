@@ -3,7 +3,7 @@ import Link from "next/link";
 import { articles } from "@/data/articles";
 export const metadata = {
   title: "All Study Guides | StudyCalc",
-  description: "Browse all GPA, CGPA, percentage, and grading guides on StudyCalc.",
+  description: "Browse every GPA, CGPA, percentage, and grading guide on StudyCalc — step-by-step formulas, worked examples, and conversion charts for students.",
   alternates: {
     canonical: "https://www.studycalc.co/guides",
   },

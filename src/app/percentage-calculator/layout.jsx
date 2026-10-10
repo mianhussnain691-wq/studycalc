@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Percentage Calculator",
-  description: "Convert marks into percentage easily and free using StudyCalc.",
+  description: "Convert any \"obtained out of total\" marks into a percentage instantly — free calculator with formula, worked examples, and a grade conversion chart.",
   alternates: {
     canonical: "https://www.studycalc.co/percentage-calculator",
   },

@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Grade Curve Calculator",
-  description: "See your curved score instantly using the common linear curve method. Free grade curve calculator by StudyCalc.",
+  description: "See your curved score instantly using the common linear curve method — free grade curve calculator with a worked example included, by StudyCalc.",
   alternates: {
     canonical: "https://www.studycalc.co/grade-curve-calculator",
   },

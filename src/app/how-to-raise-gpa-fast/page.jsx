@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
+  title: "How to Raise Your GPA Fast: 10 Proven Strategies",
+  description: "The exact mathematical levers and institutional policies — grade forgiveness, retakes, credit weighting — to rebuild a low GPA quickly, explained free.",
   alternates: { canonical: "https://www.studycalc.co/how-to-raise-gpa-fast" },
   openGraph: {
     title: "How to Raise Your GPA Fast: 10 Proven Strategies",

@@ -4,7 +4,7 @@ import { getAllBlogs } from "@/lib/mdx"; // Nawa automatic helper import kita
 
 export const metadata = {
   title: "StudyCalc Blogs - Learn GPA & Academic Calculations",
-  description: "Read expert articles on how to calculate GPA, CGPA, and manage your university grades easily.",
+  description: "Read expert articles on how to calculate GPA, CGPA, attendance, and percentages — practical, step-by-step academic guides for students, free on StudyCalc.",
   alternates: {
     canonical: "https://www.studycalc.co/blog",
   },

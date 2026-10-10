@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "GPA Scale Explained: 4.0, 5.0 & 10.0 Point Scales Compared",
   description:
-    "A clear breakdown of the 4.0, 5.0, and 10.0 GPA scales — what each one measures, how weighted vs unweighted grading changes the numbers, and how to read a scale you've never seen before.",
+    "A clear breakdown of the 4.0, 5.0, and 10.0 GPA scales — what each measures, how weighting changes the numbers, and how to read an unfamiliar scale.",
   keywords: [
     "gpa scale explained",
     "4.0 gpa scale",

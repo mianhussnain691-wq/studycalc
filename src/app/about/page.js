@@ -3,7 +3,7 @@ import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
   title: "About StudyCalc",
-  description: "Learn more about StudyCalc and our mission to make academic calculations fast and accurate.",
+  description: "Learn about StudyCalc's mission to build fast, accurate, completely free academic calculators and study guides for students all around the world.",
   alternates: {
     canonical: "https://www.studycalc.co/about",
   },

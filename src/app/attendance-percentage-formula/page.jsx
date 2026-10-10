@@ -1,9 +1,9 @@
 import AttendancePercentage from "@/components/articles/AttendancePercentage";
 
 export const metadata = {
-  title: "Attendance Percentage Formula: How Many Classes Can You Miss?",
+  title: "Attendance Percentage Formula & How Many to Miss",
   description:
-    "Learn the exact attendance percentage formula, the 75% and 80% eligibility thresholds explained, and how many classes you can safely miss — with worked examples, an eligibility chart, and a free calculator.",
+    "The exact attendance percentage formula, the 75% and 80% eligibility thresholds, and how many classes you can safely miss — with worked examples and a chart.",
   keywords: [
     "attendance percentage formula",
     "how many classes can i miss",

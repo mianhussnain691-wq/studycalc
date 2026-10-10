@@ -23,7 +23,7 @@ export const metadata = {
   },
 
   description:
-    "Free GPA, CGPA, Attendance, Percentage and Grade Calculators for students.",
+    "Free GPA, CGPA, Attendance, Percentage, and Grade Calculators for students — instant results, no sign-up required, plus step-by-step guides and charts.",
 
   keywords: [
     "GPA Calculator",

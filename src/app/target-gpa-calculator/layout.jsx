@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Target GPA Calculator",
-  description: "Find the GPA you need this semester to hit your target GPA, free using StudyCalc.",
+  description: "Find the GPA you need this semester to hit your target — free calculator with the formula, worked examples, and an impossible-target check included.",
   alternates: {
     canonical: "https://www.studycalc.co/target-gpa-calculator",
   },

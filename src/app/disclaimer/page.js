@@ -3,7 +3,7 @@ import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
   title: "Disclaimer",
-  description: "StudyCalc's disclaimer on the accuracy and use of its academic calculators.",
+  description: "StudyCalc's disclaimer on the accuracy and intended use of its free academic calculators — read this before relying on any result for official decisions.",
   alternates: {
     canonical: "https://www.studycalc.co/disclaimer",
   },

@@ -2,7 +2,7 @@ import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
   title: "Terms & Conditions",
-  description: "Terms and Conditions for using StudyCalc's free academic calculators.",
+  description: "Terms and Conditions for using StudyCalc's free academic calculators, guides, and tools — please read before using any result for official decisions.",
   alternates: {
     canonical: "https://www.studycalc.co/terms",
   },

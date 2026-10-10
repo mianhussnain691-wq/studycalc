@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Dean's List Calculator",
-  description: "Check if your GPA qualifies for the Dean's List — common threshold is 3.5+ GPA with 12+ credits. Free by StudyCalc.",
+  description: "Check if your GPA qualifies for the Dean's List — common threshold is 3.5+ GPA with 12+ credits — instantly, free, with examples for different cutoffs.",
   alternates: {
     canonical: "https://www.studycalc.co/deans-list-calculator",
   },

@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Semester Credit Load Checker",
-  description: "Full-time is usually 12 credits, overload is 18+ — check your semester credit load status free with StudyCalc.",
+  description: "Full-time is usually 12-17 credits, overload is 18+ — check your semester credit load status instantly, free, with examples for every institution type.",
   alternates: {
     canonical: "https://www.studycalc.co/semester-credit-load-checker",
   },

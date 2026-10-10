@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Class Rank & Percentile Calculator",
-  description: "Instant percentile estimate from your score and class average — no sign-up. Free class rank calculator by StudyCalc.",
+  description: "Instant percentile estimate from your score and class average — see where you rank instantly, no sign-up, free class rank calculator by StudyCalc.",
   alternates: {
     canonical: "https://www.studycalc.co/class-rank-percentile-calculator",
   },

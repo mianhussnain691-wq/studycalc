@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Letter Grade Average Calculator",
-  description: "Average your letter grades (A, B+, C...) instantly — no credit hours needed. Get your average grade and GPA equivalent free.",
+  description: "Average your letter grades (A, B+, C...) instantly — no credit hours needed. Get your average grade and 4.0 GPA equivalent, free, with worked examples.",
   alternates: {
     canonical: "https://www.studycalc.co/letter-grade-average-calculator",
   },

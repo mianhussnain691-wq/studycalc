@@ -3,7 +3,7 @@ import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
   title: "Privacy Policy",
-  description: "How StudyCalc collects, uses, and protects your data.",
+  description: "How StudyCalc collects, uses, and protects your personal data when you use our free calculators, guides, and website, explained in plain language.",
   alternates: {
     canonical: "https://www.studycalc.co/privacy-policy",
   },

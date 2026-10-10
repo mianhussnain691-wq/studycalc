@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
+  title: "Final Grade Calculator: Target Exam Scores",
+  description: "The exact formula to find what score you need on your final exam to hit your target course grade, with worked examples, free using StudyCalc.",
   alternates: { canonical: "https://www.studycalc.co/final-grade-calculator-guide" },
   openGraph: {
     title: "Final Grade Calculator: Target Exam Scores",

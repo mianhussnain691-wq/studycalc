@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Semester GPA vs CGPA: Complete Calculation & Recovery Guide",
   description:
-    "Understand the difference between Semester GPA and Cumulative GPA (CGPA), the exact credit-weighted formulas, a full 3-semester worked example, credit inertia, grade forgiveness, and academic probation thresholds.",
+    "The difference between Semester GPA and CGPA, the exact credit-weighted formulas, a full 3-semester worked example, and academic probation thresholds.",
   keywords: [
     "semester gpa vs cgpa",
     "sgpa vs cgpa difference",

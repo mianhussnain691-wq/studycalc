@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Attendance Calculator",
-  description: "Track your attendance percentage instantly and free using StudyCalc.",
+  description: "Track your attendance percentage instantly — free calculator with a \"classes you can still miss\" tracker and the exact formula used by most schools.",
   alternates: {
     canonical: "https://www.studycalc.co/attendance-calculator",
   },

@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Reverse Percentage Calculator",
-  description: "Know a part and its percentage? Find the whole instantly with our free reverse percentage calculator.",
+  description: "Know a part and its percentage? Find the whole number instantly — free reverse percentage calculator with the formula and worked examples included.",
   alternates: {
     canonical: "https://www.studycalc.co/reverse-percentage-calculator",
   },

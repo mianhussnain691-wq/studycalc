@@ -2,6 +2,7 @@
 import { MetadataRoute } from "next";
 import { articles } from "@/data/articles";
 import tools from "@/data/tools";
+import { getAllBlogs } from "@/lib/mdx";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.studycalc.co";
@@ -43,5 +44,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...toolRoutes, ...articleRoutes];
+  // Blog posts — auto-detected from content/*.mdx via the same helper
+  // blog/[slug]/page.js already uses, so they were never a separate list to
+  // keep in sync; they just hadn't been wired into the sitemap at all.
+  const blogRoutes = getAllBlogs().map((blog) => ({
+    url: `${baseUrl}/blog/${blog.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...toolRoutes, ...articleRoutes, ...blogRoutes];
 }

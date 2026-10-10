@@ -15,6 +15,9 @@ export async function generateMetadata({ params }) {
     title: `${blog.frontMatter.title} - StudyCalc`,
     description: blog.frontMatter.description,
     keywords: blog.frontMatter.keywords,
+    alternates: {
+      canonical: `https://www.studycalc.co/blog/${slug}`,
+    },
   };
 }
 

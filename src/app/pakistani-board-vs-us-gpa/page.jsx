@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Pakistani Board vs US GPA: Complete Conversion & WES Guide",
-  description: "Master guide on converting Pakistani Matric and Intermediate (FSc/ICS) marks to the US 4.0 GPA scale. Learn WES evaluation, percentage formulas, and US admissions.",
+  description: "Convert Pakistani Matric and Intermediate (FSc/ICS) marks to the US 4.0 GPA scale — WES evaluation, percentage formulas, and US admissions explained.",
   alternates: {
     canonical: "https://www.studycalc.co/pakistani-board-vs-us-gpa",
   },

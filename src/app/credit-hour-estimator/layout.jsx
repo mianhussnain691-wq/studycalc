@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Credit Hour Estimator",
-  description: "Convert weekly class hours to credit hours using the common US Carnegie-unit convention. Free by StudyCalc.",
+  description: "Convert weekly class hours into credit hours using the common US Carnegie-unit convention — free calculator with the formula and worked examples.",
   alternates: {
     canonical: "https://www.studycalc.co/credit-hour-estimator",
   },

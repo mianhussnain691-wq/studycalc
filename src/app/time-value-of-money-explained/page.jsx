@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Time Value of Money Explained: PV, FV & Annuities for Finance Students",
+  title: "Time Value of Money Explained: PV, FV & Annuities",
+  description: "Plain-language explanations of present value, future value, and annuities, with worked examples and a free financial calculator quick-reference guide.",
   alternates: { canonical: "https://www.studycalc.co/time-value-of-money-explained" },
   openGraph: {
     title: "Time Value of Money Explained: PV, FV & Annuities for Finance Students",

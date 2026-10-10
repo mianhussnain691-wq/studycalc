@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Target CGPA Calculator",
-  description: "Find the GPA you need in future semesters to reach your target CGPA, free using StudyCalc.",
+  description: "Find the GPA you need in future semesters to reach your target CGPA — free calculator with the formula, worked examples, and an impossible-target check.",
   alternates: {
     canonical: "https://www.studycalc.co/target-cgpa-calculator",
   },

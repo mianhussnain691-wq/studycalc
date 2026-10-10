@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Course Weight Impact Calculator",
-  description: "See what one upcoming exam or assignment is really worth to your final grade — free study-priority tool by StudyCalc.",
+  description: "See what one upcoming exam or assignment is really worth to your final grade — a free study-priority tool to help you focus where it matters most.",
   alternates: {
     canonical: "https://www.studycalc.co/course-weight-impact-calculator",
   },

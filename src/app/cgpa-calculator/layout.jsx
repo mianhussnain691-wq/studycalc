@@ -1,6 +1,6 @@
 export const metadata = {
   title: "CGPA Calculator",
-  description: "Calculate your cumulative CGPA online for free using StudyCalc.",
+  description: "Calculate your cumulative CGPA online instantly — free semester-by-semester calculator with credit-weighted averaging, no sign-up required, by StudyCalc.",
   alternates: {
     canonical: "https://www.studycalc.co/cgpa-calculator",
   },

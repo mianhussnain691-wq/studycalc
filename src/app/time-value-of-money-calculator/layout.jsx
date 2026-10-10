@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Time Value of Money Calculator (2026)",
-  description: "Calculate present value, future value, and annuity growth free using StudyCalc's 2026 TVM calculator for finance students.",
+  description: "Calculate present value, future value, and annuity growth instantly — free 2026 time-value-of-money calculator built for college finance students.",
   alternates: {
     canonical: "https://www.studycalc.co/time-value-of-money-calculator",
   },

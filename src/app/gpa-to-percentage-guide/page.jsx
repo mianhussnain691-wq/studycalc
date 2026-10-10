@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "GPA to Percentage Conversion: Complete Guide",
+  description: "Why GPA-to-percentage conversion isn't perfectly linear, when you actually need it, worked examples both directions, and the mistakes most students make.",
   alternates: { canonical: "https://www.studycalc.co/gpa-to-percentage-guide" },
   openGraph: {
     title: "GPA to Percentage Conversion: Complete Guide",

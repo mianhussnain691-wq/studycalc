@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
+  title: "High School vs College GPA: Key Differences",
+  description: "How weighting, credit hours, and scale conventions differ between high school and college GPA — and why your GPA often drops in freshman year.",
   alternates: { canonical: "https://www.studycalc.co/high-school-vs-college-gpa" },
   openGraph: {
     title: "High School vs College GPA: Key Differences",

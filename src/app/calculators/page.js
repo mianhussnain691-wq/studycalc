@@ -4,7 +4,7 @@ import tools from "@/data/tools";
 
 export const metadata = {
   title: "All Calculators | StudyCalc",
-  description: "Browse all free calculators available on StudyCalc.",
+  description: "Browse every free academic calculator on StudyCalc — GPA, CGPA, attendance, percentage, grade, and credit-planning tools, all instant and free to use.",
   alternates: {
     canonical: "https://www.studycalc.co/calculators",
   },
