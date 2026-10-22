@@ -101,6 +101,10 @@ export default function SemesterCreditLoadChecker() {
           Wondering how contact hours convert to credit hours?{" "}
           <Link href="/credit-hour-estimator" className="text-cyan-400 hover:underline">
             Use the Credit Hour Estimator
+          </Link>
+          , or{" "}
+          <Link href="/credit-converter" className="text-cyan-400 hover:underline">
+            convert ECTS to US credits
           </Link>.
         </p>
 

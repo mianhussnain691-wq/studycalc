@@ -119,6 +119,10 @@ export default function CreditHourEstimator() {
           Adding up credit hours across your whole semester?{" "}
           <Link href="/semester-credit-load-checker" className="text-cyan-400 hover:underline">
             Check your total credit load
+          </Link>
+          . Transferring credits from abroad?{" "}
+          <Link href="/credit-converter" className="text-cyan-400 hover:underline">
+            Convert ECTS to US credits
           </Link>.
         </p>
 

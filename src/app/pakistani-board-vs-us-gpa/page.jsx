@@ -259,7 +259,7 @@ export default function PakistaniBoardVsUsGpaPage() {
             A 3.5 CGPA from a highly rigorous engineering institution in Pakistan carries different weight than a 3.5 CGPA from a less selective college. US admissions committees account for institutional accreditation, grade inflation, and course rigor when reviewing university transcripts.
           </p>
           <p className="text-slate-300">
-            If your university already reports a CGPA rather than a percentage, our <Link href="/pakistan-cgpa-converter" className="text-emerald-400 hover:underline">Pakistan CGPA to US GPA converter</Link> applies the official HEC formula (CGPA × 25) to give you a quick percentage and approximate US GPA reference before you pursue a formal WES evaluation.
+            If your university already reports a CGPA rather than a percentage, our <Link href="/pakistan-cgpa-converter" className="text-emerald-400 hover:underline">Pakistan CGPA to US GPA converter</Link> applies the common CGPA × 25 convention to give you a quick percentage and approximate US GPA reference before you pursue a formal WES evaluation. If you also need to make sense of your course credit hours — including the Total(Theory+Lab) notation many Pakistani course outlines use — the <Link href="/credit-converter" className="text-emerald-400 hover:underline">Credit Converter</Link> decodes it.
           </p>
         </section>
 

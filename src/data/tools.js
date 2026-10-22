@@ -168,6 +168,14 @@ const tools = [
     category: "Academic Planning",
   },
   {
+    title: "Credit Converter",
+    description: "Convert between ECTS and US semester credits, with a workload-hours estimate.",
+    href: "/credit-converter",
+    badge: "New",
+    badgeColor: "bg-blue-500/20 text-blue-400",
+    category: "Academic Planning",
+  },
+  {
     title: "Semester Planning Dashboard",
     description: "See the GPA you need this semester and your credit load status together, in one place.",
     href: "/semester-planner",
