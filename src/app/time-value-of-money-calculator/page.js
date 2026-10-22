@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import TimeValueOfMoneyGuide from "@/components/calculator-guides/TimeValueOfMoneyGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 // FV = PV(1+r)^n + PMT × [((1+r)^n - 1) / r], with the r = 0 edge case
 // handled separately since the annuity factor divides by r.
@@ -223,6 +224,13 @@ export default function TimeValueOfMoneyCalculator() {
             </Link>
           </div>
         </div>
+
+        <SourcesBlock
+          formula="FV = PV(1+r)ⁿ + PMT × [((1+r)ⁿ − 1) / r]"
+          note="The standard time-value-of-money formula taught in introductory finance and accounting coursework — compound growth on a present value plus the future value of a regular payment stream (an ordinary annuity). Universal math, not an institution-specific convention."
+          guideHref="/time-value-of-money-explained"
+          guideLabel="Full explanation of PV, FV, and annuities"
+        />
 
         <TimeValueOfMoneyGuide />
 

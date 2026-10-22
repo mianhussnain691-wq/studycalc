@@ -5,6 +5,7 @@ import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import { computeNeededGpa, getCreditLoadStatus } from "@/lib/semesterMath";
 import SemesterPlannerGuide from "@/components/calculator-guides/SemesterPlannerGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 export default function SemesterPlanner() {
   const [currentCgpa, setCurrentCgpa] = useState("");
@@ -271,6 +272,12 @@ export default function SemesterPlanner() {
           </Link>
           .
         </p>
+
+        <SourcesBlock
+          note="This dashboard doesn't introduce any new formula — it combines the required-GPA algebra from Target GPA/CGPA Calculator with the common US full-time/part-time/overload credit thresholds (12-17 full-time, 18+ overload) from Semester Credit Load Checker. See each tool's own page for its sourcing in full."
+          guideHref="/target-gpa-strategy-guide"
+          guideLabel="What to do if the required GPA is out of reach"
+        />
 
         <SemesterPlannerGuide />
 

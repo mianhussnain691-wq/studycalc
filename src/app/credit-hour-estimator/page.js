@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import CreditHourEstimatorGuide from "@/components/calculator-guides/CreditHourEstimatorGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 export default function CreditHourEstimator() {
   const [contactHours, setContactHours] = useState("");
@@ -125,6 +126,13 @@ export default function CreditHourEstimator() {
             Convert ECTS to US credits
           </Link>.
         </p>
+
+        <SourcesBlock
+          formula="1 Credit Hour ≈ 1 Contact Hour + 2 Outside-Study Hours per Week"
+          note="This is the common US Carnegie-unit convention, not a universal rule — some institutions and lab/studio courses use different ratios. Check your institution's official credit-hour policy for the exact definition it uses."
+          guideHref="/credit-converter"
+          guideLabel="Convert to ECTS or decode Pakistan-style credit notation"
+        />
 
         <CreditHourEstimatorGuide />
 

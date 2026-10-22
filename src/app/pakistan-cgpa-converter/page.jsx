@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import SourcesBlock from "@/components/SourcesBlock";
 import { lookupByPercent } from "@/data/gradeScale";
 import {
   PAKISTAN_CGPA_TO_PERCENT_FACTOR,
@@ -139,6 +140,13 @@ export default function PakistanCGPAConverter() {
             </div>
           )}
         </section>
+
+        <SourcesBlock
+          formula={`Percentage = CGPA × ${PAKISTAN_CGPA_TO_PERCENT_FACTOR}`}
+          note="No single HEC-published document mandates this as official policy — it's the direct linear read-out of Pakistan's 4.0-scale CGPA, and the convention most Pakistani universities and students use in practice. Confirm the exact figure with your own registrar for anything official."
+          guideHref="/pakistani-board-vs-us-gpa"
+          guideLabel="Full Pakistan-to-US GPA conversion guide"
+        />
 
         <div className="space-y-10 text-base leading-relaxed mt-12">
 

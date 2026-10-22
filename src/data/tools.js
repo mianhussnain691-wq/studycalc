@@ -148,7 +148,7 @@ const tools = [
     description: "See where your GPA sits against common academic, scholarship, and honors thresholds.",
     href: "/is-my-gpa-good",
     badge: "New",
-    badgeColor: "bg-fuchsia-500/20 text-fuchsia-400",
+    badgeColor: "bg-rose-500/20 text-rose-400",
     category: "GPA & Grades",
   },
   {
