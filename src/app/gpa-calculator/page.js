@@ -1,8 +1,43 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import GPAGuide from "@/components/calculator-guides/GPAGuide"; // <--- Perfect Import Path
 import ShareResultButton from "@/components/ShareResultButton";
 import DownloadResultCard from "@/components/DownloadResultCard";
+import coursePresets from "@/data/coursePresets";
+
+const STORAGE_KEY = "studycalc-gpa-subjects";
+const DEFAULT_SUBJECTS = [{ id: 1, name: "", credit: "", grade: "4" }];
+
+// Wrapped so a disabled/unavailable localStorage (private browsing, blocked
+// site data, etc.) never breaks the calculator — it just falls back to a
+// fresh, in-memory subject list. Only ever called client-side (from inside
+// useEffect/handlers), never during render, so no SSR window check needed.
+function loadStoredSubjects() {
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed) || parsed.length === 0) return null;
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function saveStoredSubjects(subjects) {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(subjects));
+  } catch {
+    // Storage unavailable or full — the calculator still works, it just
+    // won't remember the course list across visits.
+  }
+}
+
+function findPreset(name) {
+  const trimmed = name.trim().toLowerCase();
+  if (!trimmed) return null;
+  return coursePresets.find((c) => c.name.toLowerCase() === trimmed) || null;
+}
 
 // Matches the scale published in GPAGuide.jsx, which renders on this same page.
 const GRADE_OPTIONS = [
@@ -19,9 +54,8 @@ const GRADE_OPTIONS = [
 ];
 
 export default function GPACalculator() {
-  const [subjects, setSubjects] = useState([
-    { id: 1, name: "", credit: "", grade: "4" },
-  ]);
+  const [subjects, setSubjects] = useState(DEFAULT_SUBJECTS);
+  const [restoredFromStorage, setRestoredFromStorage] = useState(false);
   const [gpa, setGPA] = useState("0.00");
   const [totalCredits, setTotalCredits] = useState(0);
   const [gradePoints, setGradePoints] = useState("0.00");
@@ -31,6 +65,31 @@ export default function GPACalculator() {
 
   // Date.now() collides when two rows are added within the same millisecond.
   const nextId = useRef(2);
+  const didMountRef = useRef(false);
+
+  // Restore a saved course list on mount, client-side only (avoids any SSR
+  // window access). Silently does nothing if storage is empty/unavailable.
+  useEffect(() => {
+    const stored = loadStoredSubjects();
+    if (stored) {
+      setSubjects(stored);
+      const maxId = Math.max(0, ...stored.map((s) => Number(s.id) || 0));
+      nextId.current = maxId + 1;
+      setRestoredFromStorage(true);
+    }
+  }, []);
+
+  // Persist on every change, skipping the very first run — without this,
+  // this effect would fire once on mount with the default (pre-restore)
+  // subjects and briefly overwrite a saved list before the restore above
+  // lands.
+  useEffect(() => {
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }
+    saveStoredSubjects(subjects);
+  }, [subjects]);
 
   function addSubject() {
     setSubjects([
@@ -48,9 +107,19 @@ export default function GPACalculator() {
 
   function updateSubject(id, field, value) {
     setSubjects(
-      subjects.map((subject) =>
-        subject.id === id ? { ...subject, [field]: value } : subject
-      )
+      subjects.map((subject) => {
+        if (subject.id !== id) return subject;
+        const updated = { ...subject, [field]: value };
+        // Selecting (or typing an exact match for) a known course name
+        // pre-fills the credit field — it stays fully editable afterward,
+        // this is just a starting point.
+        if (field === "name") {
+          const preset = findPreset(value);
+          updated.presetApplied = Boolean(preset);
+          if (preset) updated.credit = String(preset.typicalCredits);
+        }
+        return updated;
+      })
     );
     // Clear the banner as soon as the user starts fixing the input, rather
     // than leaving it up until the next Calculate press.
@@ -120,51 +189,68 @@ export default function GPACalculator() {
       </p>
 
       {/* Calculator Grid UI */}
+      <datalist id="course-preset-list">
+        {coursePresets.map((preset) => (
+          <option key={preset.name} value={preset.name} />
+        ))}
+      </datalist>
+
+      {restoredFromStorage && (
+        <p className="max-w-3xl mx-auto mt-6 text-center text-xs text-slate-500">
+          Restored your last course list from this browser.
+        </p>
+      )}
+
       <div className="mt-12 space-y-4 max-w-3xl mx-auto text-left">
         {subjects.map((subject, index) => (
-          <div
-            key={subject.id}
-            className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4"
-          >
-            <input
-              type="text"
-              aria-label={`Subject ${index + 1} name`}
-              placeholder="Subject Name"
-              value={subject.name}
-              onChange={(e) => updateSubject(subject.id, "name", e.target.value)}
-              className="col-span-2 md:col-span-1 rounded-xl bg-slate-800 p-3 outline-none text-white border border-slate-700 transition-all duration-200 focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500"
-            />
-            <input
-              type="number"
-              inputMode="decimal"
-              min="0"
-              step="0.5"
-              aria-label={`Subject ${index + 1} credit hours`}
-              placeholder="Credits"
-              value={subject.credit}
-              onChange={(e) => updateSubject(subject.id, "credit", e.target.value)}
-              className="rounded-xl bg-slate-800 p-3 outline-none text-white border border-slate-700 transition-all duration-200 focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500"
-            />
-            <select
-              aria-label={`Subject ${index + 1} grade`}
-              value={subject.grade}
-              onChange={(e) => updateSubject(subject.id, "grade", e.target.value)}
-              className="rounded-xl bg-slate-800 p-3 text-white outline-none border border-slate-700 transition-all duration-200 focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500"
-            >
-              {GRADE_OPTIONS.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-            <button
-              onClick={() => removeSubject(subject.id)}
-              disabled={subjects.length === 1}
-              aria-label={`Remove subject ${index + 1}`}
-              className="col-span-2 md:col-span-1 rounded-xl bg-red-600 px-4 py-3 text-white font-semibold transition-all duration-200 hover:bg-red-700 active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-red-600 disabled:active:scale-100"
-            >
-              Remove
-            </button>
+          <div key={subject.id}>
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+              <input
+                type="text"
+                list="course-preset-list"
+                aria-label={`Subject ${index + 1} name`}
+                placeholder="Subject Name (try 'Calculus I')"
+                value={subject.name}
+                onChange={(e) => updateSubject(subject.id, "name", e.target.value)}
+                className="col-span-2 md:col-span-1 rounded-xl bg-slate-800 p-3 outline-none text-white border border-slate-700 transition-all duration-200 focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500"
+              />
+              <input
+                type="number"
+                inputMode="decimal"
+                min="0"
+                step="0.5"
+                aria-label={`Subject ${index + 1} credit hours`}
+                placeholder="Credits"
+                value={subject.credit}
+                onChange={(e) => updateSubject(subject.id, "credit", e.target.value)}
+                className="rounded-xl bg-slate-800 p-3 outline-none text-white border border-slate-700 transition-all duration-200 focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500"
+              />
+              <select
+                aria-label={`Subject ${index + 1} grade`}
+                value={subject.grade}
+                onChange={(e) => updateSubject(subject.id, "grade", e.target.value)}
+                className="rounded-xl bg-slate-800 p-3 text-white outline-none border border-slate-700 transition-all duration-200 focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500"
+              >
+                {GRADE_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <button
+                onClick={() => removeSubject(subject.id)}
+                disabled={subjects.length === 1}
+                aria-label={`Remove subject ${index + 1}`}
+                className="col-span-2 md:col-span-1 rounded-xl bg-red-600 px-4 py-3 text-white font-semibold transition-all duration-200 hover:bg-red-700 active:scale-[0.97] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-red-600 disabled:active:scale-100"
+              >
+                Remove
+              </button>
+            </div>
+            {subject.presetApplied && (
+              <p className="mt-1.5 text-xs text-slate-500">
+                Typical value for &quot;{subject.name}&quot;. Check your university&apos;s catalog.
+              </p>
+            )}
           </div>
         ))}
 
