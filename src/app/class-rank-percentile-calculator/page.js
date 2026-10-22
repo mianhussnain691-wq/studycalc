@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ShareResultButton from "@/components/ShareResultButton";
 import ClassRankPercentileGuide from "@/components/calculator-guides/ClassRankPercentileGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 // Standard normal CDF via the Abramowitz & Stegun erf approximation —
 // accurate to about 1.5e-7, more than sufficient for an estimate tool.
@@ -172,6 +173,12 @@ export default function ClassRankPercentileCalculator() {
             </p>
           )}
         </div>
+
+        <SourcesBlock
+          note="This is a statistical estimate, not your actual class rank. It assumes scores are normally distributed (a bell curve) around the class average, using the standard normal CDF — real score distributions are often skewed, so treat the result as an approximation, not an official rank."
+          guideHref="/grade-calculator"
+          guideLabel="Convert your score to a letter grade directly"
+        />
 
         <ClassRankPercentileGuide />
 

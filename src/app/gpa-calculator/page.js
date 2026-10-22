@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import GPAGuide from "@/components/calculator-guides/GPAGuide"; // <--- Perfect Import Path
 import ShareResultButton from "@/components/ShareResultButton";
 import DownloadResultCard from "@/components/DownloadResultCard";
+import SourcesBlock from "@/components/SourcesBlock";
 import coursePresets from "@/data/coursePresets";
 
 const STORAGE_KEY = "studycalc-gpa-subjects";
@@ -346,6 +347,12 @@ export default function GPACalculator() {
 
       {/* Authority guide renders below the calculator, not inside the result card. */}
       <div className="text-left">
+        <SourcesBlock
+          formula="GPA = Σ(Credit Hours × Grade Points) ÷ Σ(Credit Hours)"
+          note="Uses the common US 4.0 scale with standard +/- modifiers (A = 4.0 down to F = 0.0). Individual schools can use slightly different cutoffs or omit +/- grades — check your institution's official grading policy for your exact transcript GPA."
+          guideHref="/gpa-scale-explained"
+          guideLabel="How the 4.0, 5.0, and 10.0 scales compare"
+        />
         <GPAGuide />
       </div>
     </div>

@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import ShareResultButton from "@/components/ShareResultButton";
 import LsacLawSchoolGpaGuide from "@/components/calculator-guides/LsacLawSchoolGpaGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 // LSAC allows A+ = 4.33 — unlike AMCAS, which caps A+ at 4.0. This is the
 // single most-confused point between the two calculators, so it's kept as
@@ -178,6 +179,12 @@ export default function LsacLawSchoolGpaCalculator() {
             </p>
           )}
         </div>
+
+        <SourcesBlock
+          note="Follows LSAC's CAS (Credential Assembly Service) grade-point convention, which allows A+ = 4.33 (unlike AMCAS's scale, which caps A+ at 4.0). LSAC also recalculates repeated courses under its own rule rather than your school's. Confirm current specifics on LSAC's official CAS site."
+          guideHref="/how-lsac-calculates-your-gpa"
+          guideLabel="Full breakdown of the 4.33 scale and repeated-course rule"
+        />
 
         <LsacLawSchoolGpaGuide />
 

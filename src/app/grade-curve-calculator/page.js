@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ShareResultButton from "@/components/ShareResultButton";
 import GradeCurveGuide from "@/components/calculator-guides/GradeCurveGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 export default function GradeCurveCalculator() {
   const [score, setScore] = useState("");
@@ -149,6 +150,13 @@ export default function GradeCurveCalculator() {
             </p>
           )}
         </div>
+
+        <SourcesBlock
+          formula="Curved Score = Your Score + (Target Average − Class Average)"
+          note="This is the common linear (additive) curve method — one of several curving approaches instructors use (others include square-root or bell-curve scaling). Your instructor's specific method is the one that actually applies to your grade."
+          guideHref="/grade-calculator"
+          guideLabel="Convert your curved score to a letter grade"
+        />
 
         <GradeCurveGuide />
 

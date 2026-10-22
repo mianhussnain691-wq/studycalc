@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import AcademicStandingGuide from "@/components/calculator-guides/AcademicStandingGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 // Deliberately no red/alarm colors and no "danger"/"failing"/"at risk"
 // language anywhere in this file — this tool touches on student stress and
@@ -156,6 +157,12 @@ export default function AcademicStandingChecker() {
             Check if your GPA is good or bad
           </Link>.
         </p>
+
+        <SourcesBlock
+          note="A 2.0 cumulative GPA (4.0 scale) is the commonly used threshold for good academic standing at most US institutions, not a universal rule. Some majors or programs set a higher minimum — your institution's academic catalog is the authoritative source."
+          guideHref="/is-my-gpa-good"
+          guideLabel="See where your GPA sits more broadly"
+        />
 
         <AcademicStandingGuide />
 

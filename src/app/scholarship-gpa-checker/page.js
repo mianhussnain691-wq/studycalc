@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import ScholarshipGpaGuide from "@/components/calculator-guides/ScholarshipGpaGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 // Tiers pulled directly from /gpa-for-scholarships so the two pages agree.
 const TIERS = [
@@ -137,6 +138,12 @@ export default function ScholarshipGpaChecker() {
             Is my GPA good or bad?
           </Link>
         </p>
+
+        <SourcesBlock
+          note="These tiers are common conventions, not guarantees from any specific scholarship. For real published examples: Indiana University renews academic scholarships on a 3.0 cumulative GPA with full-time (12+ credit hours) enrollment, and LSU requires a 3.0 GPA plus 24 credit hours per year. Always check the specific award's own published criteria."
+          guideHref="/gpa-for-scholarships"
+          guideLabel="Full tier breakdown and renewal strategy"
+        />
 
         <ScholarshipGpaGuide />
 

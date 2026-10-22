@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ShareResultButton from "@/components/ShareResultButton";
 import DeansListGuide from "@/components/calculator-guides/DeansListGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 const GPA_THRESHOLD = 3.5;
 const CREDIT_THRESHOLD = 12;
@@ -157,6 +158,12 @@ export default function DeansListCalculator() {
             Check if your GPA is good or bad
           </Link>.
         </p>
+
+        <SourcesBlock
+          note="Semester GPA ≥ 3.50 and credit hours ≥ 12 is a commonly used convention, not a universal rule — some schools use 3.6, 3.7, or a different combination entirely. Confirm with your registrar or student handbook."
+          guideHref="/is-my-gpa-good"
+          guideLabel="See where your GPA sits more broadly"
+        />
 
         <DeansListGuide />
 

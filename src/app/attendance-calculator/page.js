@@ -3,6 +3,7 @@
 import { useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import AttendanceGuide from "@/components/calculator-guides/AttendanceGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 import ShareResultButton from "@/components/ShareResultButton";
 import DownloadResultCard from "@/components/DownloadResultCard";
 
@@ -217,6 +218,13 @@ export default function AttendanceCalculator() {
         </div>
 
         {/* 🔥 EXTRA ZONE: Production-ready 2000-word Authority SEO Structure renders beautifully below layout */}
+        <SourcesBlock
+          formula="Attendance % = (Classes Attended ÷ Classes Held) × 100"
+          note="75% is a commonly used eligibility threshold, not a universal rule — some schools use as low as 65% or as high as 80%. Check your own institution's specific policy."
+          guideHref="/attendance-percentage-formula"
+          guideLabel="Full breakdown by country, with how-many-can-I-miss tables"
+        />
+
         <AttendanceGuide />
 
       </div>

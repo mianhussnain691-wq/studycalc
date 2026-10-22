@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import ShareResultButton from "@/components/ShareResultButton";
 import AmcasScienceGpaGuide from "@/components/calculator-guides/AmcasScienceGpaGuide";
+import SourcesBlock from "@/components/SourcesBlock";
 
 // AMCAS caps A+ at 4.0 — unlike LSAC, which allows 4.33. This is the single
 // most-confused point between the two calculators, so it's kept as its own
@@ -208,6 +209,12 @@ export default function AmcasScienceGpaCalculator() {
             />
           </div>
         )}
+
+        <SourcesBlock
+          note="Follows AAMC's AMCAS grade-point convention, where A+ and A both cap at 4.0 (unlike LSAC's scale, which allows 4.33 for A+). BCPM (Biology/Chemistry/Physics/Math) courses are tracked separately per AMCAS's own application requirements — confirm current-cycle specifics on AAMC's official AMCAS site."
+          guideHref="/what-gpa-do-you-need-for-medical-school"
+          guideLabel="Real average GPA data for MD/DO matriculants"
+        />
 
         <AmcasScienceGpaGuide />
 
