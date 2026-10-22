@@ -151,6 +151,10 @@ export default function DeansListCalculator() {
           Aiming for a scholarship instead?{" "}
           <Link href="/gpa-for-scholarships" className="text-cyan-400 hover:underline">
             See GPA requirements for scholarships
+          </Link>
+          . Or just want a general read on your GPA?{" "}
+          <Link href="/is-my-gpa-good" className="text-cyan-400 hover:underline">
+            Check if your GPA is good or bad
           </Link>.
         </p>
 

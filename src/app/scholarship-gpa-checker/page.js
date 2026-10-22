@@ -131,7 +131,11 @@ export default function ScholarshipGpaChecker() {
           For the full breakdown of tiers, renewal requirements, and strategy,{" "}
           <Link href="/gpa-for-scholarships" className="text-cyan-400 hover:underline">
             read the complete GPA for Scholarships guide
-          </Link>.
+          </Link>
+          . Or get a general read first:{" "}
+          <Link href="/is-my-gpa-good" className="text-cyan-400 hover:underline">
+            Is my GPA good or bad?
+          </Link>
         </p>
 
         <ScholarshipGpaGuide />

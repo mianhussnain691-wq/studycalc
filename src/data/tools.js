@@ -144,6 +144,14 @@ const tools = [
     category: "Academic Planning",
   },
   {
+    title: "Is My GPA Good or Bad?",
+    description: "See where your GPA sits against common academic, scholarship, and honors thresholds.",
+    href: "/is-my-gpa-good",
+    badge: "New",
+    badgeColor: "bg-fuchsia-500/20 text-fuchsia-400",
+    category: "GPA & Grades",
+  },
+  {
     title: "Course Weight Impact Calculator",
     description: "See what one upcoming assessment is really worth to your grade.",
     href: "/course-weight-impact-calculator",

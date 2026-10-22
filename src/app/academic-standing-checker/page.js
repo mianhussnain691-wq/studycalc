@@ -150,6 +150,10 @@ export default function AcademicStandingChecker() {
           Looking to improve your GPA?{" "}
           <Link href="/how-to-raise-gpa-fast" className="text-cyan-400 hover:underline">
             See strategies here
+          </Link>
+          . Want a broader read, beyond just the pass/fail line?{" "}
+          <Link href="/is-my-gpa-good" className="text-cyan-400 hover:underline">
+            Check if your GPA is good or bad
           </Link>.
         </p>
 
