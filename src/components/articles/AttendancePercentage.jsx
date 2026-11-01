@@ -1,7 +1,6 @@
 import Link from "next/link";
 
-export default function AttendancePercentage() {
-  const faqs = [
+export const attendanceFaqs = [
     {
       q: "What attendance percentage do I need to sit my exams?",
       a: "Most schools and universities set the bar at 75%, though some go as low as 65% or as high as 80%. If you drop below your school's threshold, you're usually blocked from the final exam for that course, no matter how well you've been doing in your assignments."
@@ -51,6 +50,9 @@ export default function AttendancePercentage() {
       a: "It depends entirely on the instructor's own policy. Some count lateness beyond a set number of minutes as a full absence, others mark it separately as a partial or 'tardy' record that only becomes a problem after repeated occurrences. Check your syllabus, since this detail is rarely covered by the general school-wide attendance policy."
     }
   ];
+
+export default function AttendancePercentage() {
+  const faqs = attendanceFaqs;
 
   const categories = [
     { range: "90% – 100%", status: "Excellent", color: "text-emerald-400", impact: "Comfortably clear of any cutoff. You've got room to miss a class or two without any real risk." },

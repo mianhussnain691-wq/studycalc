@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How Grading Scales Work: Pass/Fail & Grade Bands",
+  title: "Grading Scales: Pass/Fail Thresholds & Grade Bands",
   description:
     "How academic grading scales work — pass/fail thresholds, grade bands, curved vs absolute grading, and why the same score means different things elsewhere.",
   keywords: [
