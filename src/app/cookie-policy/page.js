@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
@@ -35,13 +36,26 @@ export default function CookiePolicyPage() {
             <li>Delivering relevant advertisements (such as Google AdSense) that match your interests.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-white mt-8">3. Managing Your Cookies</h2>
+          <h2 className="text-2xl font-bold text-white mt-8">3. Who Sets These Cookies</h2>
+          <p>
+            Cookies on StudyCalc are set by the third-party services we use to run and improve the site: Google Analytics and Microsoft Clarity for traffic and usage analysis, and Google AdSense for advertising. Each provider sets and manages its own cookies under its own policy — we don&apos;t set first-party tracking cookies of our own beyond what&apos;s needed for a calculator&apos;s on-page functionality.
+          </p>
+
+          <h2 className="text-2xl font-bold text-white mt-8">4. Managing Your Cookies</h2>
           <p>
             You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can modify your browser settings to decline cookies if you prefer. However, please note that disabling cookies may affect the full functionality of some calculators or components.
           </p>
 
           <p className="pt-4 border-t border-slate-800 text-slate-400">
-            For any further queries regarding our use of cookies, please contact us.
+            For any further queries regarding our use of cookies, please{" "}
+            <Link href="/contact" className="text-cyan-400 hover:underline">
+              contact us
+            </Link>
+            . See also our{" "}
+            <Link href="/privacy-policy" className="text-cyan-400 hover:underline">
+              Privacy Policy
+            </Link>{" "}
+            for how we handle data more broadly.
           </p>
 
         </div>

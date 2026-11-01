@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
@@ -69,6 +70,23 @@ export default function TermsPage() {
             property of StudyCalc. You may use the calculators for personal,
             non-commercial purposes. Reproducing or redistributing our
             articles or tools without permission is not permitted.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold">
+            Corrections & Content Accuracy
+          </h2>
+
+          <p className="mt-4 text-slate-300 leading-8">
+            If you report an error in a calculation, formula, or a fact
+            stated in one of our guides, we check it against the source the
+            page cites (or the standard formula it&apos;s built on) and correct
+            the live page once the error is confirmed. Reach us through the{" "}
+            <Link href="/contact" className="text-cyan-400 hover:underline">
+              Contact
+            </Link>{" "}
+            page with the page URL and a description of the issue.
           </p>
         </section>
 

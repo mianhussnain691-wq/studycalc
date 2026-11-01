@@ -78,6 +78,18 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
+          <h2 className="text-2xl font-bold">If You Contact Us</h2>
+          <p className="mt-4 text-slate-300 leading-8">
+            There is no account system or contact form on StudyCalc. If you
+            email us — to report an error, request a calculator, or ask a
+            question — we see only the address and message you send. We use
+            it to reply and, where relevant, to verify and correct the page
+            you&apos;re writing about. We don&apos;t add your address to any mailing
+            list or share it with a third party.
+          </p>
+        </section>
+
+        <section>
           <h2 className="text-2xl font-bold">Your Rights</h2>
           <p className="mt-4 text-slate-300 leading-8">
             Depending on your location, you may have rights under

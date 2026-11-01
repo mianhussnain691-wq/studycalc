@@ -69,6 +69,25 @@ export default function AboutPage() {
 
         </div>
 
+        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8">
+
+          <h2 className="text-3xl font-bold">
+            Found a Mistake?
+          </h2>
+
+          <p className="mt-6 text-slate-300 leading-8">
+            If a calculator, guide, or fact on StudyCalc looks wrong, tell us
+            through our{" "}
+            <Link href="/contact" className="text-cyan-400 hover:underline">
+              Contact
+            </Link>{" "}
+            page with the page URL and what you think is off. We check it
+            against the formula or source the page cites and fix confirmed
+            errors on the live page.
+          </p>
+
+        </div>
+
       </section>
 
     </main>
