@@ -488,6 +488,14 @@ export default function PercentageCalculatorGuide() {
             <span className="font-semibold text-white">How to Calculate CGPA</span>
             <p className="mt-1 text-sm text-slate-400">Learn how semester GPAs combine into a cumulative score.</p>
           </Link>
+          <Link href="/marks-out-of-500-percentage" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+            <span className="font-semibold text-white">Marks Out of 500 to Percentage</span>
+            <p className="mt-1 text-sm text-slate-400">A dedicated single-input calculator fixed to a 500 total.</p>
+          </Link>
+          <Link href="/marks-out-of-1100-percentage" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+            <span className="font-semibold text-white">Marks Out of 1100 to Percentage</span>
+            <p className="mt-1 text-sm text-slate-400">For Pakistani Matric and Intermediate results.</p>
+          </Link>
         </div>
       </div>
 

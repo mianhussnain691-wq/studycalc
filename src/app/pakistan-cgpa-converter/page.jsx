@@ -27,6 +27,10 @@ const faqs = [
     q: "Why does this calculator give an approximate US letter grade too?",
     a: "Because some universities and scholarship forms ask for an equivalent letter grade or want to see how your percentage compares to a standard grading band, not just a raw GPA number. This is shown as a reference approximation, not an official conversion.",
   },
+  {
+    q: "What does a 2.44 CGPA out of 4.00 convert to on the US scale?",
+    a: "Using the ×25 convention, 2.44 × 25 = 61% — enter 2.44 into the calculator above to see the exact percentage and approximate US letter grade for any CGPA, not just this one example.",
+  },
 ];
 
 const faqJsonLd = {

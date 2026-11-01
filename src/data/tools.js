@@ -215,6 +215,38 @@ const tools = [
     badgeColor: "bg-rose-500/20 text-rose-400",
     category: "Finance",
   },
+  {
+    title: "Marks Out of 400 to Percentage",
+    description: "Convert marks out of 400 into a percentage instantly.",
+    href: "/marks-out-of-400-percentage",
+    badge: "New",
+    badgeColor: "bg-lime-500/20 text-lime-400",
+    category: "GPA & Grades",
+  },
+  {
+    title: "Marks Out of 500 to Percentage",
+    description: "Convert marks out of 500 into a percentage instantly.",
+    href: "/marks-out-of-500-percentage",
+    badge: "New",
+    badgeColor: "bg-teal-500/20 text-teal-400",
+    category: "GPA & Grades",
+  },
+  {
+    title: "Marks Out of 600 to Percentage",
+    description: "Convert marks out of 600 into a percentage instantly.",
+    href: "/marks-out-of-600-percentage",
+    badge: "New",
+    badgeColor: "bg-emerald-500/20 text-emerald-400",
+    category: "GPA & Grades",
+  },
+  {
+    title: "Marks Out of 1100 to Percentage",
+    description: "Convert Pakistani Matric or Intermediate marks out of 1100 into a percentage.",
+    href: "/marks-out-of-1100-percentage",
+    badge: "New",
+    badgeColor: "bg-blue-500/20 text-blue-400",
+    category: "GPA & Grades",
+  },
 ];
 
 export default tools;

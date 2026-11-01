@@ -243,7 +243,10 @@ export default function PakistaniBoardVsUsGpaPage() {
             Percentage (%) = (Total Earned Marks / 1100) × 100
           </div>
           <p className="text-slate-300">
-            For example, a pre-engineering student who secures 880 marks out of 1100 achieves an 80% aggregate. While 80% represents an A+ grade locally in Pakistan, its translation to a US 4.0 GPA requires credential evaluation rather than simple division.
+            For example, a pre-engineering student who secures 880 marks out of 1100 achieves an 80% aggregate. While 80% represents an A+ grade locally in Pakistan, its translation to a US 4.0 GPA requires credential evaluation rather than simple division. To do this calculation for your own result, use our{" "}
+            <Link href="/marks-out-of-1100-percentage" className="text-emerald-400 hover:underline">
+              Marks Out of 1100 to Percentage calculator
+            </Link>.
           </p>
         </section>
 

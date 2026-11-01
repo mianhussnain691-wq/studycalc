@@ -361,7 +361,10 @@ export default function MarksToGradeConversionPage() {
             In Pakistan, intermediate education (FSc, ICS, FA, ICom) and Matriculation operate under regional boards (FBISE, BISE Lahore, etc.) where students take high-stakes summative exams at the end of each academic cycle.
           </p>
           <p className="text-slate-300">
-            Total marks are traditionally aggregated out of 1100 marks for intermediate levels. Performance tiers are denoted as A+ (80%+), A (70%–79%), B (60%–69%), C (50%–59%), and D (40%–49%), with 33% serving as the mandatory passing floor.
+            Total marks are traditionally aggregated out of 1100 marks for intermediate levels. Performance tiers are denoted as A+ (80%+), A (70%–79%), B (60%–69%), C (50%–59%), and D (40%–49%), with 33% serving as the mandatory passing floor. Convert your own result with our{" "}
+            <Link href="/marks-out-of-1100-percentage" className="text-cyan-400 hover:underline">
+              Marks Out of 1100 to Percentage calculator
+            </Link>.
           </p>
         </section>
 
