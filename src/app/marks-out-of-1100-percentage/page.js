@@ -13,7 +13,7 @@ export default function MarksOutOf1100Page() {
         </h1>
 
         <p className="mt-4 text-center text-slate-400">
-          The total Pakistani Matric and Intermediate (FSc/HSSC) boards use — enter your combined Part I + Part II marks.
+          The total Pakistani Intermediate (FSc/HSSC) boards use — enter your combined Part I + Part II marks.
         </p>
 
         <MarksOutOfCalculator total={1100} />

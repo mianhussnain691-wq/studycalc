@@ -4,7 +4,7 @@ import SourcesBlock from "@/components/SourcesBlock";
 const faqs = [
   {
     q: "Why is 500 such a common exam total?",
-    a: "500 usually comes from five subjects marked out of 100 each. It's the structure several Class 10 board exams are built around, including CBSE in India — each subject typically splits into a written paper and an internal or practical component that together add up to 100. Other institutions just use 500 as a round total for a cumulative assessment or semester. The exact subject count and split varies by board, so check your own marking scheme rather than assuming.",
+    a: "500 usually comes from five subjects marked out of 100 each — a structure several Class 10-level board exams are built around, with each subject typically split between a written paper and an internal or practical component. Other institutions just use 500 as a round total for a cumulative assessment or semester. We can't point to one verified official source confirming which specific board uses exactly this structure in the current academic year, so treat this as a common pattern, not a named board's official policy — check your own marking scheme to confirm.",
   },
   {
     q: "I took an extra subject — is my percentage still calculated out of 500?",
@@ -63,11 +63,13 @@ export default function MarksOutOf500Guide() {
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-white">Why 500 Specifically?</h2>
         <p className="mt-4 leading-7">
-          500 is a common total because it usually represents five subjects marked out of 100 each — this is
-          the structure several Class 10 board exams are built around, CBSE in India among them, where each
-          subject typically splits into a written paper and an internal or practical component. It also shows
-          up as a round total for semester scores, cumulative assessments, or standardized tests that aren&apos;t
-          tied to any particular board at all.
+          500 is a common total because it usually represents five subjects marked out of 100 each — a
+          structure several Class 10-level board exams are built around, where each subject typically splits
+          into a written paper and an internal or practical component. It also shows up as a round total for
+          semester scores, cumulative assessments, or standardized tests that aren&apos;t tied to any particular
+          board at all. We&apos;re deliberately not naming a specific board here — we couldn&apos;t verify the exact
+          current-year figure directly from an official source, so this page covers the generic 500-total
+          math rather than claiming one board&apos;s policy.
         </p>
         <p className="mt-4 leading-7">
           One wrinkle worth knowing: some boards let students sit an additional, sixth subject. Depending on
@@ -82,7 +84,7 @@ export default function MarksOutOf500Guide() {
         </p>
         <SourcesBlock
           formula="Percentage = (Marks Obtained ÷ 500) × 100"
-          note="The five-subjects-of-100 structure behind a 500 total is widely documented for several Class 10 boards, but the exact subject count, split, and whether an extra subject changes the total is set independently by each board and can change year to year — always confirm against your own board's current scheme of studies before relying on a specific number."
+          note="The five-subjects-of-100 structure behind a 500 total is a common pattern, but we could not verify one specific board's current total from an official primary source, so no board name is cited here — always confirm against your own board's current scheme of studies before relying on a specific number."
           guideHref="/marks-to-grade-conversion"
           guideLabel="See how marks map to grades across different systems"
         />

@@ -3,20 +3,24 @@ import SourcesBlock from "@/components/SourcesBlock";
 
 const faqs = [
   {
-    q: "Why is 1100 used as the total for Pakistani Matric and Intermediate results?",
-    a: "1100 is the traditional aggregate Pakistani boards use for both Matriculation/SSC (grades 9-10) and Intermediate/HSSC — FSc, ICS, FA, ICom (grades 11-12). Each level is split into Part I and Part II, and the two parts' marks are added together into that single 1100 total.",
+    q: "Why is 1100 used as the total for Pakistani Intermediate results?",
+    a: "1100 is the standard aggregate Pakistani boards use for Intermediate/HSSC — FSc, ICS, FA, ICom (grades 11-12), split into Part I and Part II, with the two parts' marks added together into that single 1100 total. It's also the denominator Pakistani universities' own admission-merit formulas use when converting results onto one scale, which is how we verified the figure (see Sources below).",
   },
   {
-    q: "Is 1100 the same for every Pakistani board?",
-    a: "It's the standard convention under what boards call the \"old course,\" and it's the denominator Pakistani universities' own admission formulas use when converting results onto one scale. Some boards have introduced a newer 1200-mark scheme for recently revised curricula — check your own result card, and if it shows 1200 instead of 1100, use our general Percentage Calculator and enter 1200 as the total.",
+    q: "Does Matriculation/SSC also use 1100 as its total?",
+    a: "Sometimes, but we can't confirm it's universal. One official Pakistani university admission formula we checked lists a Matriculation example scored out of 1050, not 1100, while separate board notifications describe 1100 for Matric too — so the Matric total genuinely varies by board and we're not asserting a single figure for it on this page. If you're converting a Matric/SSC result specifically, check your own board's result card for its stated total, or use our general Percentage Calculator with that exact number.",
+  },
+  {
+    q: "Is 1100 the same for every Pakistani board's Intermediate result?",
+    a: "It's the standard convention under what boards call the \"old course,\" and it's the denominator we found used consistently across the Intermediate admission-merit formulas we checked. Some boards have introduced a newer 1200-mark scheme for recently revised curricula — check your own result card, and if it shows 1200 instead of 1100, use our general Percentage Calculator and enter 1200 as the total.",
   },
   {
     q: "What do \"Part I\" and \"Part II\" mean in the 1100 total?",
-    a: "Matric and Intermediate in Pakistan are each two-year programs (grades 9-10 or 11-12), examined separately as Part I (first year) and Part II (second year). Neither part is graded out of 1100 on its own — it's the sum of both parts' marks that's evaluated against 1100.",
+    a: "Intermediate/HSSC in Pakistan is a two-year program (grades 11-12), examined separately as Part I (first year) and Part II (second year). Neither part is graded out of 1100 on its own — it's the sum of both parts' marks that's evaluated against 1100.",
   },
   {
     q: "How is this different from the Pakistan CGPA to percentage conversion?",
-    a: "This page converts raw board-exam marks (out of 1100) into a percentage — no CGPA involved. Our Pakistan CGPA Converter is a separate tool for university-level CGPA (0-4.0 scale) that uses HEC's roughly ×25 convention instead. Use this page for Matric/Intermediate marks, and the CGPA converter for university results.",
+    a: "This page converts raw board-exam marks (out of 1100) into a percentage — no CGPA involved. Our Pakistan CGPA Converter is a separate tool for university-level CGPA (0-4.0 scale) that uses HEC's roughly ×25 convention instead. Use this page for Intermediate/HSSC marks, and the CGPA converter for university results.",
   },
   {
     q: "What percentage counts as an A or A+ on the 1100 scale?",
@@ -24,7 +28,7 @@ const faqs = [
   },
   {
     q: "Do O-Level or A-Level results ever get converted onto the 1100 scale?",
-    a: "Yes — Pakistani universities commonly convert O-Level and A-Level subject grades into equivalent marks and then scale the total against 1100 so it's comparable to a local Matric/Intermediate aggregate. The conversion table and scaling method are set by each university's admissions office (often following IBCC guidance), so the exact grade-to-marks mapping can vary — check your target university's own equivalence formula.",
+    a: "Yes — Pakistani universities commonly convert O-Level and A-Level subject grades into equivalent marks and then scale the total against 1100 so it's comparable to a local Intermediate aggregate. The conversion table and scaling method are set by each university's admissions office (often following IBCC guidance), so the exact grade-to-marks mapping can vary — check your target university's own equivalence formula.",
   },
   {
     q: "Is 33% really the minimum passing percentage out of 1100?",
@@ -82,12 +86,18 @@ export default function MarksOutOf1100Guide() {
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-white">Why 1100 Specifically?</h2>
         <p className="mt-4 leading-7">
-          1100 is the traditional total marks Pakistani education boards use for both Matriculation/SSC
-          (grades 9-10) and Intermediate/HSSC — FSc, ICS, FA, ICom (grades 11-12). Each level runs across two
-          years, examined as Part I and Part II, and it&apos;s the sum of both parts that&apos;s measured against
-          1100. Pakistani universities also use 1100 as the scale they convert O-Level, A-Level, and other
-          foreign-board results onto, so they&apos;re comparable to a local aggregate — official university
-          admission formulas confirm this convention directly (see Sources below).
+          1100 is the standard total marks Pakistani boards use for Intermediate/HSSC — FSc, ICS, FA, ICom
+          (grades 11-12), run across two years and examined as Part I and Part II, with the sum of both parts
+          measured against 1100. Pakistani universities also use 1100 as the scale they convert O-Level,
+          A-Level, and other foreign-board results onto, so they&apos;re comparable to a local Intermediate
+          aggregate — official university admission-merit formulas confirm this convention directly (see
+          Sources below).
+        </p>
+        <p className="mt-4 leading-7">
+          Matriculation/SSC (grades 9-10) is a separate question. One official university admission formula
+          we checked lists a Matric example scored out of 1050, not 1100, so we can&apos;t confirm 1100 as a
+          single universal Matric total the way we can for Intermediate — if you&apos;re converting a Matric
+          result, check your own board&apos;s result card for its actual total rather than assuming it&apos;s 1100.
         </p>
         <p className="mt-4 leading-7">
           Some boards have introduced a newer 1200-mark scheme for recently revised curricula. If your own
@@ -109,10 +119,21 @@ export default function MarksOutOf1100Guide() {
         </div>
         <SourcesBlock
           formula="Percentage = (Marks Obtained ÷ 1100) × 100"
-          note="1100 as the Matric/Intermediate total, and as the scale used to convert foreign qualifications, is confirmed in official Pakistani university admission-merit formulas (e.g. University of Health Sciences' aggregate-percentage calculation, which expresses SSC, HSSC, and entrance-test scores each against a 1100 denominator)."
+          note="1100 as the Intermediate/HSSC total, and as the scale used to convert foreign qualifications, is confirmed in University of Health Sciences Lahore's official aggregate-percentage formula (a PMDC merit-calculation document), which repeatedly expresses HSSC and entrance-test scores against a 1100 denominator — the same document's own worked example lists Matriculation out of 1050, not 1100, which is why this page does not state a fixed Matric total."
           guideHref="/pakistani-board-vs-us-gpa"
           guideLabel="See the full Pakistani board grading breakdown and US GPA equivalence"
         />
+        <p className="mt-3 text-xs text-slate-500">
+          Primary source: University of Health Sciences, Lahore —{" "}
+          <a
+            href="https://www.uhs.edu.pk/downloads/CalcAggregatePerctg.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400/80 hover:underline"
+          >
+            Calculation of Aggregate Percentage (PDF)
+          </a>
+        </p>
       </div>
 
       <div className="mt-12">
@@ -147,9 +168,9 @@ export default function MarksOutOf1100Guide() {
         <h2 className="text-2xl font-bold text-white">Worked Examples</h2>
 
         <div className="mt-6">
-          <h3 className="text-lg font-bold text-white">Example 1: Matric (SSC) Result</h3>
+          <h3 className="text-lg font-bold text-white">Example 1: FSc Pre-Medical Result</h3>
           <p className="mt-2 leading-7">
-            A student scores 869 marks out of 1100 across Part I and Part II combined.
+            A pre-medical student&apos;s combined Part I and Part II score is 869 out of 1100.
           </p>
           <div className="mt-3 rounded-xl bg-slate-900 border border-slate-800 p-5 font-mono text-sm">
             869 ÷ 1100 × 100 = 79%
@@ -158,9 +179,9 @@ export default function MarksOutOf1100Guide() {
         </div>
 
         <div className="mt-8">
-          <h3 className="text-lg font-bold text-white">Example 2: A Borderline Intermediate Result</h3>
+          <h3 className="text-lg font-bold text-white">Example 2: A Borderline ICom Result</h3>
           <p className="mt-2 leading-7">
-            A different student&apos;s combined Part I and Part II score is 594 out of 1100.
+            A commerce (ICom) student&apos;s combined Part I and Part II score is 594 out of 1100.
           </p>
           <div className="mt-3 rounded-xl bg-slate-900 border border-slate-800 p-5 font-mono text-sm">
             594 ÷ 1100 × 100 = 54%
