@@ -175,5 +175,13 @@ export const articles = [
     category: "Finance Fundamentals",
     readTime: "8 min read",
     date: "2026-09-12"
+  },
+  {
+    title: "Pakistani University Grading Scales (Sourced)",
+    description: "Official letter grade to GPA scales for Pakistani universities, quoted directly from each university's own published regulations.",
+    slug: "pakistan-university-grading-scales",
+    category: "International Admissions",
+    readTime: "6 min read",
+    date: "2026-11-07"
   }
 ];

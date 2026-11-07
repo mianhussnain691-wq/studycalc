@@ -273,7 +273,11 @@ export default function PakistaniBoardVsUsGpaPage() {
             At the undergraduate and graduate levels, Pakistani universities chartered by the Higher Education Commission (HEC) transitioned from annual percentage systems to a 4.0 Cumulative Grade Point Average (CGPA) scale. However, grading strictness varies wildly across public and private institutions.
           </p>
           <p className="text-slate-300">
-            A 3.5 CGPA from a highly rigorous engineering institution in Pakistan carries different weight than a 3.5 CGPA from a less selective college. US admissions committees account for institutional accreditation, grade inflation, and course rigor when reviewing university transcripts.
+            A 3.5 CGPA from a highly rigorous engineering institution in Pakistan carries different weight than a 3.5 CGPA from a less selective college. US admissions committees account for institutional accreditation, grade inflation, and course rigor when reviewing university transcripts. For the universities where we could verify an official published scale directly, see our{" "}
+            <Link href="/pakistan-university-grading-scales" className="text-emerald-400 hover:underline">
+              Pakistani University Grading Scales
+            </Link>{" "}
+            page.
           </p>
           <p className="text-slate-300">
             If your university already reports a CGPA rather than a percentage, our <Link href="/pakistan-cgpa-converter" className="text-emerald-400 hover:underline">Pakistan CGPA to US GPA converter</Link> applies the common CGPA × 25 convention to give you a quick percentage and approximate US GPA reference before you pursue a formal WES evaluation. If you also need to make sense of your course credit hours — including the Total(Theory+Lab) notation many Pakistani course outlines use — the <Link href="/credit-converter" className="text-emerald-400 hover:underline">Credit Converter</Link> decodes it.
