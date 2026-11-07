@@ -163,6 +163,14 @@ export default function DeansListGuide() {
             <span className="font-semibold text-white">GPA for Scholarships</span>
             <p className="mt-1 text-sm text-slate-400">See what GPA tiers unlock merit-based funding.</p>
           </Link>
+          <Link href="/semester-credit-load-checker" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+            <span className="font-semibold text-white">Semester Credit Load Checker</span>
+            <p className="mt-1 text-sm text-slate-400">Confirm your credits clear the common full-time threshold.</p>
+          </Link>
+          <Link href="/academic-standing-checker" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+            <span className="font-semibold text-white">Academic Standing Checker</span>
+            <p className="mt-1 text-sm text-slate-400">For cumulative GPA requirements, not semester-only honors.</p>
+          </Link>
         </div>
       </div>
     </div>

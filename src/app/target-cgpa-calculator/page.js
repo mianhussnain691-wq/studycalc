@@ -97,9 +97,12 @@ export default function TargetCgpaCalculator() {
           Target CGPA Calculator
         </h1>
 
-        <p className="mt-4 text-center text-slate-400">
-          Find the GPA you need in future semesters to reach your target CGPA.
+        <p className="mt-4 text-center text-slate-400 max-w-2xl mx-auto">
+          Required GPA = (target CGPA × total credits − current quality points) ÷ remaining credits. Enter
+          your current CGPA, current credits, target CGPA, and remaining credits below to see exactly what
+          average you need going forward — works the same way on a 4.0 or 10-point scale.
         </p>
+        <p className="mt-2 text-center text-xs text-slate-500">Last updated: November 2026</p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <input

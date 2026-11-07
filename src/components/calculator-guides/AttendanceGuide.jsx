@@ -8,6 +8,7 @@ export default function AttendanceCalculatorGuide() {
     { href: "#formula", label: "Attendance Formula" },
     { href: "#example", label: "Step-by-Step Example" },
     { href: "#missed-classes", label: "How Many Classes Can You Miss?" },
+    { href: "#grade-weight", label: "When Attendance Is Part of Your Grade" },
     { href: "#mistakes", label: "Common Mistakes" },
     { href: "#tips", label: "Tips for Accurate Results" },
     { href: "#faqs", label: "FAQs" },
@@ -309,6 +310,32 @@ export default function AttendanceCalculatorGuide() {
             full breakdown across 20 to 100 classes
           </Link>{" "}
           for other term lengths.
+        </p>
+      </div>
+
+      <div id="grade-weight" className="mt-12 scroll-mt-20">
+        <h2 className="text-2xl font-bold text-white">When Attendance Is Part of Your Grade</h2>
+        <p className="mt-4 leading-7 text-slate-300">
+          Everything above is about the eligibility threshold — the cutoff that decides whether you can sit the
+          exam at all. Some courses separately give attendance a direct percentage weight toward your final grade,
+          on top of that threshold. The two are independent: you can clear the eligibility cutoff and still lose
+          grade points for the classes you missed along the way.
+        </p>
+        <p className="mt-4 leading-7 text-slate-300">
+          If your syllabus says attendance is worth, say, 10% of your final grade across 20 total class sessions,
+          each individual session is worth 10% ÷ 20 = 0.5 percentage points of your final grade:
+        </p>
+        <div className="mt-4 rounded-xl bg-slate-950/40 p-5 border border-slate-800/60 text-sm leading-6 text-slate-300">
+          <p>Attendance weight: 10% of final grade</p>
+          <p>Total class sessions: 20</p>
+          <p className="mt-2 font-mono font-bold text-cyan-400">
+            Per-class value = 10% ÷ 20 = 0.5 percentage points
+          </p>
+          <p className="mt-2">Missing 1 class ≈ -0.5 points. Missing 4 classes ≈ -2.0 points off your final grade.</p>
+        </div>
+        <p className="mt-4 leading-7 text-slate-300 text-sm">
+          The exact weight and session count are set by your own syllabus, not a universal rule — check both
+          numbers before relying on this math for your specific course.
         </p>
       </div>
 

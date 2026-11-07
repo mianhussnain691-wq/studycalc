@@ -110,9 +110,10 @@ export default function AttendanceCalculator() {
           Attendance Calculator
         </h1>
 
-        <p className="mt-4 text-center text-slate-400">
-          Calculate your attendance percentage instantly.
+        <p className="mt-4 text-center text-slate-200 font-medium max-w-xl mx-auto">
+          Attendance % = classes attended ÷ classes held × 100. Most universities require at least 75% to sit final exams, though the exact minimum varies by institution.
         </p>
+        <p className="mt-2 text-center text-xs text-slate-500">Last updated: November 2026</p>
 
         <div className="mt-12 space-y-6">
           <input

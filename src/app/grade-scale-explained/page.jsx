@@ -90,9 +90,13 @@ export default function GradeScaleExplained() {
           <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
             How Grading Scales Actually Work
           </h1>
+          <p className="mt-4 text-base md:text-lg text-slate-200 leading-relaxed font-medium">
+            A grade threshold is a fixed cutoff score — like the minimum to pass, or the GPA that triggers academic probation. A grade band is a named range of scores or GPAs, like &quot;Dean&apos;s List&quot; or &quot;Good Standing,&quot; that groups a range under one shared outcome. Grading can be absolute (fixed cutoffs set in advance) or curved (adjusted to how the class performed) — which applies depends entirely on your specific school.
+          </p>
           <p className="mt-4 text-base md:text-lg text-slate-400 leading-relaxed">
             Every school has "a grading scale," but what that actually means — where the passing line sits, whether your grade depends on a fixed standard or your classmates' performance, what triggers honors or probation — varies more than most students realize. This guide covers the concepts behind grading scales, not just one specific conversion table.
           </p>
+          <p className="mt-4 text-xs text-slate-500">Last updated: November 2026</p>
         </header>
 
         <div className="space-y-10 text-base leading-relaxed">

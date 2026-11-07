@@ -57,6 +57,14 @@ export default function GpaToPercentageCalculator() {
           Convert your GPA into an equivalent percentage range.
         </p>
 
+        <p className="mt-2 text-center text-sm text-slate-500">
+          Example: 3.3 GPA ≈ <span className="font-semibold text-cyan-400">87–89% (B+)</span> on the common US 4.0 scale
+        </p>
+
+        <p className="mt-2 text-center text-xs text-slate-600">
+          Last updated: November 2026
+        </p>
+
         <div className="mt-12">
           <input
             type="number"

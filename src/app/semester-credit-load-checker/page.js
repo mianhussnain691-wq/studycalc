@@ -39,9 +39,12 @@ export default function SemesterCreditLoadChecker() {
           Semester Credit Load Checker
         </h1>
 
-        <p className="mt-4 text-center text-slate-400">
-          Check whether your semester credit load is part-time, full-time, or overload.
+        <p className="mt-4 text-center text-slate-400 max-w-2xl mx-auto">
+          Your credit load is the total credit hours you&apos;re registered for this term. At most US
+          institutions: below 12 is part-time, 12-17 is full-time, and 18+ is an overload that often needs
+          advisor approval. Enter your total below to check instantly.
         </p>
+        <p className="mt-2 text-center text-xs text-slate-500">Last updated: November 2026</p>
 
         <div className="mt-12">
           <input

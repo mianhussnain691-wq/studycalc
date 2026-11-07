@@ -151,9 +151,13 @@ export default function APHonorsGpaWeightingGuide() {
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white tracking-tight leading-tight">
           Weighted vs. Unweighted GPA: The Ultimate AP, IB & Honors Weighting Master Guide
         </h1>
-        <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl">
-          Demystify how high schools calculate course weights, AP (5.0), IB (5.0), and Honors (4.5) grade point boosts. Explore regional variants like Texas 6.0 systems, UC Capped algorithms, cumulative weighted equations, and exact college admissions recalculation protocols.
+        <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed max-w-3xl font-medium">
+          AP and IB classes typically add a full +1.0 grade-point bonus on a 5.0 weighted scale, while Honors/Pre-AP classes usually add +0.5 on a 4.5 scale — so an A in an AP class is worth 5.0 quality points instead of the standard 4.0. Exact scales, tier names, and which courses qualify are set by each school district individually, so always confirm against your own district&apos;s grading policy.
         </p>
+        <p className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed max-w-3xl">
+          This guide breaks down the full weighting matrix, regional variants like Texas&apos;s 6.0 scale, UC&apos;s Capped Weighted system, and exactly how college admissions offices recalculate your transcript.
+        </p>
+        <p className="mt-4 text-xs text-slate-500">Last updated: November 2026</p>
       </header>
 
       {/* Main Content Body */}
@@ -600,6 +604,9 @@ export default function APHonorsGpaWeightingGuide() {
             </Link>
             <Link href="/grade-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
               Weighted Grade Calculator 📊
+            </Link>
+            <Link href="/weighted-gpa-vs-unweighted-gpa" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
+              Weighted vs. Unweighted GPA Guide 📘
             </Link>
           </div>
         </section>

@@ -93,6 +93,7 @@ export default function AttendancePercentage() {
         <p className="mt-4 text-base sm:text-lg leading-8 text-slate-300">
           Almost every school and university has some version of the same rule: fall below a certain attendance percentage, and you lose the right to sit your exams, regardless of how good your grades are. This guide walks through exactly how that percentage is calculated, how many classes you can realistically miss before it becomes a problem, and what to do if you're already close to the line.
         </p>
+        <p className="mt-4 text-xs text-slate-500">Last updated: November 2026</p>
       </div>
 
       {/* Section 1: Why it matters */}

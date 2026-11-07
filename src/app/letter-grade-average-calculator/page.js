@@ -51,9 +51,11 @@ export default function LetterGradeAverageCalculator() {
           Letter Grade Average Calculator
         </h1>
 
-        <p className="mt-4 text-center text-slate-400">
-          Average your letter grades directly — no credit hours needed.
+        <p className="mt-4 text-center text-slate-400 max-w-2xl mx-auto">
+          Pick each letter grade from the dropdowns below and this tool averages their GPA point values
+          directly — no credit hours or weighting, just a plain average of the letters you enter.
         </p>
+        <p className="mt-2 text-center text-xs text-slate-500">Last updated: November 2026</p>
 
         <div className="mt-12 space-y-4">
           {rows.map((row, index) => (

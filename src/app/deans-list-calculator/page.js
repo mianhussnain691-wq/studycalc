@@ -78,6 +78,10 @@ export default function DeansListCalculator() {
           See how your semester GPA compares to the common Dean&apos;s List threshold.
         </p>
 
+        <p className="mt-2 text-center text-xs text-slate-600">
+          Last updated: November 2026
+        </p>
+
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <input
             type="number"

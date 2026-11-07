@@ -103,6 +103,10 @@ export default function PercentageCalculator() {
           Example: 353 out of 500 = <span className="font-semibold text-cyan-400">70.60%</span>
         </p>
 
+        <p className="mt-2 text-center text-xs text-slate-600">
+          Last updated: November 2026
+        </p>
+
         <div className="mt-10 space-y-6">
           <input
             type="number"
