@@ -154,10 +154,11 @@ async function main() {
     if (status !== 200) failures.push(`HTTP status ${status}`);
 
     if (!title) failures.push("missing <title>");
-    else {
-      const coreTitle = title.replace(/\s*\|\s*StudyCalc\s*$/, "");
-      if (coreTitle.length > 60) failures.push(`title too long (${coreTitle.length} chars): "${coreTitle}"`);
-    }
+    // Measures the RENDERED <title> (including the " | StudyCalc" template
+    // suffix) — that's what actually shows in a search result, and what
+    // Bing's own length warnings are based on. A page whose own authored
+    // title is short can still fail once the suffix is added.
+    else if (title.length > 60) failures.push(`rendered title too long (${title.length} chars): "${title}"`);
 
     if (!description) failures.push("missing meta description");
     else if (description.length < 140 || description.length > 160)

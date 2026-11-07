@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Semester GPA vs CGPA: Complete Calculation & Recovery Guide",
+  title: "Semester GPA vs CGPA: Calculation & Recovery",
   description:
     "The difference between Semester GPA and CGPA, the exact credit-weighted formulas, a full 3-semester worked example, and academic probation thresholds.",
   keywords: [

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Marks to Grade Conversion: US, UK, Pakistan & India",
+  title: "Marks to Grade: US, UK, Pakistan & India",
   description: "Marks to grade conversion across the US, UK, Pakistan, and India — compare letter grades, percentages, CGPA scales, and WES evaluation in one guide.",
   alternates: {
     canonical: "https://www.studycalc.co/marks-to-grade-conversion",
@@ -158,15 +158,26 @@ export default function MarksToGradeConversionPage() {
             Global Academic Standards
           </span>
           <span className="text-xs text-slate-400">
-            Updated: July 2026 • 15 min read
+            Last updated: November 2026 • 15 min read
           </span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white tracking-tight leading-tight">
           Marks to Grade Conversion: Global US, UK, Pakistan & India Systems
         </h1>
         <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl">
-          An exhaustive reference manual detailing the mechanisms of marks to grade conversion. Explore international equivalence across US letter grades, UK degree classifications, South Asian board exam percentages, and WES credit evaluation protocols.
+          There is no single global conversion table — the US uses letter grades on a 4.0 GPA scale, the UK
+          uses degree classifications (First, 2:1, 2:2), and Pakistan/India use board-exam percentages or a
+          10-point CGPA, each set independently by the relevant institution. This guide covers how each
+          system works and how they roughly compare.
         </p>
+        <div className="mt-6">
+          <Link
+            href="/grade-calculator"
+            className="inline-block px-5 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg text-sm transition"
+          >
+            Open Grade Calculator →
+          </Link>
+        </div>
       </header>
 
       {/* Table of Contents */}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Weighted vs Unweighted GPA: AP, IB & Honors Guide",
+  title: "Weighted vs Unweighted GPA: AP, IB & Honors",
   description:
     "The complete breakdown of weighted vs unweighted high school GPA — how AP, IB, Honors, and Dual Enrollment affect your transcript and college admissions.",
   keywords: [
@@ -102,6 +102,15 @@ export default function WeightedVsUnweightedGPAGuide() {
           <p className="mt-4 text-base md:text-lg text-slate-400 leading-relaxed">
             How AP, IB, Dual Enrollment, and Honors classes actually change your high school transcript — the exact math behind unweighted 4.0 and weighted 5.0 scales, how colleges recalculate your GPA, and real worked case studies.
           </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Link
+              href="/gpa-calculator"
+              className="px-5 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg text-sm transition"
+            >
+              Calculate Your GPA →
+            </Link>
+            <span className="text-xs text-slate-500">Last updated: November 2026</span>
+          </div>
         </header>
 
         <div className="space-y-12 text-base leading-relaxed">

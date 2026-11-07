@@ -55,7 +55,9 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${blog.frontMatter.title} - StudyCalc`,
+    // The root layout's title template already appends " | StudyCalc" —
+    // adding branding here too produced a double "StudyCalc" in <title>.
+    title: blog.frontMatter.title,
     description: blog.frontMatter.description,
     keywords: blog.frontMatter.keywords,
     alternates: {

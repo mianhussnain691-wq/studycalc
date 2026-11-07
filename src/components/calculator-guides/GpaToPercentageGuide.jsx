@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { GRADE_SCALE } from "@/data/gradeScale";
+import { GRADE_SCALE, lookupByGpa } from "@/data/gradeScale";
+
+// 2.0–4.0 in 0.1 steps, each mapped to its band on the same GRADE_SCALE
+// table the live calculator uses (lookupByGpa) — not a separately invented
+// set of numbers. Covers GPA values like 3.1 or 3.4 that fall between the
+// standard +/- letter-grade points, which real searches ask about directly.
+const FINE_STEP_GPAS = [];
+for (let g = 2.0; g <= 4.0001; g += 0.1) {
+  FINE_STEP_GPAS.push(Math.round(g * 10) / 10);
+}
 
 const faqs = [
   {
@@ -163,6 +172,38 @@ export default function GpaToPercentageGuide() {
                   </td>
                 </tr>
               ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-white">GPA to Percentage, 2.0 to 4.0 in 0.1 Steps</h2>
+        <p className="mt-4 leading-7">
+          There is no single official GPA-to-percentage formula — every school sets its own grading bands, so
+          the same 3.3 GPA can mean a slightly different percentage range at different institutions. The table
+          below applies the common US 4.0 scale above (the same one our calculator uses) to every 0.1 GPA
+          value between 2.0 and 4.0, including values like 3.1, 3.4, or 3.8 that fall between the standard
+          letter-grade points. Treat it as a reasonable estimate, not an official conversion.
+        </p>
+        <div className="mt-6 overflow-x-auto rounded-xl border border-slate-800">
+          <table className="w-full text-left text-sm">
+            <thead>
+              <tr className="bg-slate-900 text-slate-300">
+                <th className="p-3">GPA</th>
+                <th className="p-3">Approx. Percentage Range</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800">
+              {FINE_STEP_GPAS.map((g) => {
+                const row = lookupByGpa(g);
+                return (
+                  <tr key={g} className="bg-slate-950">
+                    <td className="p-3 font-mono text-cyan-400 font-bold">{g.toFixed(1)}</td>
+                    <td className="p-3 text-slate-400">{row.minPercent}–{row.maxPercent}%</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

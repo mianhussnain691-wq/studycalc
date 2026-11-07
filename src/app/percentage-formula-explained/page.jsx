@@ -1,7 +1,7 @@
 import PercentageFormula from "@/components/articles/PercentageFormula";
 
 export const metadata = {
-  title: "Percentage Formula Explained: How to Calculate It",
+  title: "Percentage Formula Explained: How to Calculate",
   description:
     "The exact percentage formula, percentage increase/decrease, reverse percentage, and percentage-of-a-percentage — with worked numeric examples for each.",
   keywords: [

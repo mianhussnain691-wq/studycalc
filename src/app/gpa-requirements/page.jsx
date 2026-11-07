@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-title: "GPA Requirements: College Admissions & Graduate School",
+title: "GPA Requirements: Admissions & Grad School",
   description: "Complete breakdown of GPA requirements for Ivy League, state universities, master's programs, medical schools, law schools, and corporate recruitment.",
   alternates: { canonical: "https://www.studycalc.co/gpa-requirements" },
   openGraph: {

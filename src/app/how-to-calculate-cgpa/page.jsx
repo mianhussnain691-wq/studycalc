@@ -1,7 +1,7 @@
 import CalculateCGPA from "@/components/articles/CalculateCGPA";
 
 export const metadata = {
-  title: "How to Calculate CGPA: Formula, Examples & Calculator",
+  title: "How to Calculate CGPA: Formula & Examples",
   description:
     "Learn how to calculate CGPA with the exact formula, step-by-step worked examples, a GPA vs CGPA comparison, FAQs, and a free CGPA Calculator.",
   keywords: [

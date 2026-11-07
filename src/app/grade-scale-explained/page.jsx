@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Grading Scales: Pass/Fail Thresholds & Grade Bands",
+  title: "Grading Scales: Pass/Fail Thresholds & Bands",
   description:
     "How academic grading scales work — pass/fail thresholds, grade bands, curved vs absolute grading, and why the same score means different things elsewhere.",
   keywords: [
@@ -96,7 +96,15 @@ export default function GradeScaleExplained() {
           <p className="mt-4 text-base md:text-lg text-slate-400 leading-relaxed">
             Every school has "a grading scale," but what that actually means — where the passing line sits, whether your grade depends on a fixed standard or your classmates' performance, what triggers honors or probation — varies more than most students realize. This guide covers the concepts behind grading scales, not just one specific conversion table.
           </p>
-          <p className="mt-4 text-xs text-slate-500">Last updated: November 2026</p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Link
+              href="/grade-calculator"
+              className="px-5 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg text-sm transition"
+            >
+              Open Grade Calculator →
+            </Link>
+            <span className="text-xs text-slate-500">Last updated: November 2026</span>
+          </div>
         </header>
 
         <div className="space-y-10 text-base leading-relaxed">

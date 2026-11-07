@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Weighted vs. Unweighted GPA: AP, IB & Honors Guide",
+  title: "AP & Honors GPA Weighting: How It Works",
   description: "How high schools weight AP, Honors, IB, and Dual Enrollment classes — the quality-point matrix, regional scales like Texas 6.0, and how colleges recalculate it.",
   alternates: {
     canonical: "https://www.studycalc.co/ap-honors-gpa-weighting-guide",

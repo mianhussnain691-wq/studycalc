@@ -74,8 +74,10 @@ export default function DeansListCalculator() {
           Dean&apos;s List & Honor Roll Checker
         </h1>
 
-        <p className="mt-4 text-center text-slate-400">
-          See how your semester GPA compares to the common Dean&apos;s List threshold.
+        <p className="mt-4 text-center text-slate-400 max-w-2xl mx-auto">
+          Most US colleges set the Dean&apos;s List cutoff at a 3.5 semester GPA (some use 3.7), with no grade
+          below a B and full-time enrollment required. Exact rules vary by school — enter your GPA below to
+          check against the common threshold instantly.
         </p>
 
         <p className="mt-2 text-center text-xs text-slate-600">

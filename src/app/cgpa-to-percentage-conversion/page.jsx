@@ -7,7 +7,7 @@ import {
 } from "@/data/boardGrades";
 
 export const metadata = {
-  title: "CGPA to Percentage Calculator: Formula & Conversion Guide",
+  title: "CGPA to Percentage: Formula & Conversion Guide",
   description:
     "Convert CGPA to percentage for India (CGPA × 9.5) and Pakistan (CGPA × 25) — the two most common conventions, explained with worked examples and charts.",
   alternates: {
