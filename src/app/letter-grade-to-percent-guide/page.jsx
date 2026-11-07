@@ -91,6 +91,15 @@ const faqJsonLd = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.studycalc.co/guides" },
+    { "@type": "ListItem", position: 3, name: "Letter Grade to Percent Guide", item: "https://www.studycalc.co/letter-grade-to-percent-guide" },
+  ],
+};
 
 export default function LetterGradeToPercentGuide() {
   return (
@@ -98,6 +107,10 @@ export default function LetterGradeToPercentGuide() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12 text-slate-300">
 

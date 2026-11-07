@@ -126,6 +126,16 @@ export default function PakistaniBoardVsUsGpaPage() {
     ]
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+      { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.studycalc.co/guides" },
+      { "@type": "ListItem", position: 3, name: "Pakistani Board vs. US GPA", item: "https://www.studycalc.co/pakistani-board-vs-us-gpa" },
+    ],
+  };
+
   return (
     <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12 text-slate-300">
       <script
@@ -135,6 +145,10 @@ export default function PakistaniBoardVsUsGpaPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Header Section */}

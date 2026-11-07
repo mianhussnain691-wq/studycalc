@@ -30,11 +30,21 @@ const faqJsonLd = {
     { "@type": "Question", name: "How do I ask my professor for extra credit if I'm close to a cutoff?", acceptedAnswer: { "@type": "Answer", text: "Approach them early, before finals week, present your calculation respectfully, and ask if supplementary assignments or retakes are available to bridge the gap." } },
   ],
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.studycalc.co/guides" },
+    { "@type": "ListItem", position: 3, name: "Final Grade Calculator Guide", item: "https://www.studycalc.co/final-grade-calculator-guide" },
+  ],
+};
 
 export default function FinalGradeCalculatorGuide() {
   return (
     <main className="min-h-screen bg-slate-950 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <article className="mx-auto max-w-4xl px-6 py-12 text-slate-300">
       
       {/* Header Section */}

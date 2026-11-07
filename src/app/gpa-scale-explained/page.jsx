@@ -80,6 +80,15 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.studycalc.co/guides" },
+    { "@type": "ListItem", position: 3, name: "GPA Scale Explained", item: "https://www.studycalc.co/gpa-scale-explained" },
+  ],
+};
 
 export default function GPAScaleExplainedPage() {
   return (
@@ -87,6 +96,10 @@ export default function GPAScaleExplainedPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <article className="mx-auto mt-12 max-w-5xl rounded-2xl border border-slate-800 bg-slate-900/40 p-6 sm:p-10 text-left">

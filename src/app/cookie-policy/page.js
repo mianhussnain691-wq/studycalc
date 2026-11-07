@@ -9,9 +9,19 @@ export const metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Cookie Policy", item: "https://www.studycalc.co/cookie-policy" },
+  ],
+};
+
 export default function CookiePolicyPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="max-w-4xl mx-auto px-6 py-16">
 
         <PageHeader

@@ -29,10 +29,20 @@ const faqJsonLd = {
     { "@type": "Question", name: "Does a bad high school GPA affect my college GPA?", acceptedAnswer: { "@type": "Answer", text: "No. Your college GPA starts fresh at 0.00 on day one and is completely separate from your high school record, aside from any dual-enrollment credits that transfer in." } },
   ],
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.studycalc.co/guides" },
+    { "@type": "ListItem", position: 3, name: "High School vs College GPA", item: "https://www.studycalc.co/high-school-vs-college-gpa" },
+  ],
+};
 export default function HighSchoolVsCollegeGPA() {
   return (
     <main className="min-h-screen bg-slate-950 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <article className="mx-auto max-w-4xl px-6 py-12 text-slate-300">
       
       {/* Header Section */}
@@ -180,6 +190,13 @@ export default function HighSchoolVsCollegeGPA() {
               <h3 className="font-semibold text-white">What is a good GPA in college compared to high school?</h3>
               <p className="text-sm text-slate-400 mt-1">
                 In high school, competitive students aim for 3.8–4.2+ GPAs. In college, maintaining a 3.5+ GPA is widely considered honor-level (Dean's List) performance.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+              <h3 className="font-semibold text-white">Does a bad high school GPA affect my college GPA?</h3>
+              <p className="text-sm text-slate-400 mt-1">
+                No. Your college GPA starts fresh at 0.00 on day one and is completely separate from your high school record, aside from any dual-enrollment credits that transfer in.
               </p>
             </div>
           </div>

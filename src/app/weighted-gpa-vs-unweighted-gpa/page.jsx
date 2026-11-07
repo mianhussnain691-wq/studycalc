@@ -68,12 +68,26 @@ const faqJsonLd = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.studycalc.co/guides" },
+    { "@type": "ListItem", position: 3, name: "Weighted vs Unweighted GPA", item: "https://www.studycalc.co/weighted-gpa-vs-unweighted-gpa" },
+  ],
+};
+
 export default function WeightedVsUnweightedGPAGuide() {
   return (
     <main className="min-h-screen bg-slate-950 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <article className="mx-auto max-w-5xl px-6 py-12 text-slate-300">

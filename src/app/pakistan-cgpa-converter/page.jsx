@@ -43,6 +43,16 @@ const faqJsonLd = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Calculators", item: "https://www.studycalc.co/calculators" },
+    { "@type": "ListItem", position: 3, name: "Pakistan CGPA Converter", item: "https://www.studycalc.co/pakistan-cgpa-converter" },
+  ],
+};
+
 export default function PakistanCGPAConverter() {
   const [mode, setMode] = useState("cgpa");
   const [value, setValue] = useState("");
@@ -73,6 +83,10 @@ export default function PakistanCGPAConverter() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12 text-slate-300">

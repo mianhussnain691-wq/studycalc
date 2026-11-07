@@ -10,11 +10,21 @@ export const metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.studycalc.co/blog" },
+  ],
+};
+
 export default function BlogListPage() {
   const blogs = getAllBlogs(); // Automatic saare .mdx blogs di metadata chukega
 
   return (
     <div style={{ minHeight: '100vh', color: '#cbd5e1', fontFamily: 'sans-serif' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHeader title="Our Blogs" description="Latest academic guides and tips" />
       
       <main style={{ maxWidth: '1000px', margin: '0 auto', padding: '48px 16px' }}>

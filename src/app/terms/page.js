@@ -9,9 +9,19 @@ export const metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Terms & Conditions", item: "https://www.studycalc.co/terms" },
+  ],
+};
+
 export default function TermsPage() {
   return (
     <main className="max-w-5xl mx-auto px-6 py-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <PageHeader
         title="Terms & Conditions"

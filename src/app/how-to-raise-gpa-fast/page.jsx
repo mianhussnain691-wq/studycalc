@@ -27,16 +27,26 @@ const faqJsonLd = {
   "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "Is it possible to raise my GPA from a 2.0 to a 3.0 in just one semester?", acceptedAnswer: { "@type": "Answer", text: "If you're in freshman year with only 15 credit hours completed, yes — a 4.0 semester will mathematically raise a 2.00 GPA to 3.00. Past 60 credit hours, a full 1.0 point jump in one semester is essentially impossible without grade replacement policies." } },
-    { "@type": "Question", name: "Does retaking a course delete the old grade from my transcript?", acceptedAnswer: { "@type": "Answer", text: "Usually no, the original grade stays visible with a notation like 'Repeated/Excluded,' but under grade forgiveness policies its quality points are removed from your GPA calculation entirely." } },
+    { "@type": "Question", name: "Does retaking a course completely delete the old grade from my official transcript?", acceptedAnswer: { "@type": "Answer", text: "Usually no, the original grade stays visible with a notation like 'Repeated/Excluded,' but under grade forgiveness policies its quality points are removed from your GPA calculation entirely." } },
     { "@type": "Question", name: "How does academic probation affect my ability to raise my GPA?", acceptedAnswer: { "@type": "Answer", text: "Probation often caps your registration to 12-13 credits and requires advisor meetings, which can actually help by forcing focus on fewer courses at once." } },
     { "@type": "Question", name: "Should I take summer classes to raise my GPA faster?", acceptedAnswer: { "@type": "Answer", text: "Summer terms can help since they're shorter and let you focus on just one or two subjects at a time without multi-course task switching." } },
-    { "@type": "Question", name: "What happens if I fail a course I'm retaking?", acceptedAnswer: { "@type": "Answer", text: "It can seriously hurt your standing since it consumes your limited repeat allowance. Seek tutoring early or withdraw before the drop deadline if you're at risk." } },
+    { "@type": "Question", name: "What happens if I fail a course that I am retaking?", acceptedAnswer: { "@type": "Answer", text: "It can seriously hurt your standing since it consumes your limited repeat allowance. Seek tutoring early or withdraw before the drop deadline if you're at risk." } },
+  ],
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.studycalc.co/guides" },
+    { "@type": "ListItem", position: 3, name: "How to Raise Your GPA Fast", item: "https://www.studycalc.co/how-to-raise-gpa-fast" },
   ],
 };
 export default function HowToRaiseGPAFast() {
   return (
     <main className="min-h-screen bg-slate-950 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <article className="mx-auto max-w-4xl px-6 py-12 text-slate-300">
       
       {/* Header Section */}

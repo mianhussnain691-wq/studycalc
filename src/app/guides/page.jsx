@@ -8,10 +8,20 @@ export const metadata = {
     canonical: "https://www.studycalc.co/guides",
   },
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.studycalc.co" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.studycalc.co/guides" },
+  ],
+};
+
 export default function GuidesPage() {
   return (
     <div className="min-h-screen bg-[#070b19] text-slate-300 py-24 px-6 max-w-7xl mx-auto">
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       {/* Header */}
       <div className="mb-14 border-b border-slate-800/80 pb-8 text-center sm:text-left">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
