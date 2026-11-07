@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useRef, useState } from "react";
 // 1. 🔥 Perfectly Imported the Reusable SEO Guide Component
 import CGPAGuide from "@/components/calculator-guides/CGPAGuide";
 import SourcesBlock from "@/components/SourcesBlock";
 import ShareResultButton from "@/components/ShareResultButton";
 import DownloadResultCard from "@/components/DownloadResultCard";
+import { weightedAverage } from "@/lib/calculators";
 
 export default function CGPACalculator() {
   const [semesters, setSemesters] = useState([
@@ -71,22 +73,9 @@ export default function CGPACalculator() {
   // CGPA = Σ(GPA × credit hours) ÷ Σ(credit hours)
   function calculateCGPA() {
     const valid = validSemesters();
-
-    if (valid.length === 0) {
-      return "0.00";
-    }
-
-    const qualityPoints = valid.reduce(
-      (sum, s) => sum + s.gpa * s.credits,
-      0
-    );
-    const credits = valid.reduce((sum, s) => sum + s.credits, 0);
-
-    if (credits === 0) {
-      return "0.00";
-    }
-
-    return (qualityPoints / credits).toFixed(2);
+    const result = weightedAverage(valid.map((s) => ({ value: s.gpa, weight: s.credits })));
+    if (!result) return "0.00";
+    return result.average.toFixed(2);
   }
 
   function getStanding() {
@@ -272,6 +261,13 @@ export default function CGPACalculator() {
           guideHref="/how-to-calculate-cgpa"
           guideLabel="Full step-by-step guide with worked examples"
         />
+        <p className="mt-4 text-sm text-slate-500">
+          Run a blog or school site?{" "}
+          <Link href="/embed-calculators" className="text-cyan-400 hover:underline">
+            Embed this calculator
+          </Link>{" "}
+          on your own page for free.
+        </p>
 
         {/* 🔥 EXACTLY INJECTED BELOW THE INTERACTIVE ENGINE */}
         <CGPAGuide />

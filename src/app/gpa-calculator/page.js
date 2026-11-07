@@ -1,10 +1,12 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import GPAGuide from "@/components/calculator-guides/GPAGuide"; // <--- Perfect Import Path
 import ShareResultButton from "@/components/ShareResultButton";
 import DownloadResultCard from "@/components/DownloadResultCard";
 import SourcesBlock from "@/components/SourcesBlock";
 import coursePresets from "@/data/coursePresets";
+import { weightedAverage } from "@/lib/calculators";
 
 const STORAGE_KEY = "studycalc-gpa-subjects";
 const DEFAULT_SUBJECTS = [{ id: 1, name: "", credit: "", grade: "4" }];
@@ -139,26 +141,20 @@ export default function GPACalculator() {
       }
     }
 
-    let credits = 0;
-    let totalPoints = 0;
+    const result = weightedAverage(
+      subjects.map((subject) => ({ value: Number(subject.grade), weight: Number(subject.credit) }))
+    );
 
-    subjects.forEach((subject) => {
-      const credit = Number(subject.credit);
-      const grade = Number(subject.grade);
-      credits += credit;
-      totalPoints += credit * grade;
-    });
-
-    if (credits === 0) {
+    if (!result) {
       setError("Total credit hours must be greater than 0.");
       return;
     }
 
-    const finalGPA = totalPoints / credits;
+    const finalGPA = result.average;
 
     setGPA(finalGPA.toFixed(2));
-    setTotalCredits(credits);
-    setGradePoints(totalPoints.toFixed(2));
+    setTotalCredits(result.totalWeight);
+    setGradePoints(result.totalWeighted.toFixed(2));
     setHasCalculated(true);
 
     if (finalGPA >= 3.7) setPerformance("🎉 Excellent");
@@ -353,6 +349,13 @@ export default function GPACalculator() {
           guideHref="/gpa-scale-explained"
           guideLabel="How the 4.0, 5.0, and 10.0 scales compare"
         />
+        <p className="mt-4 text-sm text-slate-500">
+          Run a blog or school site?{" "}
+          <Link href="/embed-calculators" className="text-cyan-400 hover:underline">
+            Embed this calculator
+          </Link>{" "}
+          on your own page for free.
+        </p>
         <GPAGuide />
       </div>
     </div>

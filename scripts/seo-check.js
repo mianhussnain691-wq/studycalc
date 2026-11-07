@@ -11,9 +11,10 @@
 
 const BASE = process.env.SEO_CHECK_BASE || "http://localhost:3070";
 
-// Pages that are deliberately noindex. Nothing should be in this list yet;
-// Sprint 4 Task 2 adds the /embed/* routes here once they exist.
-const INTENDED_NOINDEX = [];
+// Pages that are deliberately noindex. The /embed/* widget routes aren't in
+// the sitemap and aren't linked via <a href> (only embedded via <iframe>),
+// so this crawl never actually visits them — listed here for documentation.
+const INTENDED_NOINDEX = ["/embed/gpa-calculator", "/embed/cgpa-calculator"];
 
 function stripTag(html, tag) {
   return html.replace(new RegExp(`<${tag}[^>]*>[\\s\\S]*?<\\/${tag}>`, "gi"), "");

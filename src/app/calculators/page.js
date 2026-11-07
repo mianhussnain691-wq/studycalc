@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import ToolCard from "@/components/ToolCard";
 import tools from "@/data/tools";
@@ -48,6 +49,19 @@ export default function CalculatorsPage() {
           />
         ))}
 
+      </div>
+
+      <div className="mt-16 rounded-2xl border border-slate-800 bg-slate-900 p-6 sm:p-8 text-center sm:text-left sm:flex sm:items-center sm:justify-between gap-6">
+        <div>
+          <h2 className="text-lg font-bold text-white">Run a blog or school site?</h2>
+          <p className="text-sm text-slate-400 mt-1">Embed the GPA or CGPA calculator directly on your own page — free, no tracking.</p>
+        </div>
+        <Link
+          href="/embed-calculators"
+          className="mt-4 sm:mt-0 inline-block rounded-lg bg-cyan-500 px-5 py-2.5 text-sm font-bold text-slate-950 hover:bg-cyan-400 transition shrink-0"
+        >
+          Get the Embed Code
+        </Link>
       </div>
 
     </main>
