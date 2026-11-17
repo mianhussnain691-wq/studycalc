@@ -1,0 +1,64 @@
+{
+  "pages": {
+    "/marks-out-of-400-percentage": {
+      "words": 703,
+      "shingles": 681
+    },
+    "/marks-out-of-500-percentage": {
+      "words": 893,
+      "shingles": 859
+    },
+    "/marks-out-of-600-percentage": {
+      "words": 779,
+      "shingles": 755
+    },
+    "/marks-out-of-1100-percentage": {
+      "words": 1068,
+      "shingles": 1016
+    }
+  },
+  "results": [
+    {
+      "a": "/marks-out-of-400-percentage",
+      "b": "/marks-out-of-600-percentage",
+      "sharedCount": 140,
+      "jaccard": 0.10802469135802469,
+      "overlapCoefficient": 0.2055800293685756
+    },
+    {
+      "a": "/marks-out-of-500-percentage",
+      "b": "/marks-out-of-600-percentage",
+      "sharedCount": 147,
+      "jaccard": 0.10020449897750511,
+      "overlapCoefficient": 0.1947019867549669
+    },
+    {
+      "a": "/marks-out-of-400-percentage",
+      "b": "/marks-out-of-500-percentage",
+      "sharedCount": 122,
+      "jaccard": 0.08603667136812412,
+      "overlapCoefficient": 0.17914831130690162
+    },
+    {
+      "a": "/marks-out-of-400-percentage",
+      "b": "/marks-out-of-1100-percentage",
+      "sharedCount": 23,
+      "jaccard": 0.013739545997610514,
+      "overlapCoefficient": 0.033773861967694566
+    },
+    {
+      "a": "/marks-out-of-600-percentage",
+      "b": "/marks-out-of-1100-percentage",
+      "sharedCount": 22,
+      "jaccard": 0.012578616352201259,
+      "overlapCoefficient": 0.02913907284768212
+    },
+    {
+      "a": "/marks-out-of-500-percentage",
+      "b": "/marks-out-of-1100-percentage",
+      "sharedCount": 24,
+      "jaccard": 0.012965964343598054,
+      "overlapCoefficient": 0.027939464493597205
+    }
+  ]
+}

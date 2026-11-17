@@ -407,6 +407,10 @@ export default function AttendanceCalculatorGuide() {
             <span className="font-semibold text-white">How to Calculate CGPA</span>
             <p className="mt-1 text-sm text-slate-400">Learn how semester GPAs combine into a cumulative score.</p>
           </Link>
+          <Link href="/blog/what-counts-as-bad-attendance" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+            <span className="font-semibold text-white">What Counts as Bad Attendance?</span>
+            <p className="mt-1 text-sm text-slate-400">The real thresholds, not the vague fear.</p>
+          </Link>
         </div>
       </div>
 

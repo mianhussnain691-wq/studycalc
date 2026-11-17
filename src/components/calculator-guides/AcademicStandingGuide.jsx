@@ -154,6 +154,10 @@ export default function AcademicStandingGuide() {
             <span className="font-semibold text-white">How to Raise Your GPA Fast</span>
             <p className="mt-1 text-sm text-slate-400">Practical strategies for improving your GPA.</p>
           </Link>
+          <Link href="/blog/gpa-drops-you-into-probation" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+            <span className="font-semibold text-white">The Day Your GPA Drops You Into Probation</span>
+            <p className="mt-1 text-sm text-slate-400">What actually happens, and why it's recoverable.</p>
+          </Link>
         </div>
       </div>
     </div>

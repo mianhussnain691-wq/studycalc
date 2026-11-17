@@ -605,6 +605,9 @@ export default function APHonorsGpaWeightingGuide() {
             <Link href="/grade-calculator" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
               Weighted Grade Calculator 📊
             </Link>
+            <Link href="/blog/weighted-gpa-flex-4-3-vs-4-0" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
+              Why a 4.3 Can Beat a 4.0 📝
+            </Link>
             <Link href="/weighted-gpa-vs-unweighted-gpa" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-base transition border border-slate-700">
               Weighted vs. Unweighted GPA Guide 📘
             </Link>

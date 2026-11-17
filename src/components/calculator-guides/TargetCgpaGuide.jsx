@@ -207,6 +207,10 @@ export default function TargetCgpaGuide() {
             <span className="font-semibold text-white">Semester GPA vs CGPA</span>
             <p className="mt-1 text-sm text-slate-400">Understand credit inertia and how recovery semesters actually move your CGPA.</p>
           </Link>
+          <Link href="/blog/how-one-bad-semester-hits-your-cgpa" className="rounded-xl border border-slate-800 bg-slate-950/40 p-5 hover:border-cyan-500/40 transition">
+            <span className="font-semibold text-white">How One Bad Semester Really Hits Your CGPA</span>
+            <p className="mt-1 text-sm text-slate-400">The compounding math, with worked examples.</p>
+          </Link>
         </div>
       </div>
     </div>
